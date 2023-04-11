@@ -28,8 +28,9 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         public RaycastHit2D PlayerLOS{get{return hit;}}
         public bool DropObj(){
             StockpileController stockpileCont = hit.transform.GetComponent<StockpileController>();
-            //If what the player is holding is an appropriate item into a stockpile and the stockpile is not full we add the item
-            //return false so that we set to player holding an item to false
+            //If what the player is holding is an appropriate item for a stockpile and the stockpile is not full we add the item
+            //If the stockpile cant take in the item we set the playerHolding to true
+            
             if((stockpileCont.ItemSprite == holdingSprite)){
                 m_InventoryCont.DroppingItem();
                 return !hit.transform.GetComponent<StockpileController>().Deposit(1);
@@ -56,7 +57,8 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 case "Fuel":
                     workstationCont.Overflow(holdingStruct.fuelAmnt);
                     //If the item can be used as fuel and we are not using workstation that doesnt use fuel and if refueling the workstation wont overflow
-                    if(!(holdingStruct.fuelAmnt==0.0f) && hit.transform.GetComponent<ForgePumpController>()==null&&(!workstationCont.FuelFull)){
+                    //Workstation that dont require fuel such as forgepump will simply have their Fuel Full boolean set to true thereby !true.
+                    if(!(holdingStruct.fuelAmnt==0.0f) && (!workstationCont.FuelFull)){
                         workstationCont.Refuel(holdingStruct.fuelAmnt);                                                                                                 
                         m_InventoryCont.DroppingItem();
                         return false;

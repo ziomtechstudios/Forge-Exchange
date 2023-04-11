@@ -61,12 +61,13 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             if(InUse && (fuelAmnt > 0.0f))
                 fuelAmnt -= (burnRate*Time.deltaTime+(forgePumpCont.InUse?(burnRate*Time.deltaTime):(0.0f)));
             //Ran out of fuel
-            else if(fuelAmnt <= 0.0f)
+            else if(fuelAmnt <= 0.0f && InUse)
                 SetForge(false,  0.0f);
             //Display current amount of fuel and temperature of forge
             CircleAmnt = (100.0f*fuelAmnt)/maxFuelAmnt;
             BarAmnt = (curTemp)/(maxTemp+forgePumpCont.MaxBoostTemp);
-        }
 
+
+        }
     }
 }
