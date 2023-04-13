@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 namespace Com.ZiomtechStudios.ForgeExchange{
-    [RequireComponent(typeof(Animator))]
     public class ForgeController : WorkstationController{
         #region Private serialized members
         [SerializeField] private float curTemp;
@@ -29,14 +28,12 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         #region Overriden Funcs
         //When turning on forge make sure conditions are met to turn on forge
         public override void ToggleUse(){
-            if(!InUse && (fuelAmnt>0.0f) && !DoingWork)
+            if(!InUse && curTemp != maxTemp &&(fuelAmnt>0.0f))
                 SetForge(true, maxTemp);
-            else if(InUse && !DoingWork)
-                SetForge(false, 0.0f);
         }
-        public override void Use(){
-            if(InUse&&!DoingWork)
-                DoingWork = true;
+        public override void Work(ItemStruct itemStruct){
+            
+            
         }
         public override void Refuel(float fuel){
             fuelAmnt += fuel;
@@ -57,6 +54,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             inUseHash = Animator.StringToHash("inUse");
             forgePumpCont = transform.parent.transform.Find("forge_pump").gameObject.GetComponent<ForgePumpController>();
             SetForge(false, 0.0f);
+
         }
         // Update is called once per frame
         void Update(){ 
@@ -69,6 +67,8 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             //Display current amount of fuel and temperature of forge
             CircleAmnt = (100.0f*fuelAmnt)/maxFuelAmnt;
             BarAmnt = (curTemp)/(maxTemp+forgePumpCont.MaxBoostTemp);
+
+
         }
     }
 }

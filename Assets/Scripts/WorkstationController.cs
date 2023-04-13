@@ -15,7 +15,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         public float CircleAmnt{get{return circleAmnt;}set{circleAmnt = value;}}
         public bool FuelFull{get{return fuelFull;}set{fuelFull = value;}}
         public bool DoingWork{get{return doingWork;}set{doingWork=value;}}
-        public virtual void Use(){}
+        public virtual void Work(ItemStruct itemStruct){}
         public virtual void Refuel(float fuel){}
         public virtual void Overflow(float amount){}
         public virtual void ToggleUse(){}
