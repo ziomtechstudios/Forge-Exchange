@@ -11,8 +11,10 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private float fuelAmnt;
         [SerializeField] private float maxFuelAmnt;
         [SerializeField] private float burnRate;
+        [SerializeField] private float ttsTimer;
         [SerializeField] private Animator forgeAnimator;
         [SerializeField] private ForgePumpController forgePumpCont;
+        [Tooltip("The Struct of the item being smelted.")] [SerializeField] private ItemStruct smeltStruct;
         #endregion
         #region Private memebers
         private int inUseHash;
@@ -32,8 +34,10 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 SetForge(true, maxTemp);
         }
         public override void Work(ItemStruct itemStruct){
-            
-            
+            if(InUse && !DoingWork){
+                DoingWork = true;
+                smeltStruct = itemStruct;
+            }   
         }
         public override void Refuel(float fuel){
             fuelAmnt += fuel;
@@ -54,13 +58,19 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             inUseHash = Animator.StringToHash("inUse");
             forgePumpCont = transform.parent.transform.Find("forge_pump").gameObject.GetComponent<ForgePumpController>();
             SetForge(false, 0.0f);
+            ttsTimer = 0.0f;
+
 
         }
         // Update is called once per frame
         void Update(){ 
             //As the forge is in use make sure fuel is being used
-            if(InUse && (fuelAmnt > 0.0f))
+            if(InUse && (fuelAmnt > 0.0f)){
                 fuelAmnt -= (burnRate*Time.deltaTime+(forgePumpCont.InUse?(burnRate*Time.deltaTime):(0.0f)));
+                if(DoingWork)
+                    ttsTimer += (((curTemp-smeltStruct.meltingTemp)/smeltStruct.meltingTemp)*smeltStruct.refinement);
+                    
+            }
             //Ran out of fuel
             else if(fuelAmnt <= 0.0f && InUse)
                 SetForge(false,  0.0f);

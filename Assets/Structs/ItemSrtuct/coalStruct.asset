@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuelAmnt: 5
   itemTag: Fuel
+  refinement: 1
+  timeToSmelt: 0
+  meltingTemp: 0

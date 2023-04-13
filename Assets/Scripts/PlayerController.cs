@@ -66,6 +66,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     else
                         return true;
                 case "Ore":
+                    
                     return false;
                 default:
                     return holdingItem;
