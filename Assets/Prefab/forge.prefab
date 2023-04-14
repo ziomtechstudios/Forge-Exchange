@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8359663826784483637}
   - component: {fileID: 8359663826784483634}
   - component: {fileID: 1514156370}
+  - component: {fileID: 6001479004233925187}
   m_Layer: 8
   m_Name: forge
   m_TagString: Forge
@@ -151,6 +152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   workstationUIStruct: {fileID: 0}
   inUse: 0
+  doingWork: 0
+  fuelFull: 0
   barAmnt: 0
   circleAmnt: 0
   curTemp: 0
@@ -158,7 +161,10 @@ MonoBehaviour:
   fuelAmnt: 0
   maxFuelAmnt: 100
   burnRate: 0.25
-  workstationCont: {fileID: 0}
+  ttsTimer: 0
+  forgeAnimator: {fileID: 0}
+  forgePumpCont: {fileID: 0}
+  smeltStruct: {fileID: 0}
 --- !u!114 &1514156370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,8 +179,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   workstationUIStruct: {fileID: 11400000, guid: d7c1726d6fe87200da0cdf1a8397c75e, type: 2}
   inUse: 0
+  doingWork: 0
+  fuelFull: 0
   barAmnt: 0
   circleAmnt: 0
+--- !u!114 &6001479004233925187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359663826784483639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac3f8be7d42cb3408893a3fdc8d63c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quantity: 0
+  maxQuantity: 1
+  itemSprite: {fileID: 0}
+  itemStruct: {fileID: 0}
 --- !u!1001 &1813523933133372309
 PrefabInstance:
   m_ObjectHideFlags: 0

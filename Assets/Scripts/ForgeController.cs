@@ -12,8 +12,12 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private float maxFuelAmnt;
         [SerializeField] private float burnRate;
         [SerializeField] private float ttsTimer;
+        [SerializeField] private float idealTTS;
+        [SerializeField] private float ttsScaler;
         [SerializeField] private Animator forgeAnimator;
         [SerializeField] private ForgePumpController forgePumpCont;
+        [SerializeField] private StockpileController forgeStockPileCont;
+        [SerializeField] private IDictionary<Sprite, Sprite> oresToBars;
         [Tooltip("The Struct of the item being smelted.")] [SerializeField] private ItemStruct smeltStruct;
         #endregion
         #region Private memebers
@@ -42,6 +46,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             if(InUse && !DoingWork){
                 DoingWork = true;
                 smeltStruct = itemStruct;
+                idealTTS = (((MaxTemp+forgePumpCont.MaxBoostTemp)-smeltStruct.meltingTemp)/smeltStruct.meltingTemp) * ttsScaler;
             }   
         }
         public override void Refuel(float fuel){
@@ -65,8 +70,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             forgePumpCont = transform.parent.transform.Find("forge_pump").gameObject.GetComponent<ForgePumpController>();
             SetForge(false, 0.0f);
             ttsTimer = 0.0f;
-
-
+            forgeStockPileCont = GetComponent<StockpileController>();
         }
         // Update is called once per frame
         void Update(){ 
@@ -74,10 +78,15 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             if(InUse && (fuelAmnt > 0.0f)){
                 //Burn fuel
                 fuelAmnt -= (burnRate*Time.deltaTime+(forgePumpCont.InUse?(burnRate*Time.deltaTime):(0.0f)));
-                //When smelting 
-                if(DoingWork)
+                //If forge is not on there is no point in seeing if its smelting
+                if(DoingWork){
                     ttsTimer += (((curTemp-smeltStruct.meltingTemp)/smeltStruct.meltingTemp)*smeltStruct.refinement);
-                    
+                    //Forge has smeltted ore return to player appropriate bar
+                    if(ttsTimer == idealTTS){
+                        
+                    }
+
+                }
             }
             //Ran out of fuel
             else if(fuelAmnt <= 0.0f && InUse)
