@@ -29,10 +29,15 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         #endregion
         #region Overriden Funcs
         //When turning on forge make sure conditions are met to turn on forge
+        //If the Forge is On then lets toggle it Off
         public override void ToggleUse(){
-            if(!InUse && curTemp != maxTemp &&(fuelAmnt>0.0f))
+            bool hasFuel = fuelAmnt>0.0f;
+            if(!InUse && (curTemp != maxTemp) && hasFuel)
                 SetForge(true, maxTemp);
+            else if(InUse)
+                SetForge(false, 0.0f);
         }
+        //Smelting Ore to Metal Bar
         public override void Work(ItemStruct itemStruct){
             if(InUse && !DoingWork){
                 DoingWork = true;
@@ -42,6 +47,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         public override void Refuel(float fuel){
             fuelAmnt += fuel;
         }
+        //Checking to see if player adding fuel will amount in more fuel than the forge can hold.
         public override void Overflow(float amount){
             FuelFull = ((fuelAmnt+amount)>maxFuelAmnt);
         }
@@ -66,7 +72,9 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         void Update(){ 
             //As the forge is in use make sure fuel is being used
             if(InUse && (fuelAmnt > 0.0f)){
+                //Burn fuel
                 fuelAmnt -= (burnRate*Time.deltaTime+(forgePumpCont.InUse?(burnRate*Time.deltaTime):(0.0f)));
+                //When smelting 
                 if(DoingWork)
                     ttsTimer += (((curTemp-smeltStruct.meltingTemp)/smeltStruct.meltingTemp)*smeltStruct.refinement);
                     
