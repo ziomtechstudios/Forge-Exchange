@@ -7,7 +7,6 @@ public class ItemStruct : ScriptableObject{
  public string itemTag;
  public string itemSubTag;
  public float refinement;
- public float timeToSmelt;
  public float meltingTemp;
  
 }

@@ -16,5 +16,4 @@ MonoBehaviour:
   itemTag: Ore
   itemSubTag: Red
   refinement: 1
-  timeToSmelt: 0
-  meltingTemp: 0
+  meltingTemp: 3000

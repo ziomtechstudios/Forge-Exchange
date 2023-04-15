@@ -15,7 +15,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         public int Quantity{get{return quantity;}}
         public int MaxQuantity{get{return maxQuantity;}set{maxQuantity = value;}}
         public Sprite ItemSprite{get{return itemSprite;}set{itemSprite = value;}}
-        public ItemStruct ItemStruct{get{return itemStruct;}}
+        public ItemStruct ItemStruct{get{return itemStruct;}set{itemStruct = value;}}
         #endregion
         public bool Deposit(int amount){
             bool canDeposit = ((quantity+amount)<=maxQuantity);

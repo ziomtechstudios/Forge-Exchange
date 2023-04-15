@@ -9,15 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8359663826784483636}
-  - component: {fileID: 6770111038955425332}
   - component: {fileID: 6435030543392501008}
   - component: {fileID: 8359663826784483637}
   - component: {fileID: 8359663826784483634}
-  - component: {fileID: 1514156370}
   - component: {fileID: 6001479004233925187}
+  - component: {fileID: 1293721267}
   m_Layer: 8
   m_Name: forge
-  m_TagString: Forge
+  m_TagString: Workstation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8359663826784483639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.999, y: 3.998, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8359663826730359675}
@@ -39,7 +38,106 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6770111038955425332
+--- !u!95 &6435030543392501008
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359663826784483639}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8fdf576050b4b1c4597ad9ce243b97a8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!61 &8359663826784483637
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359663826784483639}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.14439562, y: -0.61998796}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5000007, y: 0.49999127}
+    oldSize: {x: 1.3333334, y: 2.6666667}
+    newSize: {x: 1.3333334, y: 2.6666667}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9288725, y: 0.47822928}
+  m_EdgeRadius: 0
+--- !u!114 &8359663826784483634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359663826784483639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef7f2afb1a4d399f680454485ee09f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  workstationUIStruct: {fileID: 11400000, guid: d7c1726d6fe87200da0cdf1a8397c75e, type: 2}
+  inUse: 0
+  doingWork: 0
+  fuelFull: 0
+  barAmnt: 0
+  circleAmnt: 0
+  curTemp: 0
+  maxTemp: 3500
+  fuelAmnt: 100
+  maxFuelAmnt: 100
+  burnRate: 1
+  ttsTimer: 0
+  idealTTS: 0
+  ttsScaler: 10
+  forgeAnimator: {fileID: 6435030543392501008}
+  forgePumpCont: {fileID: 0}
+  forgeStockPileCont: {fileID: 6001479004233925187}
+  ores:
+  - Red
+  barSprites:
+  - {fileID: 1821549819, guid: acef24146fdefa2a78b4c030450569ec, type: 3}
+  barStructs:
+  - {fileID: 11400000, guid: d94b8732098d7864f96dfaea8ba890b3, type: 2}
+  smeltStruct: {fileID: 0}
+--- !u!114 &6001479004233925187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359663826784483639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac3f8be7d42cb3408893a3fdc8d63c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quantity: 0
+  maxQuantity: 1
+  itemSprite: {fileID: 0}
+  itemStruct: {fileID: 0}
+--- !u!212 &1293721267
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80,125 +178,17 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1944098048, guid: 33c8be615514ce4579c410babd97a29b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.3333334, y: 2.6666667}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6435030543392501008
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8359663826784483639}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7f041e10134074c4c96bfec1542701da, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!61 &8359663826784483637
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8359663826784483639}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0042948723, y: 0.21862936}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.9963474, y: 0.8034072}
-  m_EdgeRadius: 0
---- !u!114 &8359663826784483634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8359663826784483639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef7f2afb1a4d399f680454485ee09f34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  workstationUIStruct: {fileID: 0}
-  inUse: 0
-  doingWork: 0
-  fuelFull: 0
-  barAmnt: 0
-  circleAmnt: 0
-  curTemp: 0
-  maxTemp: 3500
-  fuelAmnt: 0
-  maxFuelAmnt: 100
-  burnRate: 0.25
-  ttsTimer: 0
-  forgeAnimator: {fileID: 0}
-  forgePumpCont: {fileID: 0}
-  smeltStruct: {fileID: 0}
---- !u!114 &1514156370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8359663826784483639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 651f01636add45fc6bc2975e5ba30fd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  workstationUIStruct: {fileID: 11400000, guid: d7c1726d6fe87200da0cdf1a8397c75e, type: 2}
-  inUse: 0
-  doingWork: 0
-  fuelFull: 0
-  barAmnt: 0
-  circleAmnt: 0
---- !u!114 &6001479004233925187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8359663826784483639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ac3f8be7d42cb3408893a3fdc8d63c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quantity: 0
-  maxQuantity: 1
-  itemSprite: {fileID: 0}
-  itemStruct: {fileID: 0}
 --- !u!1001 &1813523933133372309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -212,11 +202,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7865980528660344152, guid: 7c32c127d096b6d4590e8b3bc16915a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0.477
       objectReference: {fileID: 0}
     - target: {fileID: 7865980528660344152, guid: 7c32c127d096b6d4590e8b3bc16915a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0.067
       objectReference: {fileID: 0}
     - target: {fileID: 7865980528660344152, guid: 7c32c127d096b6d4590e8b3bc16915a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -274,11 +264,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 214322800988793840, guid: f6aed141a1d55ab47bb13250de9509ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: -0.529
       objectReference: {fileID: 0}
     - target: {fileID: 214322800988793840, guid: f6aed141a1d55ab47bb13250de9509ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0.104
       objectReference: {fileID: 0}
     - target: {fileID: 214322800988793840, guid: f6aed141a1d55ab47bb13250de9509ba, type: 3}
       propertyPath: m_LocalPosition.z

@@ -17,12 +17,14 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private Sprite holdingSprite;
         [SerializeField] private ItemStruct holdingStruct;
         [SerializeField] private InventoryController m_InventoryCont;
+        [SerializeField] private StockpileController stockpileCont;
         #endregion
         #region Private Fields
         private Animator m_Animator;
         private int lookXHash, lookYHash, isMoving, moveXHash, moveYHash;
         private int layerMask;
         private RaycastHit2D hit;
+        
         #endregion
         #region Public Members
         public RaycastHit2D PlayerLOS{get{return hit;}}
@@ -40,7 +42,8 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 return true;
         }
         public bool PickUpObj(){
-            StockpileController stockpileCont = hit.transform.GetComponent<StockpileController>();
+            if(stockpileCont==null)
+                stockpileCont = hit.transform.GetComponent<StockpileController>();
             holdingItem = true;
             holdingSprite = stockpileCont.ItemSprite;
             holdingStruct = stockpileCont.ItemStruct;
@@ -48,8 +51,13 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             return !stockpileCont.Withdraw(1);
         }
         public bool UseWorkstation(){
-            hit.transform.GetComponent<WorkstationController>().ToggleUse();
-            return false;
+            stockpileCont = hit.transform.GetComponent<StockpileController>();
+            if(stockpileCont.Quantity==0){
+                hit.transform.GetComponent<WorkstationController>().ToggleUse();
+                return false;
+            }
+            else
+                return PickUpObj();   
         }
         public bool InteractWorkstation(){
             WorkstationController workstationCont = hit.transform.GetComponent<WorkstationController>();
@@ -66,7 +74,9 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     else
                         return true;
                 case "Ore":
-                    
+                    workstationCont.Work(holdingStruct);
+                    if(workstationCont.InUse)
+                        m_InventoryCont.DroppingItem();
                     return false;
                 default:
                     return holdingItem;
@@ -87,6 +97,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             moveYHash = Animator.StringToHash("MoveY");
             isMoving = Animator.StringToHash("isMoving");
             layerMask = 1 << 8;
+            stockpileCont = null;
         }
 
         // Update is called once per frame
@@ -129,6 +140,8 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     }
                 }
             }
+            else
+                stockpileCont = null;    
         }
     }
 }

@@ -17,11 +17,15 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private Animator forgeAnimator;
         [SerializeField] private ForgePumpController forgePumpCont;
         [SerializeField] private StockpileController forgeStockPileCont;
-        [SerializeField] private IDictionary<Sprite, Sprite> oresToBars;
+        [SerializeField] private string[] ores;
+        [SerializeField] private Sprite[] barSprites;
+        [SerializeField] private ItemStruct[] barStructs;
         [Tooltip("The Struct of the item being smelted.")] [SerializeField] private ItemStruct smeltStruct;
         #endregion
         #region Private memebers
         private int inUseHash;
+        private IDictionary<string, Sprite> oresToBarsDict;
+        private IDictionary<string, ItemStruct> oreBarStructDict;
         #endregion
         #region Private Funcs
         // On/Off switch for forge where base temp for forge is defined at runtime
@@ -43,10 +47,12 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         }
         //Smelting Ore to Metal Bar
         public override void Work(ItemStruct itemStruct){
-            if(InUse && !DoingWork){
+            if(InUse && !DoingWork && (forgeStockPileCont.Quantity == 0)){
                 DoingWork = true;
                 smeltStruct = itemStruct;
                 idealTTS = (((MaxTemp+forgePumpCont.MaxBoostTemp)-smeltStruct.meltingTemp)/smeltStruct.meltingTemp) * ttsScaler;
+                forgeStockPileCont.ItemStruct = oreBarStructDict[smeltStruct.itemSubTag];
+                forgeStockPileCont.ItemSprite = oresToBarsDict[smeltStruct.itemSubTag];
             }   
         }
         public override void Refuel(float fuel){
@@ -71,6 +77,12 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             SetForge(false, 0.0f);
             ttsTimer = 0.0f;
             forgeStockPileCont = GetComponent<StockpileController>();
+            oresToBarsDict = new Dictionary<string, Sprite>();
+            oreBarStructDict = new Dictionary<string, ItemStruct>();
+            foreach(string ore in ores){
+                oresToBarsDict.Add(ore, barSprites[Array.IndexOf(ores, ore)]);
+                oreBarStructDict.Add(ore, barStructs[Array.IndexOf(ores, ore)]);
+             }
         }
         // Update is called once per frame
         void Update(){ 
@@ -80,12 +92,12 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 fuelAmnt -= (burnRate*Time.deltaTime+(forgePumpCont.InUse?(burnRate*Time.deltaTime):(0.0f)));
                 //If forge is not on there is no point in seeing if its smelting
                 if(DoingWork){
-                    ttsTimer += (((curTemp-smeltStruct.meltingTemp)/smeltStruct.meltingTemp)*smeltStruct.refinement);
+                    ttsTimer += ((((curTemp-smeltStruct.meltingTemp)/smeltStruct.meltingTemp)*smeltStruct.refinement)*Time.deltaTime);
                     //Forge has smeltted ore return to player appropriate bar
-                    if(ttsTimer == idealTTS){
-                        
+                    if(ttsTimer >= idealTTS){
+                        DoingWork = !forgeStockPileCont.Deposit(1);
+                        ttsTimer = 0.0f;
                     }
-
                 }
             }
             //Ran out of fuel
@@ -94,8 +106,6 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             //Display current amount of fuel and temperature of forge
             CircleAmnt = (100.0f*fuelAmnt)/maxFuelAmnt;
             BarAmnt = (curTemp)/(maxTemp+forgePumpCont.MaxBoostTemp);
-
-
+            }
         }
     }
-}
