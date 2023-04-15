@@ -23,8 +23,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         private Animator m_Animator;
         private int lookXHash, lookYHash, isMoving, moveXHash, moveYHash;
         private int layerMask;
-        private RaycastHit2D hit;
-        
+        private RaycastHit2D hit; 
         #endregion
         #region Public Members
         public RaycastHit2D PlayerLOS{get{return hit;}}
@@ -42,6 +41,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 return true;
         }
         public bool PickUpObj(){
+            //Make sure we have reference to component in players LOS
             if(stockpileCont==null)
                 stockpileCont = hit.transform.GetComponent<StockpileController>();
             holdingItem = true;
@@ -63,6 +63,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             WorkstationController workstationCont = hit.transform.GetComponent<WorkstationController>();
             switch(holdingStruct.itemTag){
                 case "Fuel":
+                    //First we check if this fuel deposit will be more than what the forge can handle
                     workstationCont.Overflow(holdingStruct.fuelAmnt);
                     //If the item can be used as fuel and we are not using workstation that doesnt use fuel and if refueling the workstation wont overflow
                     //Workstation that dont require fuel such as forgepump will simply have their Fuel Full boolean set to true thereby !true.
@@ -82,6 +83,8 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     return holdingItem;
             }
         }
+        #endregion
+        #region "Getter and Setters"
         public bool HoldingItem{get{return holdingItem;}set{holdingItem = value;}}
         public Sprite HoldingSprite{get {return holdingSprite;} set{holdingSprite = value;}}
         public ItemStruct HoldingStruct{get{return holdingStruct;}set{holdingStruct = value;}}
@@ -104,7 +107,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         void Update(){
             ///<summary>
             ///Player Movement
-            ///Player movement inpur taken as 2D Vector and is translted to movement of gameObject
+            ///Player movement inpurttaken as 2D Vector and is translted to movement of gameObject
             ///The last dir the player moves in is the players looking direction
             ///</summary>
             moveDir = new Vector2(Mathf.Round(Input.GetAxis("Horizontal")), Mathf.Round(Input.GetAxis("Vertical")));

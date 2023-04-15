@@ -48,9 +48,13 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         #endregion
         #region Public funcs
         public void DroppingItem(){
+            //If the player is holding item we look for coresponding slot holding said item
             if(playerCont.HoldingItem){
                 for(int i = 0; i<inventoryAmnt; i++){
                     if((itemImages[i].sprite == playerCont.HoldingSprite) &&(slotsInUse[i])){
+                        //desired slot found
+                        //Empty players hands
+                        //Empty slot
                         playerCont.HoldingSprite = null;
                         playerCont.HoldingItem = false;
                         playerCont.HoldingStruct = null;
@@ -68,9 +72,11 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 //iterating through slots we find the first empty slot
                 for(int i = 0; i<inventoryAmnt; i++){ 
                     if(slotsWithItems[i] == false){
+                        //Fill slot with item
                         slotsWithItems[i] = true;
                         itemImages[i].sprite = playerCont.HoldingSprite;
                         itemStructs[i] = playerCont.HoldingStruct;
+                        //Empty players hands
                         playerCont.HoldingItem = false;
                         playerCont.HoldingSprite = null;
                         playerCont.HoldingStruct = null;
@@ -89,6 +95,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             slotsWithItems = new bool[inventoryAmnt];
             itemStructs = new ItemStruct[inventoryAmnt];
             slotsAreFull = false;
+            //Setting inventory to empty, should change in future when saves are implemented
             for(int i = 0; i < inventoryAmnt; i++){
                 slotImages[i] = transform.Find($"Slot{i}").gameObject.GetComponent<Image>();
                 itemImages[i] = slotImages[i].transform.Find($"Item{i}").gameObject.GetComponent<Image>();
@@ -99,6 +106,8 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             }
         }
         void Update(){
+            //Corresponding slot mapped to number keys on keyboard
+            //Future implementation to include inputs via inout manager
             switch(Input.inputString){
                 case"1":
                     SelectSlot(0);
@@ -114,7 +123,8 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     break;
                 default:
                     break;
-            }   
+            } 
+            //Helps avoid non-needed work  
             slotsAreFull = Array.TrueForAll(slotsWithItems, slotWithItems => slotWithItems == true);
          }
     }

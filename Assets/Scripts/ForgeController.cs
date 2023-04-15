@@ -6,28 +6,32 @@ using UnityEngine.Tilemaps;
 namespace Com.ZiomtechStudios.ForgeExchange{
     public class ForgeController : WorkstationController{
         #region Private serialized members
+        [Header("Forge Heating.")]
         [SerializeField] private float curTemp;
         [SerializeField] private float maxTemp;
         [SerializeField] private float fuelAmnt;
         [SerializeField] private float maxFuelAmnt;
         [SerializeField] private float burnRate;
+        [Header("Forge Smelting")]
         [SerializeField] private float ttsTimer;
         [SerializeField] private float idealTTS;
         [SerializeField] private float ttsScaler;
+        [Tooltip("The Struct of the item being smelted.")] [SerializeField] private ItemStruct smeltStruct;
+        [Header("Forge Components")]
         [SerializeField] private Animator forgeAnimator;
         [SerializeField] private ForgePumpController forgePumpCont;
         [SerializeField] private StockpileController forgeStockPileCont;
+        [Header("Ore To Bar Exchange Data")]
         [SerializeField] private string[] ores;
         [SerializeField] private Sprite[] barSprites;
         [SerializeField] private ItemStruct[] barStructs;
-        [Tooltip("The Struct of the item being smelted.")] [SerializeField] private ItemStruct smeltStruct;
         #endregion
         #region Private memebers
         private int inUseHash;
         private IDictionary<string, Sprite> oresToBarsDict;
         private IDictionary<string, ItemStruct> oreBarStructDict;
         #endregion
-        #region Private Funcs
+        #region Public Funcs
         // On/Off switch for forge where base temp for forge is defined at runtime
         public void SetForge(bool state, float temp){
             InUse = state;
@@ -40,17 +44,20 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         //If the Forge is On then lets toggle it Off
         public override void ToggleUse(){
             bool hasFuel = fuelAmnt>0.0f;
-            if(!InUse && (curTemp != maxTemp) && hasFuel)
+            if(!InUse && hasFuel)
                 SetForge(true, maxTemp);
             else if(InUse)
                 SetForge(false, 0.0f);
         }
         //Smelting Ore to Metal Bar
         public override void Work(ItemStruct itemStruct){
+            //Check to see if the forge is on, its not already smelting and that it is not holding a smelted bar
             if(InUse && !DoingWork && (forgeStockPileCont.Quantity == 0)){
                 DoingWork = true;
                 smeltStruct = itemStruct;
+                //Calculate quickest time this forge could smelt given ore
                 idealTTS = (((MaxTemp+forgePumpCont.MaxBoostTemp)-smeltStruct.meltingTemp)/smeltStruct.meltingTemp) * ttsScaler;
+                //Pass the proper data about the  soon to be bar to the forge so that it will gie it to th eplayer later on
                 forgeStockPileCont.ItemStruct = oreBarStructDict[smeltStruct.itemSubTag];
                 forgeStockPileCont.ItemSprite = oresToBarsDict[smeltStruct.itemSubTag];
             }   

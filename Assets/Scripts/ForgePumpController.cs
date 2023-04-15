@@ -20,6 +20,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             CircleAmnt = forgeCont.CircleAmnt;
         }
         private float TurnOff(){
+            //
             forgeCont.SetForge(forgeCont.InUse, (forgeCont.InUse?forgeCont.MaxTemp:0.0f));
             InUse = false;
             return boostTimer;
@@ -48,15 +49,17 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         void FixedUpdate(){
             SyncUI();
             ///<summary>
-            /// If forge pump is in use and the boost timer has not reached max increment timer for boosting forge temp.
+            /// If forge pump is in use and the boost timer has not reached max Time, increment timer for boosting forge temp.
             /// If forge pump is in use and the boost timer has reached maximum allowed time turn off forge pump.
             /// If forge pump is not in use and the timer has not yet reached zero keep decrementinf the boost timer.
             /// If forge pump is not in use and the boost timer has reached zero just keep it at 0.
+            ///</sumary>
+            if(boostTimer != 0.0f)
+                boostTimer = (InUse)?(boostTimer>=timeToBoost?(TurnOff()):(boostTimer+Time.deltaTime)):((boostTimer>=0.0f)?(boostTimer-Time.deltaTime):(0.0f));
+            ///<summary>
             /// To prevent Update() from repeatedly seting boost timer to 0, the update() will check to see if the boostTimer is not 0.
             /// When setting boost timer to a number insignificantly higher than 0 when the forge pump is in use we can trigger the logic and prevent repeated assignments.
             ///</summary>
-            if(boostTimer != 0.0f)
-                boostTimer = (InUse)?(boostTimer>=timeToBoost?(TurnOff()):(boostTimer+Time.deltaTime)):((boostTimer>=0.0f)?(boostTimer-Time.deltaTime):(0.0f));
             if(forgeCont.InUse) 
                 if(InUse)
                     forgeCont.CurTemp = Mathf.Lerp(forgeCont.MaxTemp, (forgeCont.MaxTemp + maxBoostTemp), boostTimer/timeToBoost);

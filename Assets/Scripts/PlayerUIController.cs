@@ -25,12 +25,16 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         void Update(){
             if(playerCont.PlayerLOS.transform != null){
                 switch(playerCont.PlayerLOS.transform.tag){
+                    //Player sees a workstation
                     case "Workstation":
                         WorkstationController  workstationCont = playerCont.PlayerLOS.transform.gameObject.GetComponent<WorkstationController>();
+                        //Move appropriate UI items to the appropriate locations near the workstation
                         circleUI.gameObject.transform.position =  playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("circleUILOC").position);
                         barUI.gameObject.transform.position = playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("barUILOC").position);
+                        //Assign Values of workstation to corresponding UI items
                         circleUI.BarValue = workstationCont.CircleAmnt;
                         barUI.BarValue = workstationCont.BarAmnt;
+                        //Toggle UI items visibility  assign Title of UI activated UI items
                         if(!circleUI.gameObject.activeInHierarchy || !barUI.gameObject.activeInHierarchy){
                             circleUI.gameObject.SetActive(true);
                             barUI.gameObject.SetActive(true);
@@ -38,8 +42,10 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                             barUI.Title = workstationCont.WorkstationUIStruct.barTitle;
                         }
                         break;
+                        //Player sees a Stockpile
                     case "Stockpile":
                         StockpileController stockpileCont = playerCont.PlayerLOS.transform.gameObject.GetComponent<StockpileController>();
+                        //Assign location value and title of coresponding UI Items
                         counterText.gameObject.transform.position = playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("counterUILOC").position);
                         counterText.text = $"{stockpileCont.Quantity}/{stockpileCont.MaxQuantity}";
                         if(!counterText.gameObject.activeInHierarchy)
@@ -50,6 +56,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 }
             }
             else{
+                //player sees nothing that is giving us UI prompts so make UI elements not needed invisible
                 circleUI.gameObject.SetActive(false);
                 barUI.gameObject.SetActive(false);
                 counterText.gameObject.SetActive(false);                                             
