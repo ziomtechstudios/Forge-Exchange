@@ -75,9 +75,11 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     else
                         return true;
                 case "Ore":
-                    workstationCont.Work(holdingStruct);
-                    if(workstationCont.InUse)
+                    if(workstationCont.InUse && !workstationCont.DoingWork){
+                        workstationCont.Work(holdingStruct);
                         m_InventoryCont.DroppingItem();
+                        workstationCont.DoingWork = true;
+                    }
                     return false;
                 default:
                     return holdingItem;

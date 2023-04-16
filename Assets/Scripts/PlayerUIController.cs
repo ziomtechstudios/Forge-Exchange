@@ -10,6 +10,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private PlayerController playerCont;
         [SerializeField] private ProgressBar barUI;
         [SerializeField] private ProgressBarCircle circleUI;
+        [SerializeField] private Image itemUI;
         [SerializeField] private TextMeshProUGUI counterText;  
         #endregion     
         // Start is called before the first frame update
@@ -19,6 +20,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             circleUI = playerCam.transform.Find("Canvas/circleUI").gameObject.GetComponent<ProgressBarCircle>();
             barUI = playerCam.transform.Find("Canvas/barUI").gameObject.GetComponent<ProgressBar>();
             counterText = playerCam.transform.Find("Canvas/CounterText").gameObject.GetComponent<TextMeshProUGUI>();
+            itemUI = playerCam.transform.Find("Canvas/itemImage").gameObject.GetComponent<Image>();
 
         }
         // Update is called once per frame
@@ -41,6 +43,14 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                             circleUI.Title = workstationCont.WorkstationUIStruct.circleTitle;
                             barUI.Title = workstationCont.WorkstationUIStruct.barTitle;
                         }
+                        StockpileController stockPileCont = playerCont.PlayerLOS.transform.gameObject.GetComponent<StockpileController>();
+                        if((stockPileCont != null || (playerCont.PlayerLOS.transform.gameObject.GetComponent<ForgePumpController>() != null)) && (stockPileCont.Quantity != 0)){
+                            itemUI.gameObject.transform.position = playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("smeltedUILOC").position);
+                            itemUI.gameObject.SetActive(true);
+                            itemUI.sprite = stockPileCont.ItemSprite;
+                        }
+                        else if(stockPileCont.Quantity == 0 && itemUI.gameObject.activeInHierarchy)
+                            itemUI.gameObject.SetActive(false);
                         break;
                         //Player sees a Stockpile
                     case "Stockpile":
@@ -59,7 +69,9 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 //player sees nothing that is giving us UI prompts so make UI elements not needed invisible
                 circleUI.gameObject.SetActive(false);
                 barUI.gameObject.SetActive(false);
-                counterText.gameObject.SetActive(false);                                             
+                counterText.gameObject.SetActive(false); 
+                itemUI.gameObject.SetActive(false);
+
             }
         }  
     }

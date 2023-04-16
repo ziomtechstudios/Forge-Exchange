@@ -9,6 +9,7 @@ TagManager:
   - Forge Tool
   - Workstation
   - Stockpile
+  - UI
   layers:
   - Default
   - TransparentFX

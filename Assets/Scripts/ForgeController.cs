@@ -21,6 +21,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private Animator forgeAnimator;
         [SerializeField] private ForgePumpController forgePumpCont;
         [SerializeField] private StockpileController forgeStockPileCont;
+        //[SerializeField] private GameObject 
         [Header("Ore To Bar Exchange Data")]
         [SerializeField] private string[] ores;
         [SerializeField] private Sprite[] barSprites;
@@ -53,7 +54,6 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         public override void Work(ItemStruct itemStruct){
             //Check to see if the forge is on, its not already smelting and that it is not holding a smelted bar
             if(InUse && !DoingWork && (forgeStockPileCont.Quantity == 0)){
-                DoingWork = true;
                 smeltStruct = itemStruct;
                 //Calculate quickest time this forge could smelt given ore
                 idealTTS = (((MaxTemp+forgePumpCont.MaxBoostTemp)-smeltStruct.meltingTemp)/smeltStruct.meltingTemp) * ttsScaler;
@@ -104,6 +104,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     if(ttsTimer >= idealTTS){
                         DoingWork = !forgeStockPileCont.Deposit(1);
                         ttsTimer = 0.0f;
+
                     }
                 }
             }
