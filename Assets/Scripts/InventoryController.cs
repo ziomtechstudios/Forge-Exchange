@@ -77,9 +77,11 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                         itemImages[i].sprite = playerCont.HoldingSprite;
                         itemStructs[i] = playerCont.HoldingStruct;
                         //Empty players hands
-                        playerCont.HoldingItem = false;
-                        playerCont.HoldingSprite = null;
-                        playerCont.HoldingStruct = null;
+                        if(slotsWithItems[i] != slotsInUse[i]){
+                            playerCont.HoldingItem = false;
+                            playerCont.HoldingSprite = null;
+                            playerCont.HoldingStruct = null;
+                        }
                         break;
                     }
                 }

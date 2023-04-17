@@ -48,7 +48,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             holdingSprite = stockpileCont.ItemSprite;
             holdingStruct = stockpileCont.ItemStruct;
             m_InventoryCont.SlotItem();
-            return !stockpileCont.Withdraw(1);
+            return (!stockpileCont.Withdraw(1) || (holdingSprite != null));
         }
         public bool UseWorkstation(){
             stockpileCont = hit.transform.GetComponent<StockpileController>();
