@@ -10,14 +10,12 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private int quantity;
         [SerializeField] private int maxQuantity;
         [Header("Item data")]
-        [SerializeField] private Sprite itemSprite;
-        [SerializeField] private ItemStruct itemStruct;
+        [SerializeField] private GameObject itemPrefab;
         #endregion
         #region Getters/Setter
         public int Quantity{get{return quantity;}}
         public int MaxQuantity{get{return maxQuantity;}set{maxQuantity = value;}}
-        public Sprite ItemSprite{get{return itemSprite;}set{itemSprite = value;}}
-        public ItemStruct ItemStruct{get{return itemStruct;}set{itemStruct = value;}}
+        public GameObject ItemPrefab{get{return itemPrefab;}set{itemPrefab = value;}}
         #endregion
         public bool Deposit(int amount){
             //if player can deposit item to stockpile update current quantity and return outcome

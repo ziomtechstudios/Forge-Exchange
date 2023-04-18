@@ -47,7 +47,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                         if((stockPileCont != null || (playerCont.PlayerLOS.transform.gameObject.GetComponent<ForgePumpController>() != null)) && (stockPileCont.Quantity != 0)){
                             itemUI.gameObject.transform.position = playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("smeltedUILOC").position);
                             itemUI.gameObject.SetActive(true);
-                            itemUI.sprite = stockPileCont.ItemSprite;
+                            itemUI.sprite = stockPileCont.ItemPrefab.GetComponent<SpriteRenderer>().sprite;
                         }
                         else if(stockPileCont.Quantity == 0 && itemUI.gameObject.activeInHierarchy)
                             itemUI.gameObject.SetActive(false);

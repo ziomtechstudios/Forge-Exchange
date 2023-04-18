@@ -14,8 +14,8 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private float runSpeed;
         [SerializeField] private float interactDist;
         [SerializeField] private bool holdingItem;
-        [SerializeField] private Sprite holdingSprite;
-        [SerializeField] private ItemStruct holdingStruct;
+        [SerializeField] private GameObject holdingPrefab;
+        [SerializeField] private ItemController holdingCont;
         [SerializeField] private InventoryController m_InventoryCont;
         [SerializeField] private StockpileController stockpileCont;
         #endregion
@@ -32,7 +32,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             //If what the player is holding is an appropriate item for a stockpile and the stockpile is not full we add the item
             //If the stockpile cant take in the item we set the playerHolding to true
             
-            if((stockpileCont.ItemSprite == holdingSprite)){
+            if((stockpileCont.ItemPrefab == holdingPrefab)){
                 m_InventoryCont.DroppingItem();
                 return !hit.transform.GetComponent<StockpileController>().Deposit(1);
             }
@@ -45,8 +45,8 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             if(stockpileCont==null)
                 stockpileCont = hit.transform.GetComponent<StockpileController>();
             holdingItem = true;
-            holdingSprite = stockpileCont.ItemSprite;
-            holdingStruct = stockpileCont.ItemStruct;
+            holdingPrefab = stockpileCont.ItemPrefab;
+            holdingCont = stockpileCont.ItemPrefab.GetComponent<ItemController>();
             m_InventoryCont.SlotItem();
             return !stockpileCont.Withdraw(1);
         }
@@ -61,14 +61,14 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         }
         public bool InteractWorkstation(){
             WorkstationController workstationCont = hit.transform.GetComponent<WorkstationController>();
-            switch(holdingStruct.itemTag){
+            switch(holdingCont.PrefabItemStruct.itemTag){
                 case "Fuel":
                     //First we check if this fuel deposit will be more than what the forge can handle
-                    workstationCont.Overflow(holdingStruct.fuelAmnt);
+                    workstationCont.Overflow(holdingCont.PrefabItemStruct.fuelAmnt);
                     //If the item can be used as fuel and we are not using workstation that doesnt use fuel and if refueling the workstation wont overflow
                     //Workstation that dont require fuel such as forgepump will simply have their Fuel Full boolean set to true thereby !true.
-                    if(!(holdingStruct.fuelAmnt==0.0f) && (!workstationCont.FuelFull)){
-                        workstationCont.Refuel(holdingStruct.fuelAmnt);                                                                                                 
+                    if(!(holdingCont.PrefabItemStruct.fuelAmnt==0.0f) && (!workstationCont.FuelFull)){
+                        workstationCont.Refuel(holdingCont.PrefabItemStruct.fuelAmnt);                                                                                                 
                         m_InventoryCont.DroppingItem();
                         return false;
                     }
@@ -76,7 +76,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                         return true;
                 case "Ore":
                     if(workstationCont.InUse && !workstationCont.DoingWork){
-                        workstationCont.Work(holdingStruct);
+                        workstationCont.Work(holdingCont.PrefabItemStruct);
                         m_InventoryCont.DroppingItem();
                         workstationCont.DoingWork = true;
                     }
@@ -88,8 +88,8 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         #endregion
         #region "Getter and Setters"
         public bool HoldingItem{get{return holdingItem;}set{holdingItem = value;}}
-        public Sprite HoldingSprite{get {return holdingSprite;} set{holdingSprite = value;}}
-        public ItemStruct HoldingStruct{get{return holdingStruct;}set{holdingStruct = value;}}
+        public GameObject HoldingPrefab{get{return holdingPrefab;}set{holdingPrefab = value;}}
+        public ItemController HoldingCont{get{return holdingCont;}set{holdingCont = value;}}
         #endregion
         // Start is called before the first frame update
         void Start(){

@@ -24,13 +24,11 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         //[SerializeField] private GameObject 
         [Header("Ore To Bar Exchange Data")]
         [SerializeField] private string[] ores;
-        [SerializeField] private Sprite[] barSprites;
-        [SerializeField] private ItemStruct[] barStructs;
+        [SerializeField] private GameObject[] barsPrefabs;
         #endregion
         #region Private memebers
         private int inUseHash;
-        private IDictionary<string, Sprite> oresToBarsDict;
-        private IDictionary<string, ItemStruct> oreBarStructDict;
+        private IDictionary<string, GameObject> oresToBarsDict;
         #endregion
         #region Public Funcs
         // On/Off switch for forge where base temp for forge is defined at runtime
@@ -58,8 +56,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 //Calculate quickest time this forge could smelt given ore
                 idealTTS = (((MaxTemp+forgePumpCont.MaxBoostTemp)-smeltStruct.meltingTemp)/smeltStruct.meltingTemp) * ttsScaler;
                 //Pass the proper data about the  soon to be bar to the forge so that it will gie it to th eplayer later on
-                forgeStockPileCont.ItemStruct = oreBarStructDict[smeltStruct.itemSubTag];
-                forgeStockPileCont.ItemSprite = oresToBarsDict[smeltStruct.itemSubTag];
+                forgeStockPileCont.ItemPrefab = oresToBarsDict[smeltStruct.itemSubTag];
             }   
         }
         public override void Refuel(float fuel){
@@ -84,12 +81,9 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             SetForge(false, 0.0f);
             ttsTimer = 0.0f;
             forgeStockPileCont = GetComponent<StockpileController>();
-            oresToBarsDict = new Dictionary<string, Sprite>();
-            oreBarStructDict = new Dictionary<string, ItemStruct>();
-            foreach(string ore in ores){
-                oresToBarsDict.Add(ore, barSprites[Array.IndexOf(ores, ore)]);
-                oreBarStructDict.Add(ore, barStructs[Array.IndexOf(ores, ore)]);
-             }
+            oresToBarsDict = new Dictionary<string, GameObject>();
+            foreach(string ore in ores)
+                oresToBarsDict.Add(ore, barsPrefabs[Array.IndexOf(ores, ore)]);
         }
         // Update is called once per frame
         void Update(){ 
