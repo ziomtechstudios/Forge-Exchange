@@ -94,9 +94,9 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 //If forge is not on there is no point in seeing if its smelting
                 if(DoingWork){
                     ttsTimer += ((((curTemp-smeltStruct.meltingTemp)/smeltStruct.meltingTemp)*smeltStruct.refinement)*Time.deltaTime);
-                    //Forge has smeltted ore return to player appropriate bar
+                    //Forge has s meltted ore return to player appropriate bar
                     if(ttsTimer >= idealTTS){
-                        DoingWork = !forgeStockPileCont.Deposit(1);
+                        DoingWork = !forgeStockPileCont.Deposit(1, forgeStockPileCont.ItemPrefab);
                         ttsTimer = 0.0f;
 
                     }

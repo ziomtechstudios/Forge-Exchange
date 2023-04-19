@@ -31,14 +31,10 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             StockpileController stockpileCont = hit.transform.GetComponent<StockpileController>();
             //If what the player is holding is an appropriate item for a stockpile and the stockpile is not full we add the item
             //If the stockpile cant take in the item we set the playerHolding to true
-            
-            if((stockpileCont.ItemPrefab == holdingPrefab)){
+            bool canDrop = hit.transform.GetComponent<StockpileController>().Deposit(1, holdingPrefab);
+            if(canDrop)
                 m_InventoryCont.DroppingItem();
-                return !hit.transform.GetComponent<StockpileController>().Deposit(1);
-            }
-            //If not above item? should not be able to be deposited return true to indicate player is still holding onto that item
-            else
-                return true;
+            return !canDrop;
         }
         public bool PickUpObj(){
             //Make sure we have reference to component in players LOS

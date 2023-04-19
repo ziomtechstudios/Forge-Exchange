@@ -77,10 +77,12 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                         slotPrefabs[i] = playerCont.HoldingPrefab;
                         itemConts[i] = playerCont.HoldingCont;
                         itemImages[i].sprite = playerCont.HoldingPrefab.GetComponent<SpriteRenderer>().sprite;
-                        //Empty players hands
-                        playerCont.HoldingItem = false;
-                        playerCont.HoldingPrefab = null;
-                        playerCont.HoldingCont = null;
+                        //Empty players hands only if the player isnt selecting the slot the item was just slotted into
+                        if(slotsWithItems[i] != slotsInUse[i]){
+                            playerCont.HoldingItem = false;
+                            playerCont.HoldingPrefab = null;
+                            playerCont.HoldingCont = null;
+                        }
                         break;
                     }
                 }
