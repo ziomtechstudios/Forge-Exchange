@@ -18,30 +18,27 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [Tooltip("Sprite that represents when this stockpile is empty")][SerializeField] private Sprite emptyStockpileSprite;
         [Tooltip("Sprite of what corresponding items that can fill the stockpile.")][SerializeField] private Sprite[] itemSprites;
         [Tooltip("Tag of corresponding items that can fill the stockpile.")][SerializeField] private string[] itemTags;
+        private IDictionary<string, Sprite> itemTagToSpriteDict;
         #endregion
         #region Getters/Setter
         public int Quantity{get{return quantity;}}
         public int MaxQuantity{get{return maxQuantity;}set{maxQuantity = value;}}
         public GameObject ItemPrefab{get{return itemPrefab;}set{itemPrefab = value;}}
         #endregion
-        public Sprite TakeItem(GameObject newItem){
-            ItemController m_ItemController = newItem.GetComponent<ItemController>();
+        public void TakeItem(GameObject newItem, ItemController newItemCont){
             Sprite newSprite;
-            bool canTakeItem = itemTagToSpriteDict.TryGetValue((m_ItemController.PrefabItemStruct.itemSubTag+m_ItemController.PrefabItemStruct.itemTag), out newSprite);
+            bool canTakeItem = itemTagToSpriteDict.TryGetValue((newItemCont.PrefabItemStruct.itemSubTag+newItemCont.PrefabItemStruct.itemTag), out newSprite);
             itemPrefab = (canTakeItem)?(newItem):(null);
             isEmpty = !canTakeItem;
             m_SpriteRenderer.sprite = (!isEmpty)?(newSprite):(emptyStockpileSprite);
-            return (canTakeItem)?(newSprite):(null);
         }
-        private IDictionary<string, Sprite> itemTagToSpriteDict;
-        public bool Deposit(int amount, GameObject newItem){
+        public bool Deposit(int amount, GameObject newItem, ItemController newItemCont){
             //if player can deposit item to stockpile update current quantity and return outcome
-            bool canDeposit = ((quantity+amount)<=maxQuantity);
-            quantity += (canDeposit?(amount):(0));
-            if(quantity == 0)
-                TakeItem(newItem);
-            else if(canDeposit&&(newItem == itemPrefab))
-                quantity ++;
+            bool canDeposit = (((quantity+amount)<=maxQuantity)&&itemTagToSpriteDict.ContainsKey(newItemCont.PrefabItemStruct.itemSubTag+newItemCont.PrefabItemStruct.itemTag));
+            if(quantity == 0 && canDeposit)
+                TakeItem(newItem, newItemCont);
+            if(canDeposit&&(newItem == itemPrefab))
+                quantity += amount;
             return canDeposit;
         }
         //if player can withdraw from stock item then update quantity and return outcome

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ironBarStruct
   m_EditorClassIdentifier: 
   fuelAmnt: 0
-  itemTag: Metal Bar
+  itemTag: MetalBar
   itemSubTag: Iron
   refinement: 1
   meltingTemp: 0

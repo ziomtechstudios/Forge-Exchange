@@ -96,9 +96,8 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     ttsTimer += ((((curTemp-smeltStruct.meltingTemp)/smeltStruct.meltingTemp)*smeltStruct.refinement)*Time.deltaTime);
                     //Forge has s meltted ore return to player appropriate bar
                     if(ttsTimer >= idealTTS){
-                        DoingWork = !forgeStockPileCont.Deposit(1, forgeStockPileCont.ItemPrefab);
+                        DoingWork = !forgeStockPileCont.Deposit(1, forgeStockPileCont.ItemPrefab, forgeStockPileCont.ItemPrefab.GetComponent<ItemController>());
                         ttsTimer = 0.0f;
-
                     }
                 }
             }

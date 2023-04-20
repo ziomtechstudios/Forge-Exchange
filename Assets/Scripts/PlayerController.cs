@@ -26,12 +26,12 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         private RaycastHit2D hit; 
         #endregion
         #region Public Members
-        public RaycastHit2D PlayerLOS{get{return hit;}}
+        public RaycastHit2D  PlayerLOS{get{return hit;}}
         public bool DropObj(){
             StockpileController stockpileCont = hit.transform.GetComponent<StockpileController>();
             //If what the player is holding is an appropriate item for a stockpile and the stockpile is not full we add the item
             //If the stockpile cant take in the item we set the playerHolding to true
-            bool canDrop = hit.transform.GetComponent<StockpileController>().Deposit(1, holdingPrefab);
+            bool canDrop = hit.transform.GetComponent<StockpileController>().Deposit(1, holdingPrefab, holdingCont);
             if(canDrop)
                 m_InventoryCont.DroppingItem();
             return !canDrop;

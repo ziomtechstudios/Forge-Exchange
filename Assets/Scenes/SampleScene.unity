@@ -262,9 +262,17 @@ PrefabInstance:
       value: metalBarStockPile (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1163613097570474660, guid: 5f72e3cc89bf152448d29b4889a02d05, type: 3}
+      propertyPath: quantity
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163613097570474660, guid: 5f72e3cc89bf152448d29b4889a02d05, type: 3}
       propertyPath: itemPrefab
       value: 
       objectReference: {fileID: 2541162681544386626, guid: 8dfde1c4310465a4fa4b95b328df5036, type: 3}
+    - target: {fileID: 1163613097570474660, guid: 5f72e3cc89bf152448d29b4889a02d05, type: 3}
+      propertyPath: maxQuantity
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 3676626079402623555, guid: 5f72e3cc89bf152448d29b4889a02d05, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -509,7 +517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4873532473584303274, guid: 9a7d2b9205dce33ff9814fae28cb8789, type: 3}
       propertyPath: maxBoostTemp
-      value: 100
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4873532473584303274, guid: 9a7d2b9205dce33ff9814fae28cb8789, type: 3}
       propertyPath: workstationUIStruct
@@ -610,7 +618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1163613097570474660, guid: 5f72e3cc89bf152448d29b4889a02d05, type: 3}
       propertyPath: quantity
-      value: 2
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1163613097570474660, guid: 5f72e3cc89bf152448d29b4889a02d05, type: 3}
       propertyPath: itemPrefab
@@ -618,7 +626,7 @@ PrefabInstance:
       objectReference: {fileID: 6523370096078143492, guid: c8748494eea8ad409ad06f9b781e5964, type: 3}
     - target: {fileID: 1163613097570474660, guid: 5f72e3cc89bf152448d29b4889a02d05, type: 3}
       propertyPath: maxQuantity
-      value: 2
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1163613097570474660, guid: 5f72e3cc89bf152448d29b4889a02d05, type: 3}
       propertyPath: itemSprites.Array.data[0]
@@ -1071,6 +1079,14 @@ PrefabInstance:
     - target: {fileID: 4813009242283790366, guid: c6093b62279225147bdeb22d0f9ca843, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055797447627000057, guid: c6093b62279225147bdeb22d0f9ca843, type: 3}
+      propertyPath: quantity
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055797447627000057, guid: c6093b62279225147bdeb22d0f9ca843, type: 3}
+      propertyPath: maxQuantity
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 7055797447627000057, guid: c6093b62279225147bdeb22d0f9ca843, type: 3}
       propertyPath: itemTags.Array.data[0]
@@ -1612,6 +1628,14 @@ PrefabInstance:
     - target: {fileID: 5274761725333119034, guid: 83e0c6f7c22e52240822421b29a54853, type: 3}
       propertyPath: m_Name
       value: coalSotckpile
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400380837280584065, guid: 83e0c6f7c22e52240822421b29a54853, type: 3}
+      propertyPath: quantity
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400380837280584065, guid: 83e0c6f7c22e52240822421b29a54853, type: 3}
+      propertyPath: maxQuantity
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 6400380837280584065, guid: 83e0c6f7c22e52240822421b29a54853, type: 3}
       propertyPath: itemTags.Array.data[0]
@@ -7876,11 +7900,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6001479004233925187, guid: ed908d067836a27448afb9964e27649c, type: 3}
       propertyPath: itemTags.Array.data[0]
-      value: Copper
+      value: CopperMetalBar
       objectReference: {fileID: 0}
     - target: {fileID: 6001479004233925187, guid: ed908d067836a27448afb9964e27649c, type: 3}
       propertyPath: itemTags.Array.data[1]
-      value: Iron
+      value: IronMetalBar
       objectReference: {fileID: 0}
     - target: {fileID: 6001479004233925187, guid: ed908d067836a27448afb9964e27649c, type: 3}
       propertyPath: itemSprites.Array.data[0]
@@ -7895,8 +7919,20 @@ PrefabInstance:
       value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 8359663826784483634, guid: ed908d067836a27448afb9964e27649c, type: 3}
+      propertyPath: ores.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359663826784483634, guid: ed908d067836a27448afb9964e27649c, type: 3}
+      propertyPath: ores.Array.data[0]
+      value: Copper
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359663826784483634, guid: ed908d067836a27448afb9964e27649c, type: 3}
+      propertyPath: ores.Array.data[1]
+      value: Iron
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359663826784483634, guid: ed908d067836a27448afb9964e27649c, type: 3}
       propertyPath: barsPrefabs.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8359663826784483634, guid: ed908d067836a27448afb9964e27649c, type: 3}
       propertyPath: barStructs.Array.data[0]
@@ -7906,6 +7942,10 @@ PrefabInstance:
       propertyPath: barsPrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 8861168423362456300, guid: 8bacc4916a6920eab83847253d70398d, type: 3}
+    - target: {fileID: 8359663826784483634, guid: ed908d067836a27448afb9964e27649c, type: 3}
+      propertyPath: barsPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 8270811349214939455, guid: 943a766fd6ce97340b45090be25ad7f1, type: 3}
     - target: {fileID: 8359663826784483636, guid: ed908d067836a27448afb9964e27649c, type: 3}
       propertyPath: m_RootOrder
       value: 0
