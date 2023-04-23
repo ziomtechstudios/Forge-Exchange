@@ -40,10 +40,12 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             //Make sure we have reference to component in players LOS
             if(stockpileCont==null)
                 stockpileCont = hit.transform.GetComponent<StockpileController>();
-            holdingItem = true;
-            holdingPrefab = stockpileCont.ItemPrefab;
-            holdingCont = stockpileCont.ItemPrefab.GetComponent<ItemController>();
-            m_InventoryCont.SlotItem();
+            if(stockpileCont.Quantity != 0){
+                holdingItem = true;
+                holdingPrefab = stockpileCont.ItemPrefab;
+                holdingCont = stockpileCont.ItemPrefab.GetComponent<ItemController>();
+                m_InventoryCont.SlotItem();
+            }
             return !stockpileCont.Withdraw(1);
         }
         public bool UseWorkstation(){

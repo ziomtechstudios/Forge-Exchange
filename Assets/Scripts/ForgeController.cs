@@ -92,7 +92,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 //Burn fuel
                 fuelAmnt -= (burnRate*Time.deltaTime+(forgePumpCont.InUse?(burnRate*Time.deltaTime):(0.0f)));
                 //If forge is not on there is no point in seeing if its smelting
-                if(DoingWork){
+                if(DoingWork && (CurTemp >= smeltStruct.meltingTemp)){
                     ttsTimer += ((((curTemp-smeltStruct.meltingTemp)/smeltStruct.meltingTemp)*smeltStruct.refinement)*Time.deltaTime);
                     //Forge has s meltted ore return to player appropriate bar
                     if(ttsTimer >= idealTTS){

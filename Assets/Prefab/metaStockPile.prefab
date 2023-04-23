@@ -12,6 +12,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -3215250212173296945, guid: d6e806b80494b6c45bc6a1883cb06696, type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 2541162681544386626, guid: 8dfde1c4310465a4fa4b95b328df5036, type: 3}
+    - target: {fileID: -3215250212173296945, guid: d6e806b80494b6c45bc6a1883cb06696, type: 3}
       propertyPath: maxQuantity
       value: 2
       objectReference: {fileID: 0}
@@ -25,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3215250212173296945, guid: d6e806b80494b6c45bc6a1883cb06696, type: 3}
       propertyPath: itemTags.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -3215250212173296945, guid: d6e806b80494b6c45bc6a1883cb06696, type: 3}
       propertyPath: emptyStockpileSprite
@@ -33,7 +37,7 @@ PrefabInstance:
       objectReference: {fileID: 1052452066, guid: acef24146fdefa2a78b4c030450569ec, type: 3}
     - target: {fileID: -3215250212173296945, guid: d6e806b80494b6c45bc6a1883cb06696, type: 3}
       propertyPath: itemSprites.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -3215250212173296945, guid: d6e806b80494b6c45bc6a1883cb06696, type: 3}
       propertyPath: itemTags.Array.data[0]
@@ -45,7 +49,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3215250212173296945, guid: d6e806b80494b6c45bc6a1883cb06696, type: 3}
       propertyPath: itemTags.Array.data[2]
-      value: IronOre
+      value: GreenOre
       objectReference: {fileID: 0}
     - target: {fileID: -3215250212173296945, guid: d6e806b80494b6c45bc6a1883cb06696, type: 3}
       propertyPath: itemTags.Array.data[3]
@@ -62,7 +66,7 @@ PrefabInstance:
     - target: {fileID: -3215250212173296945, guid: d6e806b80494b6c45bc6a1883cb06696, type: 3}
       propertyPath: itemSprites.Array.data[2]
       value: 
-      objectReference: {fileID: 1102796783, guid: acef24146fdefa2a78b4c030450569ec, type: 3}
+      objectReference: {fileID: 1399455400, guid: acef24146fdefa2a78b4c030450569ec, type: 3}
     - target: {fileID: -3215250212173296945, guid: d6e806b80494b6c45bc6a1883cb06696, type: 3}
       propertyPath: itemSprites.Array.data[3]
       value: 
@@ -245,11 +249,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4211691359913814670, guid: d6e806b80494b6c45bc6a1883cb06696, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.918
       objectReference: {fileID: 0}
     - target: {fileID: 4211691359913814670, guid: d6e806b80494b6c45bc6a1883cb06696, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.017
       objectReference: {fileID: 0}
     - target: {fileID: 4211691359913814670, guid: d6e806b80494b6c45bc6a1883cb06696, type: 3}
       propertyPath: m_LocalPosition.z
