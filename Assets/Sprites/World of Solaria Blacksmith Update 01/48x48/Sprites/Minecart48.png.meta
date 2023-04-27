@@ -137,6 +137,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -145,9 +169,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 720
+        y: 672
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,9 +190,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 720
+        y: 672
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,9 +211,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 720
+        y: 672
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,9 +232,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 336
-        y: 720
+        y: 672
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,9 +253,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 672
+        y: 576
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,9 +274,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 672
+        y: 576
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,9 +295,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 672
+        y: 576
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,9 +316,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 336
-        y: 672
+        y: 576
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,9 +337,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 624
+        y: 480
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,9 +358,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 624
+        y: 480
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,9 +379,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 624
+        y: 480
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,9 +400,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 336
-        y: 624
+        y: 480
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,9 +421,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 576
+        y: 384
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,9 +442,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 576
+        y: 384
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,9 +463,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 576
+        y: 384
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -460,9 +484,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 336
-        y: 576
+        y: 384
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -472,342 +496,6 @@ TextureImporter:
       bones: []
       spriteID: a4ea2b13fb1b476d0869b7aa4fa2f07a
       internalID: 736104689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_16
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aad16909ed72208b1a305a2339f06e8f
-      internalID: 865093658
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_17
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8662db8d676d82179b9688b6cc96ad3a
-      internalID: -553387169
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_18
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b5956295ea79c5a48a042d852680cdf
-      internalID: -900731503
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_19
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97c06b348b8464daeb10d9006ee5599f
-      internalID: -964965635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_20
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 480
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96053ba0f0adf2595afa15d770ca06e2
-      internalID: -458825524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_21
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 480
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab180cebfcbc4d5579e6c05a5eee72e8
-      internalID: -525853741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_22
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 480
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac360543c3c5927c898e59109ce7470b
-      internalID: -1744840145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_23
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 480
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e351d870f4168ca86ab85b42f8b34273
-      internalID: 426077400
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_24
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0bcff685bec24619a9f66091677d8ef0
-      internalID: 1220083319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_25
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 740254820d256f89ba486a2bea6acbbf
-      internalID: 1785344954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_26
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 686eafafbdb40b0dabc07b6545950284
-      internalID: -2092255749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_27
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00843c560f93f7739b33149dcbb31e39
-      internalID: -1506282039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_28
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 384
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 882ed1ce246f3622c81db62f6e82dc86
-      internalID: -1860245584
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_29
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 384
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5de87cb6904bb2651bae26af30769ebf
-      internalID: -645979466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_30
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 384
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8fef0ca9fd8f87ab9cc55a4deb643af
-      internalID: 1904598114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minecart48_31
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 384
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a084992f202fa2f5b9187614937a4f4
-      internalID: -1557020553
       vertices: []
       indices: 
       edges: []
@@ -824,37 +512,21 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Minecart48_0: 1091579033
-      Minecart48_20: -458825524
-      Minecart48_25: 1785344954
-      Minecart48_15: 736104689
-      Minecart48_5: -935674642
-      Minecart48_26: -2092255749
-      Minecart48_30: 1904598114
-      Minecart48_7: -808756897
-      Minecart48_4: 1376071573
-      Minecart48_14: -1355206124
-      Minecart48_21: -525853741
-      Minecart48_13: 1695829349
-      Minecart48_29: -645979466
-      Minecart48_2: -923746838
-      Minecart48_9: 1448307111
-      Minecart48_31: -1557020553
-      Minecart48_11: -222834705
-      Minecart48_22: -1744840145
       Minecart48_1: 1857788707
-      Minecart48_19: -964965635
-      Minecart48_6: -766754896
-      Minecart48_16: 865093658
-      Minecart48_12: 1176462761
-      Minecart48_24: 1220083319
       Minecart48_10: 1592371022
+      Minecart48_11: -222834705
+      Minecart48_12: 1176462761
+      Minecart48_13: 1695829349
+      Minecart48_14: -1355206124
+      Minecart48_15: 736104689
+      Minecart48_2: -923746838
       Minecart48_3: -286862450
+      Minecart48_4: 1376071573
+      Minecart48_5: -935674642
+      Minecart48_6: -766754896
+      Minecart48_7: -808756897
       Minecart48_8: 2122092335
-      Minecart48_17: -553387169
-      Minecart48_23: 426077400
-      Minecart48_18: -900731503
-      Minecart48_28: -1860245584
-      Minecart48_27: -1506282039
+      Minecart48_9: 1448307111
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

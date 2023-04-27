@@ -44,7 +44,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             boostTimer = 0.0f;
             SyncUI();
             InUse = false;
-            FuelFull = true;
+            BarFull = true;
         }
         void FixedUpdate(){
             SyncUI();

@@ -354,53 +354,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_21
-      rect:
-        serializedVersion: 2
-        x: 1008
-        y: 720
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c85fc8a237ca0c4d99679f954f8776ee
-      internalID: 1976149126
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_22
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 720
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 120da03a70358727faaa3a0e7dec6d53
-      internalID: 1649579902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_23
       rect:
         serializedVersion: 2
-        x: 0
-        y: 672
+        x: 48
+        y: 720
         width: 48
         height: 48
       alignment: 0
@@ -438,75 +396,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_25
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 672
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 309bb58336fac19618e3771aeec4f3c5
-      internalID: -2022993761
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_26
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 672
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc57949b632b2a535b30b3d200265cb8
-      internalID: 1683829072
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_27
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 672
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e99b0d9709783c956b7061ca695a36c0
-      internalID: -1820751458
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_28
       rect:
         serializedVersion: 2
         x: 240
         y: 672
-        width: 48
+        width: 96
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -517,27 +412,6 @@ TextureImporter:
       bones: []
       spriteID: dc1f380fa471935bcab9809ae84d658b
       internalID: 232652641
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_29
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 672
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d754b75b299a4a25b6b677c178fa89c
-      internalID: 2112074163
       vertices: []
       indices: 
       edges: []
@@ -774,55 +648,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_42
-      rect:
-        serializedVersion: 2
-        x: 1008
-        y: 672
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96c06ff7287e785f6959707fc403423a
-      internalID: 974780309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_43
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 672
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 505fe7c6ff4bf06ad8e2f6d6c35db4fe
-      internalID: -983030253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_44
       rect:
         serializedVersion: 2
         x: 0
         y: 624
         width: 48
-        height: 48
+        height: 144
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -863,8 +695,8 @@ TextureImporter:
         serializedVersion: 2
         x: 96
         y: 624
-        width: 48
-        height: 48
+        width: 144
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -874,48 +706,6 @@ TextureImporter:
       bones: []
       spriteID: fb4690188a1bcb0b8b1febf39252accd
       internalID: 910068498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_47
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 624
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39e8c261f0c48434fa045bb8d1fdbd60
-      internalID: -39948970
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_48
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 624
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34191f476e388d57a810d4459ef16bc8
-      internalID: -1644127182
       vertices: []
       indices: 
       edges: []
@@ -958,111 +748,6 @@ TextureImporter:
       bones: []
       spriteID: 405164e1c10dfe7c4969caaf4e762035
       internalID: 879661832
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_51
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 624
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b6b2cd7126e414c184d69a5075abea1
-      internalID: -1332181395
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_52
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 624
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68fc4f2771a02b11cb6ec6df48c1beab
-      internalID: 1188180705
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_53
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 624
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ac77be63d124dfe395611579485cf79
-      internalID: 1097329981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_54
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 624
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a646b724f4f0fec0cb8ca22f068f1678
-      internalID: 1491817745
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_55
-      rect:
-        serializedVersion: 2
-        x: 528
-        y: 624
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d480ae1e35614a62a92c8ecb6a66a64
-      internalID: -979584891
       vertices: []
       indices: 
       edges: []
@@ -1257,48 +942,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_65
-      rect:
-        serializedVersion: 2
-        x: 1008
-        y: 624
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4dd90d312ef7301bf86e98b8734e3fac
-      internalID: -1534984102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_66
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 624
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08efa5d56a66c07f69957733311d0f66
-      internalID: -246363637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_67
       rect:
         serializedVersion: 2
@@ -1341,54 +984,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_69
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 576
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7fc4a7a971d80df88bf62fb35b9156d
-      internalID: -1217636901
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_70
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 576
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c97f075249e73ce7b5b5446f21349e3
-      internalID: 50684145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_71
       rect:
         serializedVersion: 2
         x: 240
         y: 576
-        width: 48
+        width: 96
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1404,34 +1005,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_72
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 576
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdd1369431e8840b680b8ef1a072ced3
-      internalID: -348387269
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_73
       rect:
         serializedVersion: 2
         x: 336
         y: 576
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1452,7 +1032,7 @@ TextureImporter:
         x: 384
         y: 576
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1473,7 +1053,7 @@ TextureImporter:
         x: 432
         y: 576
         width: 48
-        height: 54
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1494,7 +1074,7 @@ TextureImporter:
         x: 480
         y: 576
         width: 48
-        height: 54
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1515,7 +1095,7 @@ TextureImporter:
         x: 528
         y: 576
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1575,7 +1155,7 @@ TextureImporter:
       name: Blacksmith Decoration48_80
       rect:
         serializedVersion: 2
-        x: 672
+        x: 671
         y: 576
         width: 48
         height: 48
@@ -1640,8 +1220,8 @@ TextureImporter:
         serializedVersion: 2
         x: 1008
         y: 576
-        width: 48
-        height: 48
+        width: 96
+        height: 192
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1651,27 +1231,6 @@ TextureImporter:
       bones: []
       spriteID: 611ad04dec85e61c2b869be7e8e74ea0
       internalID: 1502186292
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_84
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 576
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5db6853b85df3400a9bf805bb73f13c9
-      internalID: -2139509416
       vertices: []
       indices: 
       edges: []
@@ -1746,7 +1305,7 @@ TextureImporter:
         x: 144
         y: 528
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1767,7 +1326,7 @@ TextureImporter:
         x: 192
         y: 528
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1787,7 +1346,7 @@ TextureImporter:
         serializedVersion: 2
         x: 240
         y: 528
-        width: 48
+        width: 96
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1798,132 +1357,6 @@ TextureImporter:
       bones: []
       spriteID: 27fd695d74ea193e7a65bfca1d4c646d
       internalID: -962936217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_91
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42cf845bc5f95cbdda0a9fdaf49997d4
-      internalID: -1819383730
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_92
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 815e22fbfd2bae847a9807827ced249a
-      internalID: 396625451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_93
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d4e0e10b72d18c1dbb5610be1f1d1f0
-      internalID: 900562750
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_94
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5cadd90115bddb14aac0191733c21ef
-      internalID: -244119075
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_95
-      rect:
-        serializedVersion: 2
-        x: 528
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad7194a1fbc5acce8ace2137602917b1
-      internalID: -1610760213
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_96
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 571a4d944532547f8b2e2d316e3a4a48
-      internalID: -1983625373
       vertices: []
       indices: 
       edges: []
@@ -1945,27 +1378,6 @@ TextureImporter:
       bones: []
       spriteID: e0567986bc4b616b39341523c2d6b439
       internalID: 1633830894
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_98
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e55d7204d718493478b156bfa8b2f833
-      internalID: -523273582
       vertices: []
       indices: 
       edges: []
@@ -2029,90 +1441,6 @@ TextureImporter:
       bones: []
       spriteID: 7504b9a6305c06effbe72d203df33961
       internalID: -2104797352
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_102
-      rect:
-        serializedVersion: 2
-        x: 864
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eac5ab6a7adda0e5f9378bfcc50aa504
-      internalID: 1235307366
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_103
-      rect:
-        serializedVersion: 2
-        x: 912
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5dbd174391fde9c3e9574b034db6975a
-      internalID: -55140246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_104
-      rect:
-        serializedVersion: 2
-        x: 1008
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd3ac6f1e31d0c5dd9459464b00b0082
-      internalID: 174745605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_105
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9c880253cee291809da17d8dd4dcd0a
-      internalID: 860924583
       vertices: []
       indices: 
       edges: []
@@ -2265,76 +1593,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_113
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 480
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02cc5b8f0cbe2f162b904019a59002e3
-      internalID: -1999878288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_114
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 480
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27612a86d4c58fe99bd920f2a9b26511
-      internalID: 1868949472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_115
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 480
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44ebf396a1d997539932fae0da3d50ea
-      internalID: 1662235118
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_116
       rect:
         serializedVersion: 2
         x: 528
         y: 480
-        width: 48
-        height: 48
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2344,27 +1609,6 @@ TextureImporter:
       bones: []
       spriteID: 7b59c5a3bae4433cfba04f4b7bf3ce43
       internalID: 272988388
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_117
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 480
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b5e3cae55fa3eb84a9e25f9e3c661ac
-      internalID: 87821119
       vertices: []
       indices: 
       edges: []
@@ -2397,7 +1641,7 @@ TextureImporter:
         x: 672
         y: 480
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2480,8 +1724,8 @@ TextureImporter:
         serializedVersion: 2
         x: 864
         y: 480
-        width: 48
-        height: 48
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2491,111 +1735,6 @@ TextureImporter:
       bones: []
       spriteID: c6363a16d0a6cfdc7abd041357749e28
       internalID: 1403109799
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_124
-      rect:
-        serializedVersion: 2
-        x: 912
-        y: 480
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74ceb28fd4d59a6dc993301e66819192
-      internalID: -8021572
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_125
-      rect:
-        serializedVersion: 2
-        x: 1008
-        y: 480
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d087fe8077e82210b1fd1aed3e162b0
-      internalID: -455481325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_126
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 480
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fbed5e9349da3ac618542396ca96ed25
-      internalID: -1110667106
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_127
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6559d54c4f97643c8cc48fc99f46be6
-      internalID: -1338484577
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_128
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4051b41ee9b6ed9e58835d001c573ccd
-      internalID: -850731334
       vertices: []
       indices: 
       edges: []
@@ -2711,8 +1850,8 @@ TextureImporter:
         serializedVersion: 2
         x: 384
         y: 432
-        width: 48
-        height: 48
+        width: 144
+        height: 144
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2727,54 +1866,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_135
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 499160814b5ee98ac9dcb1b28b45b8a2
-      internalID: 1941977412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_136
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c229620874d58d59b78508a5182b58d
-      internalID: 61659380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_137
       rect:
         serializedVersion: 2
         x: 624
         y: 432
-        width: 48
+        width: 96
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2785,48 +1882,6 @@ TextureImporter:
       bones: []
       spriteID: 8de4f6399de6a30e8a102846da698956
       internalID: 951157996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_138
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84d086c8ab6f71fb1bf2cebcf95e06a6
-      internalID: 1223063168
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_139
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d7aea6af973c06a885173c0c4546116
-      internalID: 715115085
       vertices: []
       indices: 
       edges: []
@@ -2895,55 +1950,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_143
-      rect:
-        serializedVersion: 2
-        x: 1008
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7a3bfb10798d3b649753ca53fa217b5
-      internalID: -764935682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_144
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23bdb999877ba6e169a335e5d95a7ac8
-      internalID: -855984975
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_145
       rect:
         serializedVersion: 2
         x: 0
         y: 384
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2964,7 +1977,7 @@ TextureImporter:
         x: 48
         y: 384
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3037,27 +2050,6 @@ TextureImporter:
       bones: []
       spriteID: 02291716ef84053c189a4ff182fac5a6
       internalID: -857705421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_150
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 384
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d0d1578d7f6706cd9c670c7a99ada3f
-      internalID: 682859843
       vertices: []
       indices: 
       edges: []
@@ -3153,7 +2145,7 @@ TextureImporter:
         x: 720
         y: 384
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3236,8 +2228,8 @@ TextureImporter:
         serializedVersion: 2
         x: 1008
         y: 384
-        width: 48
-        height: 48
+        width: 96
+        height: 192
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3247,27 +2239,6 @@ TextureImporter:
       bones: []
       spriteID: 6b891d51c61f10034b933105c07c4b7d
       internalID: 1770106634
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_161
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 384
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 461e93e4e53fc81728abb98baf68669c
-      internalID: 172717242
       vertices: []
       indices: 
       edges: []
@@ -3321,7 +2292,7 @@ TextureImporter:
         x: 240
         y: 336
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3383,7 +2354,7 @@ TextureImporter:
         serializedVersion: 2
         x: 624
         y: 336
-        width: 48
+        width: 96
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -3399,33 +2370,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_168
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 336
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52c702d6bcd025cf2aeb63162b42ea2e
-      internalID: 1824700850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_169
       rect:
         serializedVersion: 2
         x: 720
         y: 336
-        width: 48
+        width: 96
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -3441,33 +2391,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_170
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 336
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 069f2b62ba5912845ba2249404807aa1
-      internalID: 827612658
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_171
       rect:
         serializedVersion: 2
         x: 816
         y: 336
-        width: 48
+        width: 96
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -3478,69 +2407,6 @@ TextureImporter:
       bones: []
       spriteID: d8b8f6ba68fd7afe5855ae7b0bead259
       internalID: 1823374238
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_172
-      rect:
-        serializedVersion: 2
-        x: 864
-        y: 336
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7c69c24b40d3439b9df4e67915844e8
-      internalID: -346178198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_174
-      rect:
-        serializedVersion: 2
-        x: 1008
-        y: 336
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2600e3a4fd0e85e17b67892e71214558
-      internalID: -541636663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_175
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 336
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fcf23df32fe6456e1819857c717e9b2e
-      internalID: -742183909
       vertices: []
       indices: 
       edges: []
@@ -3572,7 +2438,7 @@ TextureImporter:
         serializedVersion: 2
         x: 48
         y: 288
-        width: 48
+        width: 144
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -3583,48 +2449,6 @@ TextureImporter:
       bones: []
       spriteID: 44931cbfab4901c5788f6c276f357071
       internalID: 1904695627
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_178
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 288
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b434ef5ea0ea39d3fbf60d8707b15655
-      internalID: -871094570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_179
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 288
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c8ee6924a2bf5d2e89bd589134df6446
-      internalID: -121918547
       vertices: []
       indices: 
       edges: []
@@ -3740,7 +2564,7 @@ TextureImporter:
         serializedVersion: 2
         x: 624
         y: 288
-        width: 48
+        width: 96
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -3756,33 +2580,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_188
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 288
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a16d6c1cc39ac8fbcaf497892eb925b7
-      internalID: -1211946992
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_189
       rect:
         serializedVersion: 2
         x: 720
         y: 288
-        width: 48
+        width: 96
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -3793,27 +2596,6 @@ TextureImporter:
       bones: []
       spriteID: 494e3dc8b797cc651ae5c940b185efbe
       internalID: -2067804495
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_190
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 288
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b6fa18fd6f482dcfbb65ab2090d2823
-      internalID: 191450770
       vertices: []
       indices: 
       edges: []
@@ -3856,174 +2638,6 @@ TextureImporter:
       bones: []
       spriteID: 621357ab8b62d0ad999f58949265d3ce
       internalID: -925678158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_193
-      rect:
-        serializedVersion: 2
-        x: 1008
-        y: 288
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 986b2dffd27795c4e80007a27b79afc2
-      internalID: 463242697
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_194
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 288
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5a06f643bdf191cfb3ed4b6ec682f39
-      internalID: 383426333
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_195
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 240
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d12c0a56f77d29b29ad92cf29eaa1082
-      internalID: 2114025042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_196
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 240
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed532db44fa3646f08ad65dc1677528e
-      internalID: 280126563
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_197
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 240
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e73d382304ed5d5f0aa9e2e8b3a637d4
-      internalID: -1344694579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_198
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 240
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c857416e7dab3a3389c830cdc14cc61
-      internalID: 1447573108
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_199
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 240
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4cad61d454ed1aaa38865dcadf69368d
-      internalID: 554361883
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_200
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 240
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc7b85327161fa78197e930859d59244
-      internalID: -65415036
       vertices: []
       indices: 
       edges: []
@@ -4134,55 +2748,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_207
-      rect:
-        serializedVersion: 2
-        x: 1008
-        y: 240
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b49624354980eadb7b6536e29cc8ce93
-      internalID: -1091456831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_208
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 240
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e82b4a9768ff384bf81d1608e4f86bdd
-      internalID: -693667907
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_209
       rect:
         serializedVersion: 2
         x: 0
         y: 192
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4202,8 +2774,8 @@ TextureImporter:
         serializedVersion: 2
         x: 48
         y: 192
-        width: 48
-        height: 48
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4218,34 +2790,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_211
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 192
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96eff008b28ab39f4a4442fbf2ae9446
-      internalID: -588020363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_212
       rect:
         serializedVersion: 2
         x: 144
         y: 192
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4265,8 +2816,8 @@ TextureImporter:
         serializedVersion: 2
         x: 192
         y: 192
-        width: 48
-        height: 48
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4276,27 +2827,6 @@ TextureImporter:
       bones: []
       spriteID: fe38a57c2ac4ef9ddb9d9298abced0e6
       internalID: -1464650294
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_214
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 192
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6f5b5d7a379be65ba848c194de01a09
-      internalID: 158373442
       vertices: []
       indices: 
       edges: []
@@ -4433,8 +2963,8 @@ TextureImporter:
         serializedVersion: 2
         x: 1008
         y: 192
-        width: 48
-        height: 48
+        width: 96
+        height: 192
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4444,153 +2974,6 @@ TextureImporter:
       bones: []
       spriteID: d8a1fb6061761d423aa6816c21c0f237
       internalID: 55891010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_222
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 192
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88b1abd8ef43cf220bf04b72808d0fc2
-      internalID: 1124749790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_223
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 144
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 540ebc176417352b3b72b1530c9818f9
-      internalID: 1627002440
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_224
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 144
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbb9661b6951698988d9e547a05d207e
-      internalID: -2103035323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_225
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 144
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4210c3260529e2a4086fe1accc0c54b3
-      internalID: 1388952680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_226
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 144
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a3d2f9bdda6077858223eab5f6d5bfa
-      internalID: -1644454460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_227
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 144
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97775f08833c7d48dac2187261452862
-      internalID: -1103506222
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_228
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 144
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 001a7ed078d63173c8dcfd9158809cd2
-      internalID: -955715090
       vertices: []
       indices: 
       edges: []
@@ -4722,55 +3105,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_235
-      rect:
-        serializedVersion: 2
-        x: 1008
-        y: 144
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65930ee9d7742dc27b456dcd82b8def5
-      internalID: -1737381864
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_236
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 144
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a032850c3dd7f0e7989e610182491932
-      internalID: 1129198636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_237
       rect:
         serializedVersion: 2
         x: 0
         y: 96
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4791,7 +3132,7 @@ TextureImporter:
         x: 48
         y: 96
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4812,7 +3153,7 @@ TextureImporter:
         x: 96
         y: 96
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4833,7 +3174,7 @@ TextureImporter:
         x: 144
         y: 96
         width: 48
-        height: 48
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4853,8 +3194,8 @@ TextureImporter:
         serializedVersion: 2
         x: 192
         y: 96
-        width: 48
-        height: 48
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4864,27 +3205,6 @@ TextureImporter:
       bones: []
       spriteID: ad819230a4c5dd69e98cd25ed26c87b0
       internalID: 579009667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_242
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 050ecd04d0bdf9c38b98977b4d87dfa7
-      internalID: 1882448409
       vertices: []
       indices: 
       edges: []
@@ -4974,132 +3294,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blacksmith Decoration48_247
-      rect:
-        serializedVersion: 2
-        x: 1008
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 032b6e274fdce8bc49f41c03355113e3
-      internalID: 1032970995
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_248
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79751097e24dd54ce9c98defb9595f84
-      internalID: -136876344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_249
-      rect:
-        serializedVersion: 2
-        x: 1008
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dfecb3b30119de11f93cbeb2472d65fc
-      internalID: -1904860970
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_250
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 541affa2b10d7e7538417622947abdb5
-      internalID: -2107236524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_251
-      rect:
-        serializedVersion: 2
-        x: 1008
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef0d9fc827ea7f5e3897a2ff0886d497
-      internalID: 30594907
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith Decoration48_252
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 779317b35548da3628d05efc6957efdd
-      internalID: -2009724318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blacksmith Decoration48_1
       rect:
         serializedVersion: 2
@@ -5108,7 +3302,7 @@ TextureImporter:
         width: 48
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5129,7 +3323,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5150,7 +3344,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5158,6 +3352,90 @@ TextureImporter:
       bones: []
       spriteID: 876439e0d00cfd04cb87dddbe792dfbc
       internalID: 1749830321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blacksmith Decoration48_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 720
+        width: 144
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f13de0d50499144a62f7da4b597119
+      internalID: -513766709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blacksmith Decoration48_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 720
+        width: 96
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f7f012d5aec0d41a9f358cbf5871d2
+      internalID: 985413659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blacksmith Decoration48_6
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb425246ffe7b441b055b54556d24e8
+      internalID: -946483442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blacksmith Decoration48_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ae1a1b9a118c242958eda881e61808
+      internalID: -2058972612
       vertices: []
       indices: 
       edges: []

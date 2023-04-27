@@ -11,6 +11,7 @@ TagManager:
   - Stockpile
   - UI
   - Item
+  - Craft Table
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - player
   - workstation
   - items
-  - 
+  - stockpile
   - 
   - 
   - 
@@ -51,6 +52,6 @@ TagManager:
   - name: Workstations
     uniqueID: 1210955635
     locked: 0
-  - name: Foundation
-    uniqueID: 2941926875
+  - name: StockPile
+    uniqueID: 3485296439
     locked: 0

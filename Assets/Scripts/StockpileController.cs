@@ -24,6 +24,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         public int Quantity{get{return quantity;}}
         public int MaxQuantity{get{return maxQuantity;}set{maxQuantity = value;}}
         public GameObject ItemPrefab{get{return itemPrefab;}set{itemPrefab = value;}}
+        public bool IsEmpty {get{return isEmpty;}}
         #endregion
         public void TakeItem(GameObject newItem, ItemController newItemCont){
             Sprite newSprite;
@@ -34,22 +35,22 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         }
         public bool Deposit(int amount, GameObject newItem, ItemController newItemCont){
             //if player can deposit item to stockpile update current quantity and return outcome
-            bool canDeposit = (((quantity+amount)<=maxQuantity)&&itemTagToSpriteDict.ContainsKey(newItemCont.PrefabItemStruct.itemSubTag+newItemCont.PrefabItemStruct.itemTag));
-            if(quantity == 0 && canDeposit)
+            if(isEmpty && itemTagToSpriteDict.ContainsKey(newItemCont.PrefabItemStruct.itemSubTag+newItemCont.PrefabItemStruct.itemTag))
                 TakeItem(newItem, newItemCont);
-            if(canDeposit&&(newItem == itemPrefab))
+            if(((quantity+amount)<=maxQuantity)&&(newItem == itemPrefab)){
                 quantity += amount;
-            return canDeposit;
+                return true;
+            }
+            else
+                return false;
         }
         //if player can withdraw from stock item then update quantity and return outcome
-        public bool Withdraw(int amount){
-            bool canWithdraw = ((quantity-amount)>=0);
-            quantity -=(canWithdraw?(amount):(0));
+        public void Withdraw(int amount){
+            quantity -=(((quantity-amount)>=0)?(amount):(0));
             //if empty get rid of 
-            isEmpty = quantity==0;
+            isEmpty = (quantity==0);
             m_SpriteRenderer.sprite = (isEmpty)?(emptyStockpileSprite):(m_SpriteRenderer.sprite);
             itemPrefab = (isEmpty)?(null):(itemPrefab);
-            return canWithdraw;
         }
         public void Start(){
             m_SpriteRenderer = GetComponent<SpriteRenderer>();

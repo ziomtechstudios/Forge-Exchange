@@ -173,7 +173,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +194,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +215,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,7 +236,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,90 +244,6 @@ TextureImporter:
       bones: []
       spriteID: 6f4a02d192e2570ada6e3b16e51be281
       internalID: 844680912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 720
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b1a13000f3cc3904b8c647f3433f8a9
-      internalID: -715961822
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_5
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 720
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c57e37169712f8f49360393a1a56cad
-      internalID: -1018353230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_6
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 720
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e4b2be320a54965789b40ce7583af40
-      internalID: 53264279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_7
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 720
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b1b44fa11aa4fb59aee3f290244e174
-      internalID: 876723313
       vertices: []
       indices: 
       edges: []
@@ -341,7 +257,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,7 +278,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,7 +299,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -404,7 +320,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -423,9 +339,9 @@ TextureImporter:
         x: 192
         y: 672
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -444,9 +360,9 @@ TextureImporter:
         x: 240
         y: 672
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -465,9 +381,9 @@ TextureImporter:
         x: 288
         y: 672
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -486,9 +402,9 @@ TextureImporter:
         x: 336
         y: 672
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -509,7 +425,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -530,7 +446,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -551,7 +467,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -572,7 +488,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -580,90 +496,6 @@ TextureImporter:
       bones: []
       spriteID: 4d43e31134fefd27ba672ad426b908fd
       internalID: -713379502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_20
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 624
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2dc88ff3999d0d2b682fd9cecbf3d173
-      internalID: 282824289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_21
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 624
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19bb87cc69fa058f899785bf09956652
-      internalID: 576708603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_22
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 624
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9acbcc2e8cfa915c9bd63963f5ab8e7
-      internalID: 58343447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_23
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 624
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68f066c080cfe9a8cbc3ba5578fac267
-      internalID: -886101363
       vertices: []
       indices: 
       edges: []
@@ -677,7 +509,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -698,7 +530,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -719,7 +551,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -740,7 +572,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -759,9 +591,9 @@ TextureImporter:
         x: 192
         y: 576
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -780,9 +612,9 @@ TextureImporter:
         x: 240
         y: 576
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -801,9 +633,9 @@ TextureImporter:
         x: 288
         y: 576
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -822,9 +654,9 @@ TextureImporter:
         x: 336
         y: 576
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -845,7 +677,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -866,7 +698,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -887,7 +719,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -908,7 +740,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -916,90 +748,6 @@ TextureImporter:
       bones: []
       spriteID: 319b7aafc892f59128f416abd57574e3
       internalID: 584364868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_36
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ae1fe9ff5b5c1911a813b9a53f4a4da
-      internalID: 1245318084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_37
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d1661dc2b760ce7d7b879a6e070b5691
-      internalID: -768680263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_38
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fccd32ebeaacb4900b16c84a1e3ae509
-      internalID: 1600852932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_39
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 528
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 180db30329272776daa1030a1e4e415c
-      internalID: -1509318969
       vertices: []
       indices: 
       edges: []
@@ -1013,7 +761,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1034,7 +782,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1055,7 +803,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1076,7 +824,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1095,9 +843,9 @@ TextureImporter:
         x: 192
         y: 480
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1116,9 +864,9 @@ TextureImporter:
         x: 240
         y: 480
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1137,9 +885,9 @@ TextureImporter:
         x: 288
         y: 480
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1158,9 +906,9 @@ TextureImporter:
         x: 336
         y: 480
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1181,7 +929,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1202,7 +950,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1223,7 +971,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1244,7 +992,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1252,90 +1000,6 @@ TextureImporter:
       bones: []
       spriteID: 9d30eed24f09e6bc59ffff5e106f2980
       internalID: 124576649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_52
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c08eca2a14804f680b9ed8461b1d97a2
-      internalID: -278547644
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_53
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a70b05fe1db10c9c0b9a902c9dc19162
-      internalID: 419068434
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_54
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00ba0ac46df277581a45aba0b7e7ba4e
-      internalID: 362981768
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blacksmith 01 48_55
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 432
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5413a1dafa2bf2197b7ece947101b06f
-      internalID: -1501151622
       vertices: []
       indices: 
       edges: []
@@ -1349,7 +1013,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1370,7 +1034,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1391,7 +1055,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1412,7 +1076,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1431,9 +1095,9 @@ TextureImporter:
         x: 192
         y: 384
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1452,9 +1116,9 @@ TextureImporter:
         x: 240
         y: 384
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1473,9 +1137,9 @@ TextureImporter:
         x: 288
         y: 384
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1494,9 +1158,9 @@ TextureImporter:
         x: 336
         y: 384
         width: 48
-        height: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1517,7 +1181,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1538,7 +1202,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1559,7 +1223,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1580,7 +1244,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1601,7 +1265,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1622,7 +1286,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1643,7 +1307,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1664,7 +1328,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1685,7 +1349,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1706,7 +1370,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1727,7 +1391,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1748,7 +1412,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1769,7 +1433,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1790,7 +1454,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1811,7 +1475,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1832,7 +1496,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1855,86 +1519,86 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Blacksmith 01 48_57: 1033565305
-      Blacksmith 01 48_11: -459455407
-      Blacksmith 01 48_49: -534334018
-      Blacksmith 01 48_52: -278547644
       Blacksmith 01 48_0: 1618939967
-      Blacksmith 01 48_72: -1939874682
-      Blacksmith 01 48_54: 362981768
-      Blacksmith 01 48_14: 1904648026
-      Blacksmith 01 48_38: 1600852932
-      Blacksmith 01 48_22: 58343447
-      Blacksmith 01 48_66: -526985184
-      Blacksmith 01 48_55: -1501151622
-      Blacksmith 01 48_78: 1033458351
-      Blacksmith 01 48_32: 1102642585
-      Blacksmith 01 48_77: -981433743
-      Blacksmith 01 48_60: 1424660182
-      Blacksmith 01 48_69: -663997972
-      Blacksmith 01 48_26: 2035613332
-      Blacksmith 01 48_50: 1707829547
-      Blacksmith 01 48_74: 43458483
-      Blacksmith 01 48_9: -1416451335
-      Blacksmith 01 48_13: -948690225
-      Blacksmith 01 48_3: 844680912
-      Blacksmith 01 48_61: 1022948975
-      Blacksmith 01 48_71: 45120509
-      Blacksmith 01 48_70: -206422237
-      Blacksmith 01 48_19: -713379502
-      Blacksmith 01 48_17: 1776266276
-      Blacksmith 01 48_33: -1462319210
-      Blacksmith 01 48_39: -1509318969
-      Blacksmith 01 48_46: 1402379041
-      Blacksmith 01 48_29: 1639131710
-      Blacksmith 01 48_34: -2083082433
-      Blacksmith 01 48_25: -1974689031
       Blacksmith 01 48_1: 426900519
-      Blacksmith 01 48_21: 576708603
-      Blacksmith 01 48_44: -759160776
-      Blacksmith 01 48_56: 765468491
-      Blacksmith 01 48_65: -897717942
-      Blacksmith 01 48_7: 876723313
-      Blacksmith 01 48_23: -886101363
-      Blacksmith 01 48_6: 53264279
-      Blacksmith 01 48_15: -1745053762
-      Blacksmith 01 48_59: -935763021
-      Blacksmith 01 48_63: 1540529307
-      Blacksmith 01 48_43: -1889182367
-      Blacksmith 01 48_37: -768680263
-      Blacksmith 01 48_75: 843568053
-      Blacksmith 01 48_18: -1014272204
-      Blacksmith 01 48_64: 1360934658
-      Blacksmith 01 48_47: -2109128249
-      Blacksmith 01 48_2: 29122737
-      Blacksmith 01 48_30: 264277859
-      Blacksmith 01 48_58: -1046257732
-      Blacksmith 01 48_41: -2144548337
-      Blacksmith 01 48_12: 1963516760
-      Blacksmith 01 48_8: -630821863
-      Blacksmith 01 48_40: 2051825459
-      Blacksmith 01 48_67: 191172145
-      Blacksmith 01 48_73: 539495214
-      Blacksmith 01 48_24: -455403140
-      Blacksmith 01 48_31: 1667631030
-      Blacksmith 01 48_35: 584364868
-      Blacksmith 01 48_48: 320027396
-      Blacksmith 01 48_4: -715961822
-      Blacksmith 01 48_62: -1548267857
-      Blacksmith 01 48_68: 293499006
-      Blacksmith 01 48_79: 1385507589
-      Blacksmith 01 48_42: -518793489
-      Blacksmith 01 48_20: 282824289
-      Blacksmith 01 48_27: 1105800301
-      Blacksmith 01 48_5: -1018353230
-      Blacksmith 01 48_45: -2083190453
       Blacksmith 01 48_10: 1459495193
-      Blacksmith 01 48_53: 419068434
+      Blacksmith 01 48_11: -459455407
+      Blacksmith 01 48_12: 1963516760
+      Blacksmith 01 48_13: -948690225
+      Blacksmith 01 48_14: 1904648026
+      Blacksmith 01 48_15: -1745053762
       Blacksmith 01 48_16: -485568672
-      Blacksmith 01 48_36: 1245318084
-      Blacksmith 01 48_76: -1800673202
-      Blacksmith 01 48_51: 124576649
+      Blacksmith 01 48_17: 1776266276
+      Blacksmith 01 48_18: -1014272204
+      Blacksmith 01 48_19: -713379502
+      Blacksmith 01 48_2: 29122737
+      Blacksmith 01 48_20: 282824289
+      Blacksmith 01 48_21: 576708603
+      Blacksmith 01 48_22: 58343447
+      Blacksmith 01 48_23: -886101363
+      Blacksmith 01 48_24: -455403140
+      Blacksmith 01 48_25: -1974689031
+      Blacksmith 01 48_26: 2035613332
+      Blacksmith 01 48_27: 1105800301
       Blacksmith 01 48_28: 1080967841
+      Blacksmith 01 48_29: 1639131710
+      Blacksmith 01 48_3: 844680912
+      Blacksmith 01 48_30: 264277859
+      Blacksmith 01 48_31: 1667631030
+      Blacksmith 01 48_32: 1102642585
+      Blacksmith 01 48_33: -1462319210
+      Blacksmith 01 48_34: -2083082433
+      Blacksmith 01 48_35: 584364868
+      Blacksmith 01 48_36: 1245318084
+      Blacksmith 01 48_37: -768680263
+      Blacksmith 01 48_38: 1600852932
+      Blacksmith 01 48_39: -1509318969
+      Blacksmith 01 48_4: -715961822
+      Blacksmith 01 48_40: 2051825459
+      Blacksmith 01 48_41: -2144548337
+      Blacksmith 01 48_42: -518793489
+      Blacksmith 01 48_43: -1889182367
+      Blacksmith 01 48_44: -759160776
+      Blacksmith 01 48_45: -2083190453
+      Blacksmith 01 48_46: 1402379041
+      Blacksmith 01 48_47: -2109128249
+      Blacksmith 01 48_48: 320027396
+      Blacksmith 01 48_49: -534334018
+      Blacksmith 01 48_5: -1018353230
+      Blacksmith 01 48_50: 1707829547
+      Blacksmith 01 48_51: 124576649
+      Blacksmith 01 48_52: -278547644
+      Blacksmith 01 48_53: 419068434
+      Blacksmith 01 48_54: 362981768
+      Blacksmith 01 48_55: -1501151622
+      Blacksmith 01 48_56: 765468491
+      Blacksmith 01 48_57: 1033565305
+      Blacksmith 01 48_58: -1046257732
+      Blacksmith 01 48_59: -935763021
+      Blacksmith 01 48_6: 53264279
+      Blacksmith 01 48_60: 1424660182
+      Blacksmith 01 48_61: 1022948975
+      Blacksmith 01 48_62: -1548267857
+      Blacksmith 01 48_63: 1540529307
+      Blacksmith 01 48_64: 1360934658
+      Blacksmith 01 48_65: -897717942
+      Blacksmith 01 48_66: -526985184
+      Blacksmith 01 48_67: 191172145
+      Blacksmith 01 48_68: 293499006
+      Blacksmith 01 48_69: -663997972
+      Blacksmith 01 48_7: 876723313
+      Blacksmith 01 48_70: -206422237
+      Blacksmith 01 48_71: 45120509
+      Blacksmith 01 48_72: -1939874682
+      Blacksmith 01 48_73: 539495214
+      Blacksmith 01 48_74: 43458483
+      Blacksmith 01 48_75: 843568053
+      Blacksmith 01 48_76: -1800673202
+      Blacksmith 01 48_77: -981433743
+      Blacksmith 01 48_78: 1033458351
+      Blacksmith 01 48_79: 1385507589
+      Blacksmith 01 48_8: -630821863
+      Blacksmith 01 48_9: -1416451335
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

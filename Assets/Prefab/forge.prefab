@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 1293721267}
   m_Layer: 8
   m_Name: forge
-  m_TagString: Workstation
+  m_TagString: Forge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
   workstationUIStruct: {fileID: 11400000, guid: d7c1726d6fe87200da0cdf1a8397c75e, type: 2}
   inUse: 0
   doingWork: 0
-  fuelFull: 0
+  barFull: 0
   barAmnt: 0
   circleAmnt: 0
   curTemp: 0
@@ -204,9 +204,11 @@ MonoBehaviour:
   ores:
   - Copper
   - Iron
+  - Green
   barsPrefabs:
   - {fileID: 8861168423362456300, guid: 8bacc4916a6920eab83847253d70398d, type: 3}
   - {fileID: 8270811349214939455, guid: 943a766fd6ce97340b45090be25ad7f1, type: 3}
+  - {fileID: 1560987628691976045, guid: bba2232027d72170d82c47614425b453, type: 3}
 --- !u!114 &6001479004233925187
 MonoBehaviour:
   m_ObjectHideFlags: 0

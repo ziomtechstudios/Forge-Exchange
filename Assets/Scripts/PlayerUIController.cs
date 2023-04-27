@@ -26,9 +26,9 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         // Update is called once per frame
         void Update(){
             if(playerCont.PlayerLOS.transform != null){
-                switch(playerCont.PlayerLOS.transform.tag){
+                switch(playerCont.PlayerLOS.transform.gameObject.layer){
                     //Player sees a workstation
-                    case "Workstation":
+                    case 8:
                         WorkstationController  workstationCont = playerCont.PlayerLOS.transform.gameObject.GetComponent<WorkstationController>();
                         //Move appropriate UI items to the appropriate locations near the workstation
                         circleUI.gameObject.transform.position =  playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("circleUILOC").position);
@@ -43,17 +43,19 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                             circleUI.Title = workstationCont.WorkstationUIStruct.circleTitle;
                             barUI.Title = workstationCont.WorkstationUIStruct.barTitle;
                         }
-                        StockpileController stockPileCont = playerCont.PlayerLOS.transform.gameObject.GetComponent<StockpileController>();
-                        if((stockPileCont != null || (playerCont.PlayerLOS.transform.gameObject.GetComponent<ForgePumpController>() != null)) && (stockPileCont.Quantity != 0)){
-                            itemUI.gameObject.transform.position = playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("smeltedUILOC").position);
-                            itemUI.gameObject.SetActive(true);
-                            itemUI.sprite = stockPileCont.ItemPrefab.GetComponent<SpriteRenderer>().sprite;
+                        if(playerCont.PlayerLOS.transform.tag != "Forge Tool"){
+                            StockpileController stockPileCont = playerCont.PlayerLOS.transform.gameObject.GetComponent<StockpileController>();
+                            if((stockPileCont != null || (playerCont.PlayerLOS.transform.gameObject.GetComponent<ForgePumpController>() != null)) && (stockPileCont.Quantity != 0)){
+                                itemUI.gameObject.transform.position = playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("smeltedUILOC").position);
+                                itemUI.gameObject.SetActive(true);
+                                itemUI.sprite = stockPileCont.ItemPrefab.GetComponent<SpriteRenderer>().sprite;
+                            }
+                            else if(stockPileCont.Quantity == 0 && itemUI.gameObject.activeInHierarchy)
+                                itemUI.gameObject.SetActive(false);
                         }
-                        else if(stockPileCont.Quantity == 0 && itemUI.gameObject.activeInHierarchy)
-                            itemUI.gameObject.SetActive(false);
                         break;
                         //Player sees a Stockpile
-                    case "Stockpile":
+                    case 10:
                         StockpileController stockpileCont = playerCont.PlayerLOS.transform.gameObject.GetComponent<StockpileController>();
                         //Assign location value and title of coresponding UI Items
                         counterText.gameObject.transform.position = playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("counterUILOC").position);

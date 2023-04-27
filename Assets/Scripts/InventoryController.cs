@@ -58,6 +58,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                         //Empty slot
                         playerCont.HoldingPrefab = null;
                         playerCont.HoldingCont = null;
+                        playerCont.HoldingItem = false;
                         itemImages[i].sprite = noItemSprite;
                         slotsWithItems[i] = false;
                         SelectSlot(-1);

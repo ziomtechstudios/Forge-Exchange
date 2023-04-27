@@ -64,7 +64,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         }
         //Checking to see if player adding fuel will amount in more fuel than the forge can hold.
         public override void Overflow(float amount){
-            FuelFull = ((fuelAmnt+amount)>maxFuelAmnt);
+            BarFull = ((fuelAmnt+amount)>maxFuelAmnt);
         }
         #endregion 
         #region Getters/Setters
