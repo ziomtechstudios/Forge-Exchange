@@ -115,7 +115,6 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             layerMask = ((1<<stockpileLayer)|(1 <<workstationLayer));
             stockpileCont = null;
         }
-
         // Update is called once per frame
         void Update(){
             ///<summary>
