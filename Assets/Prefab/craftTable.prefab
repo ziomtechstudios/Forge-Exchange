@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8774610992904272769}
   - component: {fileID: 583378844944101580}
   - component: {fileID: 2198725361258699361}
-  - component: {fileID: 2049528589391120482}
   m_Layer: 8
   m_Name: craftTable
   m_TagString: Untagged
@@ -114,27 +113,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2594043, y: 0.15916774}
   m_EdgeRadius: 0
---- !u!95 &2049528589391120482
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6386700912813093083}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6475929604743361406
 GameObject:
   m_ObjectHideFlags: 0

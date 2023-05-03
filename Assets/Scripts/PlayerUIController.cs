@@ -44,7 +44,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                             barUI.Title = workstationCont.WorkstationUIStruct.barTitle;
                         }
                         if(playerCont.PlayerLOS.transform.tag != "Forge Tool"){
-                            StockpileController stockPileCont = playerCont.PlayerLOS.transform.gameObject.GetComponent<StockpileController>();
+                            StockpileController stockPileCont = playerCon.PlayerLOS.transform.gameObject.GetComponent<StockpileController>();
                             if((stockPileCont != null || (playerCont.PlayerLOS.transform.gameObject.GetComponent<ForgePumpController>() != null)) && (stockPileCont.Quantity != 0)){
                                 itemUI.gameObject.transform.position = playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("smeltedUILOC").position);
                                 itemUI.gameObject.SetActive(true);
