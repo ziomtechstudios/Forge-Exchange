@@ -12,6 +12,9 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private ProgressBarCircle circleUI;
         [SerializeField] private Image itemUI;
         [SerializeField] private TextMeshProUGUI counterText;  
+        #endregion
+        #region Private Fields
+        private Transform circleTransform, barTransform;
         #endregion     
         // Start is called before the first frame update
         void Start(){
@@ -30,23 +33,30 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     //Player sees a workstation
                     case 8:
                         WorkstationController  workstationCont = playerCont.PlayerLOS.transform.gameObject.GetComponent<WorkstationController>();
-                        //Move appropriate UI items to the appropriate locations near the workstation
-                        circleUI.gameObject.transform.position =  playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("circleUILOC").position);
-                        barUI.gameObject.transform.position = playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("barUILOC").position);
-                        //Assign Values of workstation to corresponding UI items
-                        circleUI.BarValue = workstationCont.CircleAmnt;
-                        barUI.BarValue = workstationCont.BarAmnt;
-                        //Toggle UI items visibility  assign Title of UI activated UI items
-                        if(!circleUI.gameObject.activeInHierarchy || !barUI.gameObject.activeInHierarchy){
-                            circleUI.gameObject.SetActive(true);
-                            barUI.gameObject.SetActive(true);
-                            circleUI.Title = workstationCont.WorkstationUIStruct.circleTitle;
-                            barUI.Title = workstationCont.WorkstationUIStruct.barTitle;
+                        circleTransform = playerCont.PlayerLOS.transform.Find("circleUILOC");
+                        barTransform = playerCont.PlayerLOS.transform.Find("barUILOC");
+                        if(circleTransform != null){
+                            circleUI.gameObject.transform.position =  playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("circleUILOC").position);
+                            circleUI.BarValue = workstationCont.CircleAmnt;
+                            if(!circleUI.gameObject.activeInHierarchy){
+                                circleUI.gameObject.SetActive(true);
+                                circleUI.Title = workstationCont.WorkstationUIStruct.circleTitle;
+                            }
                         }
+                        if(barTransform != null){
+                            barUI.gameObject.transform.position = playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("barUILOC").position);
+                            barUI.BarValue = workstationCont.BarAmnt;
+                            //Toggle UI items visibility  assign Title of UI activated UI items
+                            if(!barUI.gameObject.activeInHierarchy){
+                                barUI.gameObject.SetActive(true);
+                                barUI.Title = workstationCont.WorkstationUIStruct.barTitle;
+                            }
+                        }
+
                         if(playerCont.PlayerLOS.transform.tag != "Forge Tool"){
-                            StockpileController stockPileCont = playerCon.PlayerLOS.transform.gameObject.GetComponent<StockpileController>();
+                            StockpileController stockPileCont = playerCont.PlayerLOS.transform.gameObject.GetComponent<StockpileController>();
                             if((stockPileCont != null || (playerCont.PlayerLOS.transform.gameObject.GetComponent<ForgePumpController>() != null)) && (stockPileCont.Quantity != 0)){
-                                itemUI.gameObject.transform.position = playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("smeltedUILOC").position);
+                                itemUI.gameObject.transform.position = playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("productUILOC").position);
                                 itemUI.gameObject.SetActive(true);
                                 itemUI.sprite = stockPileCont.ItemPrefab.GetComponent<SpriteRenderer>().sprite;
                             }

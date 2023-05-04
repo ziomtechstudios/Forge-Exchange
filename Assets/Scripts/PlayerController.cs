@@ -42,7 +42,9 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             //Make sure we have reference to component in players LOS
             if(stockpileCont==null)
                 stockpileCont = hit.transform.GetComponent<StockpileController>();
+            //Make sure that the stickpile is not empty
             if(!stockpileCont.IsEmpty){
+                //Occupy the objects in the players hands and have them slot it into first available slot
                 holdingItem = true;
                 holdingPrefab = stockpileCont.ItemPrefab;
                 holdingCont = stockpileCont.ItemPrefab.GetComponent<ItemController>();
@@ -81,6 +83,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                             else
                                 return true;
                         case "Ore":
+                            //Make sure that the forge is on and that its not already smelting ore(s)
                             if(workstationCont.InUse && !workstationCont.DoingWork){
                                 workstationCont.Work(holdingCont.PrefabItemStruct);
                                 m_InventoryCont.DroppingItem();

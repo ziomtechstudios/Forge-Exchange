@@ -459,6 +459,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 293479856}
     m_Modifications:
+    - target: {fileID: 1038668129, guid: 7398dcaa8c839184c8ca33de0743dd7d, type: 3}
+      propertyPath: emptyStockpileSprite
+      value: 
+      objectReference: {fileID: 1188841806, guid: 3ece0d7503142e44ab2f2e5934707fcb, type: 3}
+    - target: {fileID: 309807439974248321, guid: 7398dcaa8c839184c8ca33de0743dd7d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1d92d7f0f82ade240b5a18e0276481d6, type: 2}
     - target: {fileID: 6386700912813093083, guid: 7398dcaa8c839184c8ca33de0743dd7d, type: 3}
       propertyPath: m_Name
       value: craftTable
@@ -7689,6 +7697,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 293479856}
     m_Modifications:
+    - target: {fileID: 1293721267, guid: ed908d067836a27448afb9964e27649c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6001479004233925187, guid: ed908d067836a27448afb9964e27649c, type: 3}
+      propertyPath: itemSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 1749830321, guid: acef24146fdefa2a78b4c030450569ec, type: 3}
+    - target: {fileID: 6085750806094733662, guid: ed908d067836a27448afb9964e27649c, type: 3}
+      propertyPath: m_Name
+      value: productUILOC
+      objectReference: {fileID: 0}
     - target: {fileID: 8359663826784483636, guid: ed908d067836a27448afb9964e27649c, type: 3}
       propertyPath: m_RootOrder
       value: 0
