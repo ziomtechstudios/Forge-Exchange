@@ -8,6 +8,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
     public class PlayerController : MonoBehaviour{
         #region Private Serialized Fields
         [Header("Player Movement")]
+        [SerializeField] private bool isMoving;
         [SerializeField] private Vector2 lookDir;
         [SerializeField] private Vector2 moveDir;
         [SerializeField] private float walkSpeed;
@@ -17,14 +18,28 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private GameObject holdingPrefab;
         [SerializeField] private ItemController holdingCont;
         [SerializeField] private InventoryController m_InventoryCont;
+        [SerializeField] private PolygonCollider2D m_Collider;
         #endregion
         #region Private Fields
         private StockpileController stockpileCont;
         private WorkstationController workstationCont;
         private Animator m_Animator;
-        private int lookXHash, lookYHash, isMoving, moveXHash, moveYHash;
-        private int layerMask, stockpileLayer, workstationLayer;
+        private int lookXHash, lookYHash, isMovingHash, moveXHash, moveYHash;
+        private int layerMask, stockpileLayer, workstationLayer, boundsLayer;
         private RaycastHit2D hit; 
+        private void MovePlayer(bool moving){
+            if(moving){
+                m_Animator.SetBool(isMovingHash, true);
+                m_Animator.SetFloat(moveXHash, moveDir.x);
+                m_Animator.SetFloat(moveYHash, moveDir.y);
+                transform.Translate(moveDir*Time.deltaTime*walkSpeed);
+            }
+            else{
+                m_Animator.SetBool(isMovingHash, false);
+                m_Animator.SetFloat(lookXHash, lookDir.x);
+                m_Animator.SetFloat(lookYHash, lookDir.y);
+            }
+        }
         #endregion
         #region Public Members
         public RaycastHit2D  PlayerLOS{get{return hit;}}
@@ -112,34 +127,37 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             lookYHash = Animator.StringToHash("LookY");
             moveXHash = Animator.StringToHash("MoveX");
             moveYHash = Animator.StringToHash("MoveY");
-            isMoving = Animator.StringToHash("isMoving");
-            workstationLayer = LayerMask.NameToLayer("workstation");
-            stockpileLayer = LayerMask.NameToLayer("stockpile");
-            layerMask = ((1<<stockpileLayer)|(1 <<workstationLayer));
+            isMovingHash = Animator.StringToHash("isMoving");
+            workstationLayer = (1<<LayerMask.NameToLayer("workstation"));
+            stockpileLayer = (1<<LayerMask.NameToLayer("stockpile"));
+            boundsLayer =  (1 << LayerMask.NameToLayer("bounds"));
+            layerMask = (stockpileLayer|workstationLayer|boundsLayer);
             stockpileCont = null;
+            m_Collider = GetComponent<PolygonCollider2D>();
         }
         // Update is called once per frame
-        void Update(){
+        void FixedUpdate(){
             ///<summary>
             ///Player Movement
             ///Player movement inpurttaken as 2D Vector and is translted to movement of gameObject
             ///The last dir the player moves in is the players looking direction
             ///</summary>
             moveDir = new Vector2(Mathf.Round(Input.GetAxis("Horizontal")), Mathf.Round(Input.GetAxis("Vertical")));
-            if(moveDir!=Vector2.zero){
-                m_Animator.SetBool(isMoving, true);
-                m_Animator.SetFloat(moveXHash, moveDir.x);
-                m_Animator.SetFloat(moveYHash, moveDir.y);
-                transform.Translate(moveDir*Time.deltaTime*walkSpeed);
-                lookDir = moveDir;
-            }
-            else{
-                m_Animator.SetBool(isMoving, false);
-                m_Animator.SetFloat(lookXHash, lookDir.x);
-                m_Animator.SetFloat(lookYHash, lookDir.y);
-            }
+            isMoving = moveDir != Vector2.zero;
+            lookDir = (isMoving)?(moveDir.normalized):(lookDir);
             //Is the player looking at a interactable object + within an interactable distance?
             hit = Physics2D.Raycast(transform.position, lookDir, interactDist, layerMask); 
+            //If player wants to move
+            if(isMoving){
+                //If player is touching bounds and the player is trying to move towards the bounds
+                if((m_Collider.IsTouchingLayers(boundsLayer)) && (hit.transform != null))
+                    MovePlayer(false);
+                //The player is either no longer touching bounds or is attempting to walk away from bounds
+                else
+                    MovePlayer(true);
+                }
+            else if(!isMoving && m_Animator.GetBool(isMovingHash))
+                MovePlayer(false);
             //If so is the player prompting to interact with said item?
             if(hit.transform != null){
                 if(Input.GetButtonDown("Use")){
