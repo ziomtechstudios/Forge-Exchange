@@ -136,7 +136,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             m_Collider = GetComponent<PolygonCollider2D>();
         }
         // Update is called once per frame
-        void FixedUpdate(){
+        void Update(){
             ///<summary>
             ///Player Movement
             ///Player movement inpurttaken as 2D Vector and is translted to movement of gameObject

@@ -8,11 +8,15 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         #endregion
         #region Private Fields
         private int inUseHash;
+        private GameObject[] ingredients;
+        private string[] recipes;
+        private IDictionary<string, GameObject> craftingRecipes;
         #endregion
         #region Public Funcs
         public override void ToggleUse(){
             InUse = !InUse;
             m_Animator.SetBool(inUseHash, InUse);
+            
         }
         #endregion
         
@@ -24,7 +28,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         }
 
         // Update is called once per frame
-        void FixedUpdate(){
+        void Update(){
             
         }
     }
