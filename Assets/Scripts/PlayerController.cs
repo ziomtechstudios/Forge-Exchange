@@ -26,7 +26,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         private Animator m_Animator;
         private int lookXHash, lookYHash, isMovingHash, moveXHash, moveYHash;
         private int layerMask, stockpileLayer, workstationLayer, boundsLayer;
-        private RaycastHit2D hit; 
+        private RaycastHit2D hit;
         private void MovePlayer(bool moving){
             if(moving){
                 m_Animator.SetBool(isMovingHash, true);
@@ -112,6 +112,11 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     return holdingItem;
             }
         }
+        public OnMove(InputAction.CallbackContext context){
+            moveDir = context.ReadValue<Vector2>();
+            isMoving = moveDir != Vector2.zero;
+            lookDir = (isMoving)?(moveDir.normalized):(lookDir);
+        }
         #endregion
         #region "Getter and Setters"
         public bool HoldingItem{get{return holdingItem;}set{holdingItem = value;}}
@@ -127,6 +132,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             lookYHash = Animator.StringToHash("LookY");
             moveXHash = Animator.StringToHash("MoveX");
             moveYHash = Animator.StringToHash("MoveY");
+            isMoving = false;
             isMovingHash = Animator.StringToHash("isMoving");
             workstationLayer = (1<<LayerMask.NameToLayer("workstation"));
             stockpileLayer = (1<<LayerMask.NameToLayer("stockpile"));
@@ -142,9 +148,6 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             ///Player movement inpurttaken as 2D Vector and is translted to movement of gameObject
             ///The last dir the player moves in is the players looking direction
             ///</summary>
-            moveDir = new Vector2(Mathf.Round(Input.GetAxis("Horizontal")), Mathf.Round(Input.GetAxis("Vertical")));
-            isMoving = moveDir != Vector2.zero;
-            lookDir = (isMoving)?(moveDir.normalized):(lookDir);
             //Is the player looking at a interactable object + within an interactable distance?
             hit = Physics2D.Raycast(transform.position, lookDir, interactDist, layerMask); 
             //If player wants to move
