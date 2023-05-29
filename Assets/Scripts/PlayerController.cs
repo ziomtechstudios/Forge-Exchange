@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
+
 namespace Com.ZiomtechStudios.ForgeExchange{
     [RequireComponent(typeof(Animator))]
     public class PlayerController : MonoBehaviour{
@@ -120,8 +122,9 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             lookDir = (isMoving)?(moveDir.normalized):(lookDir);
         }
         public void OnInteraction(InputAction.CallbackContext context){
-             //If so is the player prompting to interact with said item?
-            if(hit.transform != null){
+            hit = Physics2D.Raycast(transform.position, lookDir, interactDist, layerMask);
+            //If so is the player prompting to interact with said item?
+            if (hit.transform != null && (context.started)){
                 //Diff scenarios based on what the player is interacting with
                 switch(hit.transform.gameObject.layer){
                      //Forge, Quelcher, Sandstone, etc...
@@ -135,9 +138,10 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     default:
                         break;
                 }
+                return;
             }
             else
-                stockpileCont = null;   
+                stockpileCont = null;
         }
         #endregion
         #region "Getter and Setters"

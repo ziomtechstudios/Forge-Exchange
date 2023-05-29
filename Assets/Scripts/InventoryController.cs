@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem.Interactions;
+using UnityEngine.InputSystem;
+
 namespace Com.ZiomtechStudios.ForgeExchange{
     public class InventoryController : MonoBehaviour{
         #region Serialized Fields
@@ -89,6 +92,12 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 }
             }        
         }
+        public void OnSelect(InputAction.CallbackContext context){
+            int slot = int.Parse(context.action.name) - 1;
+            SelectSlot(slot);
+            //Helps avoid non-needed work  
+            slotsAreFull = Array.TrueForAll(slotsWithItems, slotWithItems => slotWithItems == true);
+        }
         #endregion
         // Start is called before the first frame update
         void Start(){
@@ -111,26 +120,6 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             }
         }
         void Update(){
-            //Corresponding slot mapped to number keys on keyboard
-            //Future implementation to include inputs via inout manager
-            switch(Input.inputString){
-                case"1":
-                    SelectSlot(0);
-                    break;
-                case"2":
-                    SelectSlot(1);
-                    break;
-                case"3":
-                    SelectSlot(2);
-                    break;
-                case"4":
-                    SelectSlot(3);
-                    break;
-                default:
-                    break;
-            } 
-            //Helps avoid non-needed work  
-            slotsAreFull = Array.TrueForAll(slotsWithItems, slotWithItems => slotWithItems == true);
          }
     }
 }

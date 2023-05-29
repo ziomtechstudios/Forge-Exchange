@@ -31,9 +31,85 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "1",
+                    "type": "Button",
+                    "id": "786fcee8-ec72-4721-a7f1-5e0e081aec54",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "2",
+                    "type": "Button",
+                    "id": "4508fb05-3f63-4591-b2e4-4c781b3491cc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "3",
+                    "type": "Button",
+                    "id": "d2923e57-afbc-45be-99fc-ca5162ce2724",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "4",
+                    "type": "Button",
+                    "id": "dc0b72c8-574a-487e-8f1e-44cc672a6ac8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "5",
+                    "type": "Button",
+                    "id": "12a91231-5810-4eac-9ea5-848654bddc5a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "6",
+                    "type": "Button",
+                    "id": "bd918772-305e-495b-b7aa-d09d0d66e43e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
+                {
+                    "name": "",
+                    "id": "188732d4-38d2-4aaa-b16c-b3bafa94fcab",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f09e7fa6-2f7a-4a53-ae5e-cef66ba6a3ac",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
                 {
                     "name": "",
                     "id": "05aaf514-b662-4057-8757-3b0b73a2f611",
@@ -47,23 +123,67 @@
                 },
                 {
                     "name": "",
-                    "id": "90056eba-8191-4543-b8bd-0c9d93b7112f",
-                    "path": "<Gamepad>/buttonEast",
+                    "id": "c223e8c4-3a20-4ce1-b7d9-1c6416b852fd",
+                    "path": "<Keyboard>/#(1)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Interact",
+                    "action": "1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "188732d4-38d2-4aaa-b16c-b3bafa94fcab",
-                    "path": "<Gamepad>/buttonSouth",
+                    "id": "6ec35c8f-af6a-4e07-8fe9-0e57ba5de49f",
+                    "path": "<Keyboard>/#(2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Run",
+                    "action": "2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ad9e4562-460d-4f86-bfab-57678d14165d",
+                    "path": "<Keyboard>/#(3)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e2487322-7d66-4d71-8be8-80a9265c2d38",
+                    "path": "<Keyboard>/#(4)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4939a73e-6c3a-4105-a208-d88fab3ebd71",
+                    "path": "<Keyboard>/#(5)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0e652b4b-2651-428f-bb4a-36ba92ac02c7",
+                    "path": "<Keyboard>/#(6)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "6",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
