@@ -8,68 +8,64 @@
                 {
                     "name": "Move",
                     "type": "Value",
-                    "id": "854d0779-f0c2-4e20-9762-e10877e5bb8a",
+                    "id": "42e79b25-f767-4179-8d6f-3a6d397642fa",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "a921370d-44c6-41fb-9345-4f5098a30231",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Run",
+                    "type": "Button",
+                    "id": "8740021d-3e0b-4bf2-8d34-235cab377f47",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
-                    "name": "2D Vector",
-                    "id": "c672029a-3f67-4638-ab78-48bd61e4ca41",
-                    "path": "2DVector(mode=2)",
+                    "name": "",
+                    "id": "05aaf514-b662-4057-8757-3b0b73a2f611",
+                    "path": "<Joystick>/stick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Move",
-                    "isComposite": true,
+                    "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "up",
-                    "id": "3d7e7f30-18b0-48c5-8561-b08617c909ad",
-                    "path": "<Joystick>/stick/up",
+                    "name": "",
+                    "id": "90056eba-8191-4543-b8bd-0c9d93b7112f",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "Interact",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
-                    "name": "down",
-                    "id": "df0533f9-0735-4403-b833-a2e7a2156bc6",
-                    "path": "<Joystick>/stick/down",
+                    "name": "",
+                    "id": "188732d4-38d2-4aaa-b16c-b3bafa94fcab",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "Run",
                     "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "001b7ddc-11d1-4a6e-9978-727b802796ad",
-                    "path": "<Joystick>/stick/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "8a154007-6ea6-4781-951d-be3597100b13",
-                    "path": "<Joystick>/stick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 }
             ]
         }

@@ -773,7 +773,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17, y: -78}
+  m_AnchoredPosition: {x: 141, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &989033117
@@ -836,19 +836,7 @@ MonoBehaviour:
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 702535410}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_DeviceRegainedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -858,20 +846,42 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1015521341}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 702535410}
+        m_TargetAssemblyTypeName: Com.ZiomtechStudios.ForgeExchange.PlayerController,
+          Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 854d0779-f0c2-4e20-9762-e10877e5bb8a
+    m_ActionId: 42e79b25-f767-4179-8d6f-3a6d397642fa
     m_ActionName: ShopControls/Move
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 702535410}
+        m_TargetAssemblyTypeName: Com.ZiomtechStudios.ForgeExchange.PlayerController,
+          Assembly-CSharp
+        m_MethodName: OnInteraction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a921370d-44c6-41fb-9345-4f5098a30231
+    m_ActionName: ShopControls/Interact
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8740021d-3e0b-4bf2-8d34-235cab377f47
+    m_ActionName: ShopControls/Run
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: ShopControls
@@ -1108,7 +1118,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -643, y: -298}
+  m_AnchoredPosition: {x: -836, y: -232}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1395423301 stripped
@@ -1652,7 +1662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 605, y: -284}
+  m_AnchoredPosition: {x: 765, y: -134}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1789136134
@@ -1667,7 +1677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: 
+  m_ControlPath: <Gamepad>/buttonEast
 --- !u!114 &1789136135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1762,6 +1772,7 @@ GameObject:
   - component: {fileID: 1841552329}
   - component: {fileID: 1841552328}
   - component: {fileID: 1841552327}
+  - component: {fileID: 1841552330}
   m_Layer: 5
   m_Name: BButton
   m_TagString: Untagged
@@ -1786,7 +1797,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 765, y: -134}
+  m_AnchoredPosition: {x: 605, y: -284}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841552327
@@ -1871,6 +1882,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841552325}
   m_CullTransparentMesh: 1
+--- !u!114 &1841552330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841552325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/buttonSouth
 --- !u!1 &1853563432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,7 +2016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovementRange: 10
   m_DynamicOriginRange: 100
-  m_ControlPath: <Gamepad>/leftStick
+  m_ControlPath: <Joystick>/stick
   m_Behaviour: 0
   m_UseIsolatedInputActions: 0
   m_PointerDownAction:
@@ -8333,6 +8357,14 @@ PrefabInstance:
       propertyPath: layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2417434155176800258, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
+      propertyPath: lookDir.x
+      value: 2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417434155176800258, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
+      propertyPath: lookDir.y
+      value: -0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 2417434155176800262, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_Name
       value: blacksmith
@@ -8380,6 +8412,14 @@ PrefabInstance:
     - target: {fileID: 2417434155176800263, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417434155193816688, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417434155193816688, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}

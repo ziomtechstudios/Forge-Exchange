@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 namespace Com.ZiomtechStudios.ForgeExchange{
     [RequireComponent(typeof(Animator))]
     public class PlayerController : MonoBehaviour{
@@ -112,10 +113,31 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     return holdingItem;
             }
         }
-        public OnMove(InputAction.CallbackContext context){
+        public void OnMove(InputAction.CallbackContext context){
             moveDir = context.ReadValue<Vector2>();
+            Debug.Log(moveDir);
             isMoving = moveDir != Vector2.zero;
             lookDir = (isMoving)?(moveDir.normalized):(lookDir);
+        }
+        public void OnInteraction(InputAction.CallbackContext context){
+             //If so is the player prompting to interact with said item?
+            if(hit.transform != null){
+                //Diff scenarios based on what the player is interacting with
+                switch(hit.transform.gameObject.layer){
+                     //Forge, Quelcher, Sandstone, etc...
+                    case 8:
+                        holdingItem = (!holdingItem)?(UseWorkstation()):(InteractWorkstation());
+                        break;
+                    //Coal pile, wood pile, etc...
+                    case 10:
+                        holdingItem = (!holdingItem)?((m_InventoryCont.SlotsAreFull)?(false):PickUpObj()):(DropObj());
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+                stockpileCont = null;   
         }
         #endregion
         #region "Getter and Setters"
@@ -160,27 +182,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     MovePlayer(true);
                 }
             else if(!isMoving && m_Animator.GetBool(isMovingHash))
-                MovePlayer(false);
-            //If so is the player prompting to interact with said item?
-            if(hit.transform != null){
-                if(Input.GetButtonDown("Use")){
-                    //Diff scenarios based on what the player is interacting with
-                    switch(hit.transform.gameObject.layer){
-                        //Forge, Quelcher, Sandstone, etc...
-                        case 8:
-                            holdingItem = (!holdingItem)?(UseWorkstation()):(InteractWorkstation());
-                            break;
-                        //Coal pile, wood pile, etc...
-                        case 10:
-                            holdingItem = (!holdingItem)?((m_InventoryCont.SlotsAreFull)?(false):PickUpObj()):(DropObj());
-                            break;
-                        default:
-                            break;
-                    }
-                }
-            }
-            else
-                stockpileCont = null;    
+                MovePlayer(false); 
         }
     }
 }
