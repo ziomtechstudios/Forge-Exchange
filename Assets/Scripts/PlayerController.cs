@@ -12,6 +12,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         #region Private Serialized Fields
         [Header("Player Movement")]
         [SerializeField] private bool isMoving;
+        [SerializeField] private bool isRunning; 
         [SerializeField] private Vector2 lookDir;
         [SerializeField] private Vector2 moveDir;
         [SerializeField] private float walkSpeed;
@@ -35,7 +36,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 m_Animator.SetBool(isMovingHash, true);
                 m_Animator.SetFloat(moveXHash, moveDir.x);
                 m_Animator.SetFloat(moveYHash, moveDir.y);
-                transform.Translate(moveDir*Time.deltaTime*walkSpeed);
+                transform.Translate((isRunning?runSpeed:1.00f)*Time.deltaTime*walkSpeed*moveDir);
             }
             else{
                 m_Animator.SetBool(isMovingHash, false);
@@ -117,7 +118,6 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         }
         public void OnMove(InputAction.CallbackContext context){
             moveDir = context.ReadValue<Vector2>();
-            Debug.Log(moveDir);
             isMoving = moveDir != Vector2.zero;
             lookDir = (isMoving)?(moveDir.normalized):(lookDir);
         }
@@ -142,6 +142,12 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             }
             else
                 stockpileCont = null;
+        }
+        public void ToggleRun(InputAction.CallbackContext context){
+            if (context.started)
+                isRunning = true;
+            else if(context.canceled)
+                isRunning = false;
         }
         #endregion
         #region "Getter and Setters"

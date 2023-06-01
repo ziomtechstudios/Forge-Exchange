@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 namespace Com.ZiomtechStudios.ForgeExchange{
     public class PlayerUIController : MonoBehaviour{
         #region Private Serialized Fields
@@ -11,19 +12,27 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private ProgressBar barUI;
         [SerializeField] private ProgressBarCircle circleUI;
         [SerializeField] private Image itemUI;
-        [SerializeField] private TextMeshProUGUI counterText;  
+        [SerializeField] private TextMeshProUGUI counterText;
+        [SerializeField] private GameObject backPackObj;
         #endregion
         #region Private Fields
         private Transform circleTransform, barTransform;
-        #endregion     
+        #endregion
+        #region Public Members
+        public void ToggleInventory(){
+            backPackObj.SetActive(!backPackObj.activeInHierarchy);
+        }
+        #endregion
         // Start is called before the first frame update
         void Start(){
             playerCam = transform.Find("Main Camera").gameObject.GetComponent<Camera>();
             playerCont = GetComponent<PlayerController>();
-            circleUI = playerCam.transform.Find("Canvas/circleUI").gameObject.GetComponent<ProgressBarCircle>();
-            barUI = playerCam.transform.Find("Canvas/barUI").gameObject.GetComponent<ProgressBar>();
+            circleUI = playerCam.transform.Find("Canvas/LOSUI/circleUI").gameObject.GetComponent<ProgressBarCircle>();
+            barUI = playerCam.transform.Find("Canvas/LOSUI/barUI").gameObject.GetComponent<ProgressBar>();
             counterText = playerCam.transform.Find("Canvas/CounterText").gameObject.GetComponent<TextMeshProUGUI>();
             itemUI = playerCam.transform.Find("Canvas/itemImage").gameObject.GetComponent<Image>();
+            backPackObj = transform.Find("Main Camera/Canvas/Inventory/ImageInventory").gameObject;
+            backPackObj.SetActive(false);
 
         }
         // Update is called once per frame

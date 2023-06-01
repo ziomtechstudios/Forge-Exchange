@@ -20,7 +20,7 @@
                     "id": "a921370d-44c6-41fb-9345-4f5098a30231",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": true
                 },
                 {
@@ -29,7 +29,7 @@
                     "id": "8740021d-3e0b-4bf2-8d34-235cab377f47",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Hold",
                     "initialStateCheck": false
                 },
                 {
@@ -81,6 +81,15 @@
                     "name": "6",
                     "type": "Button",
                     "id": "bd918772-305e-495b-b7aa-d09d0d66e43e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Inventory Button",
+                    "type": "Button",
+                    "id": "13a17fd2-c1a1-43d8-9280-6f3b2f497732",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -184,6 +193,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "6",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "266be535-f317-4796-abaf-2df78fd9161b",
+                    "path": "<Keyboard>/#(I)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Inventory Button",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

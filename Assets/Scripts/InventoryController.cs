@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem.Interactions;
 using UnityEngine.InputSystem;
 
 namespace Com.ZiomtechStudios.ForgeExchange{
@@ -137,6 +136,10 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 slotsWithItems[i] = false;
                 slotPrefabs[i] = null;
             }
+        }
+        private void Update(){
+            if(!slotsAreFull)
+                slotsAreFull = Array.TrueForAll(slotsWithItems, slotWithItems => slotWithItems == true);
         }
     }
 }
