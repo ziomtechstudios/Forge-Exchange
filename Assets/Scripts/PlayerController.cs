@@ -80,8 +80,10 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 workstationCont.ToggleUse();
                 return false;
             }
+            else if (stockpileCont.Quantity != 0 && !m_InventoryCont.SlotsAreFull)
+                return PickUpObj();
             else
-                return PickUpObj();   
+                return holdingItem;
         }
         public bool InteractWorkstation(){
             if(workstationCont == null)
@@ -107,8 +109,10 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                                 workstationCont.Work(holdingCont.PrefabItemStruct);
                                 m_InventoryCont.DroppingItem();
                                 workstationCont.DoingWork = true;
+                                return false;
                             }
-                            return false;
+                            else
+                                return true;
                         default:
                             return holdingItem;   
                     }
@@ -129,7 +133,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 switch(hit.transform.gameObject.layer){
                      //Forge, Quelcher, Sandstone, etc...
                     case 8:
-                        holdingItem = (!holdingItem)?(UseWorkstation()):(InteractWorkstation());
+                        holdingItem = (holdingItem)?(InteractWorkstation()):(UseWorkstation());
                         break;
                     //Coal pile, wood pile, etc...
                     case 10:

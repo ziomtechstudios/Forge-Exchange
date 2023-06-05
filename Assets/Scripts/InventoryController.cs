@@ -6,29 +6,22 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 namespace Com.ZiomtechStudios.ForgeExchange{
-    public class InventoryController : MonoBehaviour
-    {
+    public class InventoryController : MonoBehaviour{
         #region Serialized Fields
         [Tooltip("Amount of inventory slots.")][SerializeField] private int inventoryAmnt;
-        [Tooltip("Sprite of what background for each slot.")][SerializeField] private Image[] slotImages;
-        [Tooltip("Which slot is selected by users.")][SerializeField] private bool[] slotsInUse;
-        [Tooltip("Which slots have item(s).")][SerializeField] private bool[] slotsWithItems;
-        [Tooltip("UI Images that show the given sprite of the items in the inventory")][SerializeField] private Image[] itemImages;
-        [Tooltip("Prefab correlating to inventoried items.")][SerializeField] private GameObject[] slotPrefabs;
-        [Tooltip("ItemController for correlating inventory items")][SerializeField] private ItemController[] itemConts;
+        [SerializeField] private SlotController[] slotConts;
         [SerializeField] private PlayerController playerCont;
         [Tooltip("Are all of the items equiped with an item?")][SerializeField] private bool slotsAreFull;
         [Tooltip("Sprite used by slot to indicate there is no item.")][SerializeField] private Sprite noItemSprite;
         #endregion
         #region Private Funcs
-        private bool ToggleHolding(int index)
-        {
+        private bool ToggleHolding(int index){
             //If the slot selected has an item the player holds the item
-            playerCont.HoldingItem = (slotsWithItems[index] && !slotsInUse[index]);
+            playerCont.HoldingItem = (slotConts[index].SlotWithItem && !slotConts[index].SlotInUse);
             //Update sprite of what player is holding to that of what was in the selected slot
-            playerCont.HoldingPrefab = (playerCont.HoldingItem) ? (slotPrefabs[index]) : (null);
-            playerCont.HoldingCont = (playerCont.HoldingItem) ? (itemConts[index]) : (null);
-            return (!slotsInUse[index]);
+            playerCont.HoldingPrefab = (playerCont.HoldingItem) ? (slotConts[index].SlotPrefab) : (null);
+            playerCont.HoldingCont = (playerCont.HoldingItem) ? (slotConts[index].ItemCont) : (null);
+            return (!slotConts[index].SlotInUse);
         }
         //Player selects which slot in their inventory they want to select, makes that obj the one the player is holding
         private void SelectSlot(int slotIndex)
@@ -38,23 +31,25 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             {
                 for (int i = 0; i < inventoryAmnt; i++)
                 {
-                    slotsInUse[i] = (i == slotIndex) ? (ToggleHolding(i)) : false;
-                    slotImages[i].fillCenter = !slotsInUse[i];
+                    slotConts[i].SlotInUse = (i == slotIndex) ? ToggleHolding(i) : false;
+                    slotConts[i].SlotImage.fillCenter = !slotConts[i].SlotInUse;
                 }
             }
             //selected slot is highlighted
             else
             {
-                for (int i = 0; i <= (inventoryAmnt - 1); i++)
+                for (int i = 0; i < inventoryAmnt; i++)
                 {
-                    slotsInUse[i] = false;
-                    slotImages[i].fillCenter = !slotsInUse[i];
+                    slotConts[i].SlotInUse = false;
+                    slotConts[i].SlotImage.fillCenter = !slotConts[i].SlotInUse;
                 }
             }
         }
         #endregion
         #region Getters/Setters
         public bool SlotsAreFull { get { return slotsAreFull; } }
+        public SlotController[] SlotConts { get { return slotConts; } }
+        public int InventoryAmnt { get { return inventoryAmnt; } }
         #endregion
         #region Public funcs
         public void DroppingItem()
@@ -64,7 +59,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             {
                 for (int i = 0; i < inventoryAmnt; i++)
                 {
-                    if ((slotPrefabs[i] == playerCont.HoldingPrefab) && (slotsInUse[i]))
+                    if ((slotConts[i].SlotPrefab == playerCont.HoldingPrefab) && (slotConts[i].SlotInUse))
                     {
                         //desired slot found
                         //Empty players hands
@@ -72,12 +67,15 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                         playerCont.HoldingPrefab = null;
                         playerCont.HoldingCont = null;
                         playerCont.HoldingItem = false;
-                        itemImages[i].sprite = noItemSprite;
-                        slotsWithItems[i] = false;
+                        slotConts[i].ItemImage.sprite = noItemSprite;
+                        slotConts[i].SlotWithItem = false;
+                        slotConts[i].ItemCont = null;
+                        slotConts[i].SlotPrefab = null;
                         SelectSlot(-1);
                         break;
                     }
                 }
+                slotsAreFull = Array.TrueForAll(slotConts, slotCont => slotCont.SlotWithItem == true);
             }
         }
         public void SlotItem()
@@ -88,15 +86,15 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 //iterating through slots we find the first empty slot
                 for (int i = 0; i <= (inventoryAmnt - 1); i++)
                 {
-                    if (slotsWithItems[i] == false)
+                    if (!slotConts[i].SlotWithItem)
                     {
                         //Fill slot with item
-                        slotsWithItems[i] = true;
-                        slotPrefabs[i] = playerCont.HoldingPrefab;
-                        itemConts[i] = playerCont.HoldingCont;
-                        itemImages[i].sprite = playerCont.HoldingPrefab.GetComponent<SpriteRenderer>().sprite;
+                        slotConts[i].SlotWithItem = true;
+                        slotConts[i].SlotPrefab = playerCont.HoldingPrefab;
+                        slotConts[i].ItemCont = playerCont.HoldingCont;
+                        slotConts[i].ItemImage.sprite = playerCont.HoldingPrefab.GetComponent<SpriteRenderer>().sprite;
                         //Empty players hands only if the player isnt selecting the slot the item was just slotted into
-                        if (slotsWithItems[i] != slotsInUse[i])
+                        if (slotConts[i].SlotWithItem != slotConts[i].SlotInUse)
                         {
                             playerCont.HoldingItem = false;
                             playerCont.HoldingPrefab = null;
@@ -112,34 +110,27 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             int slot = int.Parse(context.action.name) - 1;
             SelectSlot(slot);
             //Helps avoid non-needed work  
-            slotsAreFull = Array.TrueForAll(slotsWithItems, slotWithItems => slotWithItems == true);
+            slotsAreFull = Array.TrueForAll(slotConts, slotCont => slotCont.SlotWithItem == true);
         }
         #endregion
         // Start is called before the first frame update
-        void Start()
-        {
+        void Awake(){
             playerCont = transform.parent.parent.parent.GetComponent<PlayerController>();
-            slotImages = new Image[inventoryAmnt];
-            slotsInUse = new bool[inventoryAmnt];
-            slotsWithItems = new bool[inventoryAmnt];
-            slotPrefabs = new GameObject[inventoryAmnt];
-            itemConts = new ItemController[inventoryAmnt];
-            itemImages = new Image[inventoryAmnt];
+            slotConts = new SlotController[inventoryAmnt];
             slotsAreFull = false;
             //Setting inventory to empty, should change in future when saves are implemented
             for (int i = 0; i < inventoryAmnt; i++)
             {
-                slotImages[i] = transform.Find($"Slot{i}").gameObject.GetComponent<Image>();
-                itemImages[i] = slotImages[i].transform.Find($"Item{i}").gameObject.GetComponent<Image>();
-                slotsInUse[i] = false;
-                slotImages[i].fillCenter = !(slotsInUse[i]);
-                slotsWithItems[i] = false;
-                slotPrefabs[i] = null;
+                slotConts[i] = transform.Find($"Slot{i}").gameObject.GetComponent<SlotController>();
+                slotConts[i].SlotInUse = false;
+                slotConts[i].SlotWithItem = false;
+                slotConts[i].SlotPrefab = null;
+                slotConts[i].SlotImage.fillCenter = !(slotConts[i].SlotInUse);
             }
         }
-        private void Update(){
+        void Update(){
             if(!slotsAreFull)
-                slotsAreFull = Array.TrueForAll(slotsWithItems, slotWithItems => slotWithItems == true);
+                slotsAreFull = Array.TrueForAll(slotConts, slotCont => slotCont.SlotWithItem == true);
         }
     }
 }

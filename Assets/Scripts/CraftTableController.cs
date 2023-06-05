@@ -15,8 +15,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         #region Public Funcs
         public override void ToggleUse(){
             InUse = !InUse;
-            m_Animator.SetBool(inUseHash, InUse);
-            
+            m_Animator.SetBool(inUseHash, InUse); 
         }
         #endregion
         

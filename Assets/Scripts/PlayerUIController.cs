@@ -21,10 +21,11 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         #region Public Members
         public void ToggleInventory(){
             backPackObj.SetActive(!backPackObj.activeInHierarchy);
+
         }
         #endregion
         // Start is called before the first frame update
-        void Start(){
+        void Awake(){
             playerCam = transform.Find("Main Camera").gameObject.GetComponent<Camera>();
             playerCont = GetComponent<PlayerController>();
             circleUI = playerCam.transform.Find("Canvas/LOSUI/circleUI").gameObject.GetComponent<ProgressBarCircle>();
@@ -62,7 +63,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                             }
                         }
 
-                        if(playerCont.PlayerLOS.transform.tag != "Forge Tool"){
+                        if(playerCont.PlayerLOS.transform.tag.Contains("Forge Tool")){
                             StockpileController stockPileCont = playerCont.PlayerLOS.transform.gameObject.GetComponent<StockpileController>();
                             if((stockPileCont != null || (playerCont.PlayerLOS.transform.gameObject.GetComponent<ForgePumpController>() != null)) && (stockPileCont.Quantity != 0)){
                                 itemUI.gameObject.transform.position = playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("productUILOC").position);
