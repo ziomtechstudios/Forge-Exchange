@@ -13,14 +13,27 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private SlotController[] quickSlots;
         #endregion
         #region Public Funcs
-        public void SyncQuickSlots()
+        public void SyncQuickSlots(string order)
         {
-            for (int i = 0; i < m_InventoryCont.InventoryAmnt; i++)
-            {
-                quickSlots[i].ItemImage.sprite = m_InventoryCont.SlotConts[i].ItemImage.sprite;
-                quickSlots[i].SlotWithItem = m_InventoryCont.SlotConts[i].SlotWithItem;
-                quickSlots[i].ItemCont = m_InventoryCont.SlotConts[i].ItemCont;
-                quickSlots[i].SlotPrefab = m_InventoryCont.SlotConts[i].SlotPrefab;
+            switch (order) {
+                case "InGameToMenu":
+                    for (int i = 0; i < m_InventoryCont.InventoryAmnt; i++)
+                    {
+                    quickSlots[i].ItemImage.sprite = m_InventoryCont.SlotConts[i].ItemImage.sprite;
+                    quickSlots[i].SlotWithItem = m_InventoryCont.SlotConts[i].SlotWithItem;
+                    quickSlots[i].ItemCont = m_InventoryCont.SlotConts[i].ItemCont;
+                    quickSlots[i].SlotPrefab = m_InventoryCont.SlotConts[i].SlotPrefab;
+                    }
+                    break;
+                case "MenuToInGame":
+                    for (int i = 0; i < m_InventoryCont.InventoryAmnt; i++)
+                    {
+                        m_InventoryCont.SlotConts[i].ItemImage.sprite = quickSlots[i].ItemImage.sprite;
+                        m_InventoryCont.SlotConts[i].SlotWithItem = quickSlots[i].SlotWithItem;
+                        m_InventoryCont.SlotConts[i].ItemCont = quickSlots[i].ItemCont;
+                        m_InventoryCont.SlotConts[i].SlotPrefab = quickSlots[i].SlotPrefab;
+                    }
+                    break;
             }
         }
         #endregion
@@ -35,7 +48,11 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 quickSlots[i] = transform.Find($"QuickSlots/Slot{i}").gameObject.GetComponent<SlotController>();          
         }
         void OnEnable(){
-            SyncQuickSlots();
+            SyncQuickSlots("InGameToMenu"); 
+        }
+        void OnDisable()
+        {
+            SyncQuickSlots("MenuToInGame");
         }
     }
 }

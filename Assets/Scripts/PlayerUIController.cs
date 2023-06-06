@@ -21,7 +21,6 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         #region Public Members
         public void ToggleInventory(){
             backPackObj.SetActive(!backPackObj.activeInHierarchy);
-
         }
         #endregion
         // Start is called before the first frame update
