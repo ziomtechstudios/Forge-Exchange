@@ -16,7 +16,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private GameObject backPackObj;
         #endregion
         #region Private Fields
-        private Transform circleTransform, barTransform;
+        private Transform circleTransform, barTransform, itemUiTransform;
         #endregion
         #region Public Members
         public void ToggleInventory(){
@@ -44,6 +44,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                         WorkstationController  workstationCont = playerCont.PlayerLOS.transform.gameObject.GetComponent<WorkstationController>();
                         circleTransform = playerCont.PlayerLOS.transform.Find("circleUILOC");
                         barTransform = playerCont.PlayerLOS.transform.Find("barUILOC");
+                        itemUiTransform = playerCont.PlayerLOS.transform.Find("productUILOC");
                         if(circleTransform != null){
                             circleUI.gameObject.transform.position =  playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("circleUILOC").position);
                             circleUI.BarValue = workstationCont.CircleAmnt;
@@ -62,9 +63,9 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                             }
                         }
 
-                        if(playerCont.PlayerLOS.transform.tag.Contains("Forge Tool")){
+                        if(itemUiTransform != null){
                             StockpileController stockPileCont = playerCont.PlayerLOS.transform.gameObject.GetComponent<StockpileController>();
-                            if((stockPileCont != null || (playerCont.PlayerLOS.transform.gameObject.GetComponent<ForgePumpController>() != null)) && (stockPileCont.Quantity != 0)){
+                            if(stockPileCont != null  && (stockPileCont.Quantity != 0)){
                                 itemUI.gameObject.transform.position = playerCam.WorldToScreenPoint(playerCont.PlayerLOS.transform.Find("productUILOC").position);
                                 itemUI.gameObject.SetActive(true);
                                 itemUI.sprite = stockPileCont.ItemPrefab.GetComponent<SpriteRenderer>().sprite;

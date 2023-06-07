@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1397
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 138
+  controlID: 31
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 143
+  controlID: 24
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 144
+  controlID: 25
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -244,15 +244,15 @@ MonoBehaviour:
     y: 1034
     width: 1937
     height: 313
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
   - {fileID: 17}
   - {fileID: 13}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -335,9 +335,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 52}
-    m_SelectedIDs: d4750000
-    m_LastClickedID: 30164
-    m_ExpandedIDs: 00000000a8750000aa750000ac750000
+    m_SelectedIDs: 40750000
+    m_LastClickedID: 30016
+    m_ExpandedIDs: 00000000187500001a7500001c75000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -365,7 +365,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a8750000aa750000ac750000
+    m_ExpandedIDs: 00000000187500001a7500001c750000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -390,9 +390,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 98faffff
-    m_LastClickedInstanceID: -1384
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: ec6f000008d70000d46e0000b26e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -474,8 +474,8 @@ MonoBehaviour:
     m_SearchString: 
   m_ActionsTreeState:
     scrollPos: {x: 0, y: 127}
-    m_SelectedIDs: 0660c68d
-    m_LastClickedID: -1916379130
+    m_SelectedIDs: 967bfe57
+    m_LastClickedID: 1476295574
     m_ExpandedIDs: eb525d80c09597896a115b90f675e694cf1444b4303feed759c272e010a3c1e25b703749967bfe57ce77615935c9fc6537a1c87c
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -596,23 +596,23 @@ MonoBehaviour:
       },\n                {\n                    \"name\": \"2\",\n                   
       \"type\": \"Button\",\n                    \"id\": \"4508fb05-3f63-4591-b2e4-4c781b3491cc\",\n                   
       \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
-      \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
+      \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
       },\n                {\n                    \"name\": \"3\",\n                   
       \"type\": \"Button\",\n                    \"id\": \"d2923e57-afbc-45be-99fc-ca5162ce2724\",\n                   
       \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
-      \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
+      \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
       },\n                {\n                    \"name\": \"4\",\n                   
       \"type\": \"Button\",\n                    \"id\": \"dc0b72c8-574a-487e-8f1e-44cc672a6ac8\",\n                   
       \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
-      \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
+      \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
       },\n                {\n                    \"name\": \"5\",\n                   
       \"type\": \"Button\",\n                    \"id\": \"12a91231-5810-4eac-9ea5-848654bddc5a\",\n                   
       \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
-      \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
+      \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
       },\n                {\n                    \"name\": \"6\",\n                   
       \"type\": \"Button\",\n                    \"id\": \"bd918772-305e-495b-b7aa-d09d0d66e43e\",\n                   
       \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
-      \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
+      \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
       },\n                {\n                    \"name\": \"Inventory Button\",\n                   
       \"type\": \"Button\",\n                    \"id\": \"13a17fd2-c1a1-43d8-9280-6f3b2f497732\",\n                   
       \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
@@ -1023,9 +1023,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1338.3269, y: 806.32043, z: -8.105873}
+    m_Target: {x: 1544.6001, y: 753.3333, z: -0.00000043399632}
     speed: 2
-    m_Value: {x: 1338.3269, y: 806.32043, z: -8.105873}
+    m_Value: {x: 1544.6001, y: 753.3333, z: -0.00000043399632}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1076,9 +1076,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 774.7061
+    m_Target: 762.22986
     speed: 2
-    m_Value: 774.7061
+    m_Value: 762.22986
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1134,7 +1134,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 28500
+  m_LastSelectedObjectID: 81754
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1262,10 +1262,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 430
+    x: 416
     y: 73
-    width: 1505
-    height: 927
+    width: 1519
+    height: 1013
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

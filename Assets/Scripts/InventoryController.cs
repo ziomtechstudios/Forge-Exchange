@@ -84,7 +84,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             if (playerCont.HoldingItem && !(slotsAreFull))
             {
                 //iterating through slots we find the first empty slot
-                for (int i = 0; i <= (inventoryAmnt - 1); i++)
+                for (int i = 0; i < inventoryAmnt; i++)
                 {
                     if (!slotConts[i].SlotWithItem)
                     {
@@ -107,14 +107,15 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         }
         public void OnSelect(InputAction.CallbackContext context)
         {
-            int slot = int.Parse(context.action.name) - 1;
+            int slot = int.Parse(context.action.name)-1;
+            Debug.Log(slot);
             SelectSlot(slot);
             //Helps avoid non-needed work  
             slotsAreFull = Array.TrueForAll(slotConts, slotCont => slotCont.SlotWithItem == true);
         }
         #endregion
         // Start is called before the first frame update
-        void Awake(){
+        void Start(){
             playerCont = transform.parent.parent.parent.GetComponent<PlayerController>();
             slotConts = new SlotController[inventoryAmnt];
             slotsAreFull = false;
