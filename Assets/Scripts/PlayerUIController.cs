@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.InputSystem;
+
 namespace Com.ZiomtechStudios.ForgeExchange{
     public class PlayerUIController : MonoBehaviour{
         #region Private Serialized Fields
@@ -14,6 +12,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private Image itemUI;
         [SerializeField] private TextMeshProUGUI counterText;
         [SerializeField] private GameObject backPackObj;
+        [SerializeField] private BackpackController backpackController;
         #endregion
         #region Private Fields
         private Transform circleTransform, barTransform, itemUiTransform;
@@ -21,6 +20,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         #region Public Members
         public void ToggleInventory(){
             backPackObj.SetActive(!backPackObj.activeInHierarchy);
+            backpackController.SyncQuickSlots((backPackObj.activeInHierarchy) ? ("InGameToMenu") : ("MenuToInGame"));
         }
         #endregion
         // Start is called before the first frame update
@@ -33,6 +33,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             itemUI = playerCam.transform.Find("Canvas/itemImage").gameObject.GetComponent<Image>();
             backPackObj = transform.Find("Main Camera/Canvas/Inventory/ImageInventory").gameObject;
             backPackObj.SetActive(false);
+            backpackController = backPackObj.transform.Find("Backpack").gameObject.GetComponent<BackpackController>();
 
         }
         // Update is called once per frame

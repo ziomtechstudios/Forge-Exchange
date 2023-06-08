@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 namespace Com.ZiomtechStudios.ForgeExchange{
@@ -108,7 +105,6 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         public void OnSelect(InputAction.CallbackContext context)
         {
             int slot = int.Parse(context.action.name)-1;
-            Debug.Log(slot);
             SelectSlot(slot);
             //Helps avoid non-needed work  
             slotsAreFull = Array.TrueForAll(slotConts, slotCont => slotCont.SlotWithItem == true);

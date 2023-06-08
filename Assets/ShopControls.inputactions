@@ -17,79 +17,79 @@
                 {
                     "name": "Interact",
                     "type": "Button",
-                    "id": "a921370d-44c6-41fb-9345-4f5098a30231",
+                    "id": "e8a6374d-28b4-450b-a3ed-ae5c050464f6",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": true
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Run",
                     "type": "Button",
-                    "id": "8740021d-3e0b-4bf2-8d34-235cab377f47",
+                    "id": "af006a13-74d6-4df0-b5af-0cf446558463",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Hold",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
                     "name": "1",
                     "type": "Button",
-                    "id": "786fcee8-ec72-4721-a7f1-5e0e081aec54",
+                    "id": "4ca77c8a-0519-4db3-8e35-310d93e4b7d7",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
                     "name": "2",
                     "type": "Button",
-                    "id": "4508fb05-3f63-4591-b2e4-4c781b3491cc",
+                    "id": "2a1c9dd1-a184-41f6-8688-f942dd38df1e",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
                     "name": "3",
                     "type": "Button",
-                    "id": "d2923e57-afbc-45be-99fc-ca5162ce2724",
+                    "id": "9b0f87e3-eeb4-45c3-b97b-3aa2a8a01aae",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
                     "name": "4",
                     "type": "Button",
-                    "id": "dc0b72c8-574a-487e-8f1e-44cc672a6ac8",
+                    "id": "f3cc80d4-c209-426c-ad4f-2c0a9b30f74d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
                     "name": "5",
                     "type": "Button",
-                    "id": "12a91231-5810-4eac-9ea5-848654bddc5a",
+                    "id": "d1ba1e0a-c6e1-4105-9f5b-2c0122b5f101",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
                     "name": "6",
                     "type": "Button",
-                    "id": "bd918772-305e-495b-b7aa-d09d0d66e43e",
+                    "id": "ffcf0904-c026-48c8-b01e-16dafad7b5c2",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
-                    "name": "Inventory Button",
+                    "name": "Inventory",
                     "type": "Button",
-                    "id": "13a17fd2-c1a1-43d8-9280-6f3b2f497732",
+                    "id": "b0e287c5-1088-459c-a262-2b763c1c4edb",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -99,30 +99,8 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "188732d4-38d2-4aaa-b16c-b3bafa94fcab",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Run",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f09e7fa6-2f7a-4a53-ae5e-cef66ba6a3ac",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "05aaf514-b662-4057-8757-3b0b73a2f611",
-                    "path": "<Joystick>/stick",
+                    "path": "<AndroidJoystick>/stick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -132,9 +110,31 @@
                 },
                 {
                     "name": "",
-                    "id": "c223e8c4-3a20-4ce1-b7d9-1c6416b852fd",
-                    "path": "<Keyboard>/#(1)",
+                    "id": "3a9e09b3-d1db-4225-8b08-b8db231aef0d",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7c7f88ec-d11b-4e8e-a652-011676b4b85e",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "20c8a351-ca17-4f54-b93f-013fd5f2cae7",
+                    "path": "<Keyboard>/1",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "1",
@@ -143,8 +143,8 @@
                 },
                 {
                     "name": "",
-                    "id": "6ec35c8f-af6a-4e07-8fe9-0e57ba5de49f",
-                    "path": "<Keyboard>/#(2)",
+                    "id": "15aa0397-c7e5-4707-96a2-f428fc83cf9c",
+                    "path": "<Keyboard>/2",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -154,8 +154,8 @@
                 },
                 {
                     "name": "",
-                    "id": "ad9e4562-460d-4f86-bfab-57678d14165d",
-                    "path": "<Keyboard>/#(3)",
+                    "id": "37354e48-91a9-4a50-b729-514e6a32bb9b",
+                    "path": "<Keyboard>/3",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -165,8 +165,8 @@
                 },
                 {
                     "name": "",
-                    "id": "e2487322-7d66-4d71-8be8-80a9265c2d38",
-                    "path": "<Keyboard>/#(4)",
+                    "id": "d20e8114-6017-4322-a25c-2a103d496060",
+                    "path": "<Keyboard>/4",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -176,8 +176,8 @@
                 },
                 {
                     "name": "",
-                    "id": "4939a73e-6c3a-4105-a208-d88fab3ebd71",
-                    "path": "<Keyboard>/#(5)",
+                    "id": "14b9e14a-cc8d-48a6-9b83-ecf88186f8be",
+                    "path": "<Keyboard>/5",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -187,8 +187,8 @@
                 },
                 {
                     "name": "",
-                    "id": "0e652b4b-2651-428f-bb4a-36ba92ac02c7",
-                    "path": "<Keyboard>/#(6)",
+                    "id": "e4dc170b-39f6-4c8b-8b03-051eca76574b",
+                    "path": "<Keyboard>/6",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -198,12 +198,12 @@
                 },
                 {
                     "name": "",
-                    "id": "266be535-f317-4796-abaf-2df78fd9161b",
-                    "path": "<Keyboard>/#(I)",
+                    "id": "7280174e-1a90-43ea-a076-b690e5b504ca",
+                    "path": "<Keyboard>/i",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Inventory Button",
+                    "action": "Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

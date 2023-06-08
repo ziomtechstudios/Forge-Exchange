@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Com.ZiomtechStudios.ForgeExchange{
     public class BackpackController : MonoBehaviour
@@ -19,10 +16,10 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 case "InGameToMenu":
                     for (int i = 0; i < m_InventoryCont.InventoryAmnt; i++)
                     {
-                    quickSlots[i].ItemImage.sprite = m_InventoryCont.SlotConts[i].ItemImage.sprite;
-                    quickSlots[i].SlotWithItem = m_InventoryCont.SlotConts[i].SlotWithItem;
-                    quickSlots[i].ItemCont = m_InventoryCont.SlotConts[i].ItemCont;
-                    quickSlots[i].SlotPrefab = m_InventoryCont.SlotConts[i].SlotPrefab;
+                        quickSlots[i].ItemImage.sprite = m_InventoryCont.SlotConts[i].ItemImage.sprite;
+                        quickSlots[i].SlotWithItem = m_InventoryCont.SlotConts[i].SlotWithItem;
+                        quickSlots[i].ItemCont = m_InventoryCont.SlotConts[i].ItemCont;
+                        quickSlots[i].SlotPrefab = m_InventoryCont.SlotConts[i].SlotPrefab;
                     }
                     break;
                 case "MenuToInGame":
@@ -46,13 +43,6 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             quickSlots = new SlotController[m_InventoryCont.InventoryAmnt];
             for(int i=0;i<m_InventoryCont.InventoryAmnt;i++)
                 quickSlots[i] = transform.Find($"QuickSlots/Slot{i}").gameObject.GetComponent<SlotController>();          
-        }
-        void OnEnable(){
-            SyncQuickSlots("InGameToMenu"); 
-        }
-        void OnDisable()
-        {
-            SyncQuickSlots("MenuToInGame");
         }
     }
 }

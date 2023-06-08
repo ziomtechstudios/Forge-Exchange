@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
-using UnityEngine.UI;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Interactions;
 
 namespace Com.ZiomtechStudios.ForgeExchange{
     [RequireComponent(typeof(Animator))]
@@ -23,10 +18,10 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private ItemController holdingCont;
         [SerializeField] private InventoryController m_InventoryCont;
         [SerializeField] private PolygonCollider2D m_Collider;
+        [SerializeField] private WorkstationController workstationCont;
         #endregion
         #region Private Fields
         private StockpileController stockpileCont;
-        private WorkstationController workstationCont;
         private Animator m_Animator;
         private int lookXHash, lookYHash, isMovingHash, moveXHash, moveYHash;
         private int layerMask, stockpileLayer, workstationLayer, boundsLayer;
@@ -86,8 +81,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 return holdingItem;
         }
         public bool InteractWorkstation(){
-            if(workstationCont == null)
-                workstationCont = hit.transform.GetComponent<WorkstationController>();
+            workstationCont = hit.transform.GetComponent<WorkstationController>();
             switch(hit.transform.tag){
                 case "Forge":
                     switch(holdingCont.PrefabItemStruct.itemTag){
