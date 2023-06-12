@@ -111,8 +111,8 @@
                 {
                     "name": "",
                     "id": "3a9e09b3-d1db-4225-8b08-b8db231aef0d",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "Tap",
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
@@ -122,7 +122,7 @@
                 {
                     "name": "",
                     "id": "7c7f88ec-d11b-4e8e-a652-011676b4b85e",
-                    "path": "<Keyboard>/leftShift",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "Hold",
                     "processors": "",
                     "groups": "",
@@ -133,7 +133,7 @@
                 {
                     "name": "",
                     "id": "20c8a351-ca17-4f54-b93f-013fd5f2cae7",
-                    "path": "<Keyboard>/1",
+                    "path": "<Touchscreen>/touch1/tap",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",
@@ -144,7 +144,7 @@
                 {
                     "name": "",
                     "id": "15aa0397-c7e5-4707-96a2-f428fc83cf9c",
-                    "path": "<Keyboard>/2",
+                    "path": "<Touchscreen>/touch2/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -155,7 +155,7 @@
                 {
                     "name": "",
                     "id": "37354e48-91a9-4a50-b729-514e6a32bb9b",
-                    "path": "<Keyboard>/3",
+                    "path": "<Touchscreen>/touch3/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -166,7 +166,7 @@
                 {
                     "name": "",
                     "id": "d20e8114-6017-4322-a25c-2a103d496060",
-                    "path": "<Keyboard>/4",
+                    "path": "<Touchscreen>/touch4/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -177,7 +177,7 @@
                 {
                     "name": "",
                     "id": "14b9e14a-cc8d-48a6-9b83-ecf88186f8be",
-                    "path": "<Keyboard>/5",
+                    "path": "<Touchscreen>/touch5/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -188,7 +188,7 @@
                 {
                     "name": "",
                     "id": "e4dc170b-39f6-4c8b-8b03-051eca76574b",
-                    "path": "<Keyboard>/6",
+                    "path": "<Touchscreen>/touch6/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -199,7 +199,7 @@
                 {
                     "name": "",
                     "id": "7280174e-1a90-43ea-a076-b690e5b504ca",
-                    "path": "<Keyboard>/i",
+                    "path": "<Touchscreen>/touch9/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

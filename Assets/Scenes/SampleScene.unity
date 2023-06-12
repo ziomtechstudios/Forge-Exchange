@@ -7696,7 +7696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 34338025, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_ControlPath
-      value: <Keyboard>/#(6)
+      value: <Touchscreen>/touch6/tap
       objectReference: {fileID: 0}
     - target: {fileID: 292360768, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_Enabled
@@ -7704,7 +7704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 292360768, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_ControlPath
-      value: <Keyboard>/#(1)
+      value: <Touchscreen>/touch1/tap
       objectReference: {fileID: 0}
     - target: {fileID: 436941515, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_Enabled
@@ -7712,7 +7712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 436941515, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_ControlPath
-      value: <Keyboard>/#(3)
+      value: <Touchscreen>/touch3/tap
       objectReference: {fileID: 0}
     - target: {fileID: 502957492, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -7730,9 +7730,25 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -4.180005
       objectReference: {fileID: 0}
+    - target: {fileID: 723829778, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 723829778, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 723829778, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 861069414, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 901279199, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1015521348, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_NotificationBehavior
@@ -7996,7 +8012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1048539060, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_ControlPath
-      value: <Keyboard>/#(4)
+      value: <Touchscreen>/touch4/tap
       objectReference: {fileID: 0}
     - target: {fileID: 1160338721, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_IsActive
@@ -8024,7 +8040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1460068647, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_ControlPath
-      value: <Keyboard>/#(2)
+      value: <Touchscreen>/touch2/tap
       objectReference: {fileID: 0}
     - target: {fileID: 1512225308, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -8040,7 +8056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1512225309, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_ControlPath
-      value: <Keyboard>/#(5)
+      value: <Touchscreen>/touch5/tap
       objectReference: {fileID: 0}
     - target: {fileID: 1637976869, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8072,7 +8088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1789136134, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_ControlPath
-      value: <Keyboard>/#(E)
+      value: <Gamepad>/buttonEast
       objectReference: {fileID: 0}
     - target: {fileID: 1841552330, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_Enabled
@@ -8080,7 +8096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1841552330, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_ControlPath
-      value: <Keyboard>/leftShift
+      value: <Gamepad>/buttonSouth
       objectReference: {fileID: 0}
     - target: {fileID: 1870026160, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8096,7 +8112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1977494655, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_ControlPath
-      value: <Keyboard>/i
+      value: <Touchscreen>/touch9/tap
       objectReference: {fileID: 0}
     - target: {fileID: 2018302368, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_AnchoredPosition.y
