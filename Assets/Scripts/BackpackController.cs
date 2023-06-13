@@ -9,8 +9,32 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private InventoryController m_InventoryCont;
         [SerializeField] private SlotController[] backPackSlots;
         [SerializeField] private SlotController[] quickSlots;
+        [SerializeField] private bool isDragging;
         #endregion
         #region Public Funcs
+        public void OnDrag()
+        {
+            isDragging = !isDragging;
+        }
+        public void DragandDrop()
+        {
+           isDragging = isDragging && Input.touchCount > 0;
+            if (isDragging)
+            {
+                Touch touch = Input.GetTouch(0);
+                switch(touch.phase)
+                {
+                    case TouchPhase.Began:
+                        break;
+                    case TouchPhase.Moved:
+                        break;
+                    case TouchPhase.Ended:
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
         public void SyncQuickSlots(string order)
         {
             switch (order) {
@@ -39,6 +63,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         #endregion
         // Start is called before the first frame update
         void Awake(){
+            isDragging = false;
             gameObject.SetActive(true);
             m_InventoryCont = transform.parent.parent.parent.Find("InventorySlots").gameObject.GetComponent<InventoryController>();
             backPackSlots = new SlotController[numSlots];
@@ -47,6 +72,9 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             quickSlots = new SlotController[m_InventoryCont.InventoryAmnt];
             for(int i=0;i<m_InventoryCont.InventoryAmnt;i++)
                 quickSlots[i] = transform.Find($"QuickSlots/Slot{i}").gameObject.GetComponent<SlotController>();          
+        }
+        private void Update(){
+            
         }
     }
 }
