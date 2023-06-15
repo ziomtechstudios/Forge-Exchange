@@ -20,7 +20,7 @@
                     "id": "e8a6374d-28b4-450b-a3ed-ae5c050464f6",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -29,7 +29,7 @@
                     "id": "af006a13-74d6-4df0-b5af-0cf446558463",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Hold",
                     "initialStateCheck": false
                 },
                 {
@@ -38,7 +38,7 @@
                     "id": "4ca77c8a-0519-4db3-8e35-310d93e4b7d7",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -47,7 +47,7 @@
                     "id": "2a1c9dd1-a184-41f6-8688-f942dd38df1e",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -56,7 +56,7 @@
                     "id": "9b0f87e3-eeb4-45c3-b97b-3aa2a8a01aae",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -65,7 +65,7 @@
                     "id": "f3cc80d4-c209-426c-ad4f-2c0a9b30f74d",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -74,7 +74,7 @@
                     "id": "d1ba1e0a-c6e1-4105-9f5b-2c0122b5f101",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -83,7 +83,7 @@
                     "id": "ffcf0904-c026-48c8-b01e-16dafad7b5c2",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -92,7 +92,7 @@
                     "id": "b0e287c5-1088-459c-a262-2b763c1c4edb",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
@@ -112,7 +112,7 @@
                     "name": "",
                     "id": "3a9e09b3-d1db-4225-8b08-b8db231aef0d",
                     "path": "<Gamepad>/buttonEast",
-                    "interactions": "Tap",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
@@ -123,7 +123,7 @@
                     "name": "",
                     "id": "7c7f88ec-d11b-4e8e-a652-011676b4b85e",
                     "path": "<Gamepad>/buttonSouth",
-                    "interactions": "Hold",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Run",
@@ -133,8 +133,8 @@
                 {
                     "name": "",
                     "id": "20c8a351-ca17-4f54-b93f-013fd5f2cae7",
-                    "path": "<Touchscreen>/touch1/tap",
-                    "interactions": "Press",
+                    "path": "<Touchscreen>/touch2/tap",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "1",
@@ -144,7 +144,7 @@
                 {
                     "name": "",
                     "id": "15aa0397-c7e5-4707-96a2-f428fc83cf9c",
-                    "path": "<Touchscreen>/touch2/tap",
+                    "path": "<Touchscreen>/touch3/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -155,7 +155,7 @@
                 {
                     "name": "",
                     "id": "37354e48-91a9-4a50-b729-514e6a32bb9b",
-                    "path": "<Touchscreen>/touch3/tap",
+                    "path": "<Touchscreen>/touch4/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -166,7 +166,7 @@
                 {
                     "name": "",
                     "id": "d20e8114-6017-4322-a25c-2a103d496060",
-                    "path": "<Touchscreen>/touch4/tap",
+                    "path": "<Touchscreen>/touch5/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -177,7 +177,7 @@
                 {
                     "name": "",
                     "id": "14b9e14a-cc8d-48a6-9b83-ecf88186f8be",
-                    "path": "<Touchscreen>/touch5/tap",
+                    "path": "<Touchscreen>/touch6/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -188,7 +188,7 @@
                 {
                     "name": "",
                     "id": "e4dc170b-39f6-4c8b-8b03-051eca76574b",
-                    "path": "<Touchscreen>/touch6/tap",
+                    "path": "<Touchscreen>/touch7/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

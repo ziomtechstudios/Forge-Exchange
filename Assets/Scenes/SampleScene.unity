@@ -7696,7 +7696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 34338025, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_ControlPath
-      value: <Touchscreen>/touch6/tap
+      value: <Touchscreen>/touch7/tap
       objectReference: {fileID: 0}
     - target: {fileID: 292360768, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_Enabled
@@ -7704,7 +7704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 292360768, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_ControlPath
-      value: <Touchscreen>/touch1/tap
+      value: <Touchscreen>/touch2/tap
       objectReference: {fileID: 0}
     - target: {fileID: 436941515, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_Enabled
@@ -7712,7 +7712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 436941515, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_ControlPath
-      value: <Touchscreen>/touch3/tap
+      value: <Touchscreen>/touch4/tap
       objectReference: {fileID: 0}
     - target: {fileID: 502957492, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8016,7 +8016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1048539060, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_ControlPath
-      value: <Touchscreen>/touch4/tap
+      value: <Touchscreen>/touch5/tap
       objectReference: {fileID: 0}
     - target: {fileID: 1160338721, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_IsActive
@@ -8044,7 +8044,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1460068647, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_ControlPath
-      value: <Touchscreen>/touch2/tap
+      value: <Touchscreen>/touch3/tap
       objectReference: {fileID: 0}
     - target: {fileID: 1512225308, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -8060,7 +8060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1512225309, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_ControlPath
-      value: <Touchscreen>/touch5/tap
+      value: <Touchscreen>/touch6/tap
       objectReference: {fileID: 0}
     - target: {fileID: 1637976869, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_AnchoredPosition.y
