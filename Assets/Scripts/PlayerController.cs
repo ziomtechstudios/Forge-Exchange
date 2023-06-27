@@ -115,6 +115,11 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             }
         }
         public void OnMove(InputAction.CallbackContext context){
+            ///<summary>
+            ///Player Movement
+            ///Player movement inputtaken as 2D Vector and is translted to movement of gameObject
+            ///The last dir the player moves in is the players looking direction
+            ///</summary>
             moveDir = context.ReadValue<Vector2>();
             isMoving = moveDir != Vector2.zero;
             lookDir = (isMoving)?(moveDir.normalized):(lookDir);
@@ -173,11 +178,6 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         }
         // Update is called once per frame
         void Update(){
-            ///<summary>
-            ///Player Movement
-            ///Player movement inpurttaken as 2D Vector and is translted to movement of gameObject
-            ///The last dir the player moves in is the players looking direction
-            ///</summary>
             //Is the player looking at a interactable object + within an interactable distance?
             hit = Physics2D.Raycast(transform.position, lookDir, interactDist, layerMask); 
             //If player wants to move
