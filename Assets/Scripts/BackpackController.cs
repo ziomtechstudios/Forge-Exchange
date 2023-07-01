@@ -11,17 +11,15 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private InventoryController m_InventoryCont;
         [SerializeField] private SlotController[] backPackSlots;
         [SerializeField] private SlotController[] quickSlots;
-        [SerializeField] private bool isDragging;
         [SerializeField] private GameObject movingSlot;
         [SerializeField] private SlotController movingSlotCont;
-        [SerializeField] private Canvas m_Canvas;
+        [SerializeField] private RectTransform backPackRectTransform;
         #endregion
         #region Private Functions + Members
         private string ogSlotType;
         private int ogSlotIndex;
         private RectTransform movingSlotRectTransform;
-        private RectTransform backPackRectTransform;
-        private Vector2 movingPos;
+        
         #endregion
         #region Getters/Setters
         public string OGSlotType{get{return ogSlotType;}}
@@ -113,45 +111,40 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     }
                     break;
             }
+            m_InventoryCont.AreAllSlotsFull();
         }
         public void OnBeginDrag(PointerEventData eventData){
             SlotController selectedSlotCont = eventData.pointerPressRaycast.gameObject.transform.parent.gameObject.GetComponent<SlotController>();
             if(selectedSlotCont != null && selectedSlotCont.SlotWithItem){
-                isDragging = true;
                 ogSlotType = selectedSlotCont.gameObject.transform.parent.name;
                 ogSlotIndex = Int32.Parse(selectedSlotCont.gameObject.name.Remove(0,4));
                 EmptySlot();
-                RectTransformUtility.ScreenPointToLocalPointInRectangle(backPackRectTransform, eventData.pressPosition, null, out movingPos);
-                movingSlotRectTransform.localPosition = movingPos;
-
             }
         }
-        public void OnDrag(PointerEventData eventData){
-            if (isDragging)
-            {
-                RectTransformUtility.ScreenPointToLocalPointInRectangle(backPackRectTransform, eventData.pressPosition, null, out movingPos);
-                movingSlotRectTransform.localPosition = movingPos;
-            }
+        public void OnDrag(PointerEventData eventData)
+        {
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(backPackRectTransform, eventData.pointerCurrentRaycast.screenPosition, eventData.pressEventCamera, out Vector2 anchoredPosition);
+            movingSlotRectTransform.anchoredPosition = anchoredPosition;
         }
         public void OnEndDrag(PointerEventData eventData)
         {
-            Debug.Log("On End Drag!");
-            isDragging = false;
-            SlotController destinationSlotCont = eventData.pointerPressRaycast.gameObject.transform.parent.gameObject.GetComponent<SlotController>();
+            SlotController destinationSlotCont = (eventData.pointerCurrentRaycast.gameObject != null)? eventData.pointerCurrentRaycast.gameObject.transform.parent.gameObject.GetComponent<SlotController>():null;
+            //Debug.Log(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.name + eventData.pointerCurrentRaycast.gameObject.transform.parent.name);
             if (destinationSlotCont != null && !destinationSlotCont.SlotWithItem)
                 OccupySlot(destinationSlotCont.gameObject.transform.parent.name, Int32.Parse(destinationSlotCont.gameObject.name.Remove(0, 4)));
+            else
+                OccupySlot(ogSlotType,ogSlotIndex);
         }
 
         #endregion
         // Start is called before the first frame update
         void Awake(){
-            isDragging = false;
             m_InventoryCont = transform.parent.parent.parent.Find("InventorySlots").gameObject.GetComponent<InventoryController>();
             movingSlot = transform.Find("Slot13").gameObject;
             movingSlotCont = movingSlot.GetComponent<SlotController>();
             movingSlotRectTransform = movingSlot.GetComponent<RectTransform>();    
             backPackSlots = new SlotController[numSlots];
-            backPackRectTransform = GetComponent<RectTransform>();
+            backPackRectTransform = transform.gameObject.GetComponent<RectTransform>();
             for(int i = 0; i < numSlots; i++)
                 backPackSlots[i] = transform.Find($"Slot{i}").gameObject.GetComponent<SlotController>();
             quickSlots = new SlotController[m_InventoryCont.InventoryAmnt];

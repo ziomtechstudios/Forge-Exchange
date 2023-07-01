@@ -44,6 +44,10 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         }
         #endregion
         #region Getters/Setters
+        public void AreAllSlotsFull()
+        {
+            slotsAreFull = Array.TrueForAll(slotConts, slotCont => slotCont.SlotWithItem == true);
+        }
         public bool SlotsAreFull { get { return slotsAreFull; } }
         public SlotController[] SlotConts { get { return slotConts; } }
         public int InventoryAmnt { get { return inventoryAmnt; } }
@@ -128,7 +132,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         }
         void Update(){
             if(!slotsAreFull)
-                slotsAreFull = Array.TrueForAll(slotConts, slotCont => slotCont.SlotWithItem == true);
+                AreAllSlotsFull();
         }
     }
 }
