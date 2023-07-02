@@ -113,7 +113,13 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     }
                     break;
             }
+<<<<<<< Updated upstream
+=======
+            //Update status of if all quick slots are full
+            m_InventoryCont.AreAllSlotsFull();
+>>>>>>> Stashed changes
         }
+        //Store info of original item is contained in and move the item to the moving slot
         public void OnBeginDrag(PointerEventData eventData){
             SlotController selectedSlotCont = eventData.pointerPressRaycast.gameObject.transform.parent.gameObject.GetComponent<SlotController>();
             if(selectedSlotCont != null && selectedSlotCont.SlotWithItem){
@@ -126,13 +132,27 @@ namespace Com.ZiomtechStudios.ForgeExchange{
 
             }
         }
+<<<<<<< Updated upstream
         public void OnDrag(PointerEventData eventData){
             if (isDragging)
             {
                 RectTransformUtility.ScreenPointToLocalPointInRectangle(backPackRectTransform, eventData.pressPosition, null, out movingPos);
                 movingSlotRectTransform.localPosition = movingPos;
             }
+=======
+        //Move moving slot to coressponding current touch position
+        public void OnDrag(PointerEventData eventData)
+        {
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(backPackRectTransform, eventData.pointerCurrentRaycast.screenPosition, eventData.pressEventCamera, out Vector2 anchoredPosition);
+            movingSlotRectTransform.anchoredPosition = anchoredPosition;
+>>>>>>> Stashed changes
         }
+        /// <summary>
+        /// Moving slot is at destination
+        /// Check to see if destination has a slot and if that slot is not being used
+        /// If there is an empty slot remove item from moving slot and insert into destination slot
+        /// if no empty slot send the item back into its original slot
+        /// </summary>
         public void OnEndDrag(PointerEventData eventData)
         {
             Debug.Log("On End Drag!");
@@ -141,7 +161,6 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             if (destinationSlotCont != null && !destinationSlotCont.SlotWithItem)
                 OccupySlot(destinationSlotCont.gameObject.transform.parent.name, Int32.Parse(destinationSlotCont.gameObject.name.Remove(0, 4)));
         }
-
         #endregion
         // Start is called before the first frame update
         void Awake(){

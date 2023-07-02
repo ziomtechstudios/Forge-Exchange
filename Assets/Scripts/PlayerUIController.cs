@@ -96,6 +96,6 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 itemUI.gameObject.SetActive(false);
 
             }
-        }  
+        }
     }
 }
