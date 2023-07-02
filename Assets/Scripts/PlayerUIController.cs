@@ -12,6 +12,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private Image itemUI;
         [SerializeField] private TextMeshProUGUI counterText;
         [SerializeField] private GameObject backPackObj;
+        [SerializeField] private GameObject inGameQuickSlotObjs;
         [SerializeField] private BackpackController backpackController;
         #endregion
         #region Private Fields
@@ -22,10 +23,12 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             backPackObj.SetActive(!backPackObj.activeInHierarchy);
             backpackController.SyncQuickSlots((backPackObj.activeInHierarchy) ? ("InGameToMenu") : ("MenuToInGame"));
         }
+        public GameObject InGameQuickSlotObjs { get { return inGameQuickSlotObjs; } }
         #endregion
         // Start is called before the first frame update
         void Awake(){
             playerCam = transform.Find("Main Camera").gameObject.GetComponent<Camera>();
+            inGameQuickSlotObjs = playerCam.transform.Find("Canvas/InventorySlots").gameObject;
             playerCont = GetComponent<PlayerController>();
             circleUI = playerCam.transform.Find("Canvas/LOSUI/circleUI").gameObject.GetComponent<ProgressBarCircle>();
             barUI = playerCam.transform.Find("Canvas/LOSUI/barUI").gameObject.GetComponent<ProgressBar>();

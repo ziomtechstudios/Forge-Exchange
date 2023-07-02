@@ -14,6 +14,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private GameObject movingSlot;
         [SerializeField] private SlotController movingSlotCont;
         [SerializeField] private RectTransform backPackRectTransform;
+        [SerializeField] private PlayerUIController m_playerUIController;
         #endregion
         #region Private Functions + Members
         private string ogSlotType;
@@ -139,6 +140,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         #endregion
         // Start is called before the first frame update
         void Awake(){
+            m_playerUIController = transform.parent.parent.parent.parent.parent.gameObject.GetComponent<PlayerUIController>();
             m_InventoryCont = transform.parent.parent.parent.Find("InventorySlots").gameObject.GetComponent<InventoryController>();
             movingSlot = transform.Find("Slot13").gameObject;
             movingSlotCont = movingSlot.GetComponent<SlotController>();
@@ -150,7 +152,16 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             quickSlots = new SlotController[m_InventoryCont.InventoryAmnt];
             for(int i=0;i<m_InventoryCont.InventoryAmnt;i++)
                 quickSlots[i] = transform.Find($"QuickSlots/Slot{i}").gameObject.GetComponent<SlotController>();
-
+        }
+        private void OnEnable()
+        {
+            if(m_playerUIController == null)
+                m_playerUIController = transform.parent.parent.parent.parent.parent.gameObject.GetComponent<PlayerUIController>();
+            m_playerUIController.InGameQuickSlotObjs.SetActive(false);
+        }
+        void OnDisable()
+        {
+            m_playerUIController.InGameQuickSlotObjs.SetActive(true);
         }
     }
 }
