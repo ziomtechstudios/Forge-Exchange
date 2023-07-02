@@ -1,4 +1,5 @@
 using System;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -11,17 +12,16 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private InventoryController m_InventoryCont;
         [SerializeField] private SlotController[] backPackSlots;
         [SerializeField] private SlotController[] quickSlots;
-        [SerializeField] private bool isDragging;
         [SerializeField] private GameObject movingSlot;
         [SerializeField] private SlotController movingSlotCont;
         [SerializeField] private Canvas m_Canvas;
+        [SerializeField] private PlayerUIController m_PlayerUIController;
         #endregion
         #region Private Functions + Members
         private string ogSlotType;
         private int ogSlotIndex;
         private RectTransform movingSlotRectTransform;
         private RectTransform backPackRectTransform;
-        private Vector2 movingPos;
         #endregion
         #region Getters/Setters
         public string OGSlotType{get{return ogSlotType;}}
@@ -113,39 +113,26 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                     }
                     break;
             }
-<<<<<<< Updated upstream
-=======
             //Update status of if all quick slots are full
             m_InventoryCont.AreAllSlotsFull();
->>>>>>> Stashed changes
+
         }
         //Store info of original item is contained in and move the item to the moving slot
         public void OnBeginDrag(PointerEventData eventData){
             SlotController selectedSlotCont = eventData.pointerPressRaycast.gameObject.transform.parent.gameObject.GetComponent<SlotController>();
             if(selectedSlotCont != null && selectedSlotCont.SlotWithItem){
-                isDragging = true;
                 ogSlotType = selectedSlotCont.gameObject.transform.parent.name;
                 ogSlotIndex = Int32.Parse(selectedSlotCont.gameObject.name.Remove(0,4));
                 EmptySlot();
-                RectTransformUtility.ScreenPointToLocalPointInRectangle(backPackRectTransform, eventData.pressPosition, null, out movingPos);
-                movingSlotRectTransform.localPosition = movingPos;
-
+                RectTransformUtility.ScreenPointToLocalPointInRectangle(backPackRectTransform, eventData.pointerCurrentRaycast.screenPosition, eventData.pressEventCamera, out Vector2 anchoredPosition);
+                movingSlotRectTransform.anchoredPosition = anchoredPosition;
             }
         }
-<<<<<<< Updated upstream
-        public void OnDrag(PointerEventData eventData){
-            if (isDragging)
-            {
-                RectTransformUtility.ScreenPointToLocalPointInRectangle(backPackRectTransform, eventData.pressPosition, null, out movingPos);
-                movingSlotRectTransform.localPosition = movingPos;
-            }
-=======
         //Move moving slot to coressponding current touch position
         public void OnDrag(PointerEventData eventData)
         {
             RectTransformUtility.ScreenPointToLocalPointInRectangle(backPackRectTransform, eventData.pointerCurrentRaycast.screenPosition, eventData.pressEventCamera, out Vector2 anchoredPosition);
             movingSlotRectTransform.anchoredPosition = anchoredPosition;
->>>>>>> Stashed changes
         }
         /// <summary>
         /// Moving slot is at destination
@@ -155,17 +142,17 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         /// </summary>
         public void OnEndDrag(PointerEventData eventData)
         {
-            Debug.Log("On End Drag!");
-            isDragging = false;
-            SlotController destinationSlotCont = eventData.pointerPressRaycast.gameObject.transform.parent.gameObject.GetComponent<SlotController>();
+            SlotController destinationSlotCont = (eventData.pointerCurrentRaycast.gameObject == null)?(null):(eventData.pointerCurrentRaycast.gameObject.transform.parent.gameObject.GetComponent<SlotController>());
             if (destinationSlotCont != null && !destinationSlotCont.SlotWithItem)
                 OccupySlot(destinationSlotCont.gameObject.transform.parent.name, Int32.Parse(destinationSlotCont.gameObject.name.Remove(0, 4)));
+            else if(destinationSlotCont == null || destinationSlotCont.SlotWithItem)
+                OccupySlot(ogSlotType, ogSlotIndex);
         }
         #endregion
         // Start is called before the first frame update
         void Awake(){
-            isDragging = false;
             m_InventoryCont = transform.parent.parent.parent.Find("InventorySlots").gameObject.GetComponent<InventoryController>();
+            m_PlayerUIController = m_InventoryCont.transform.parent.parent.parent.gameObject.GetComponent<PlayerUIController>();
             movingSlot = transform.Find("Slot13").gameObject;
             movingSlotCont = movingSlot.GetComponent<SlotController>();
             movingSlotRectTransform = movingSlot.GetComponent<RectTransform>();    
@@ -177,6 +164,14 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             for(int i=0;i<m_InventoryCont.InventoryAmnt;i++)
                 quickSlots[i] = transform.Find($"QuickSlots/Slot{i}").gameObject.GetComponent<SlotController>();
 
+        }
+        public void OnEnable()
+        {
+            m_PlayerUIController.InGameQuickSlotObjs.SetActive(false);
+        }
+        public void OnDisable()
+        {
+            m_PlayerUIController.InGameQuickSlotObjs.SetActive(true);
         }
     }
 }
