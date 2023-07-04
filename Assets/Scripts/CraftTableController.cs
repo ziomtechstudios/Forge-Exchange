@@ -7,6 +7,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         #region Serialized Fields
         [SerializeField] private Animator m_Animator;
         [SerializeField] private int slotAmnt;
+        [SerializeField] private GameObject craftMenuObj;
         #endregion
         #region Private Fields
         private int inUseHash;
