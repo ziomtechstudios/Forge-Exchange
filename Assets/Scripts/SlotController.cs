@@ -12,6 +12,7 @@ namespace Com.ZiomtechStudios.ForgeExchange
         [SerializeField] private bool slotWithItem;
         [SerializeField] private GameObject slotPrefab;
         [SerializeField] private ItemController itemCont;
+        [SerializeField] private string slotType;
         #endregion
         #region Getters/Setters
         public bool SlotInUse{get{return slotInUse;}set{slotInUse = value;}}

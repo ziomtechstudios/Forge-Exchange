@@ -402,6 +402,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &152801381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,6 +499,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &155712811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -858,6 +860,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &282555005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -988,6 +991,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &312745687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1393,6 +1397,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &468412324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1489,6 +1494,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &488198600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1695,6 +1701,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &597487081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1791,6 +1798,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &605032741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2107,6 +2115,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: craftTable
       objectReference: {fileID: 0}
+    - target: {fileID: 6386700912813093083, guid: 7398dcaa8c839184c8ca33de0743dd7d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8774610992904272769, guid: 7398dcaa8c839184c8ca33de0743dd7d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2223,6 +2235,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &693235856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2528,6 +2541,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &821949039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2995,6 +3009,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1007263111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3091,6 +3106,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1014859658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3329,6 +3345,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1101136804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3582,6 +3599,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1255128768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3798,6 +3816,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1376080346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3904,6 +3923,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1531985702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4372,6 +4392,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1621943320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4468,6 +4489,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1630412813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4564,6 +4586,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1632101127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4660,6 +4683,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1660748400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5101,6 +5125,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1672496149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5273,6 +5298,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1696470576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5374,6 +5400,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1749667924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5470,6 +5497,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1775173211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5690,6 +5718,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1823288445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5786,6 +5815,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1823841080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6036,6 +6066,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1860374678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6208,6 +6239,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1880994840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6532,6 +6564,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1903693437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6746,6 +6779,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1972170783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6842,6 +6876,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1981555884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6938,6 +6973,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &1993019031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13577,6 +13613,7 @@ MonoBehaviour:
   slotWithItem: 0
   slotPrefab: {fileID: 0}
   itemCont: {fileID: 0}
+  slotType: 
 --- !u!114 &2094091632
 MonoBehaviour:
   m_ObjectHideFlags: 0

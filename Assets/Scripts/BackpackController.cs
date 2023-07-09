@@ -1,8 +1,7 @@
 using System;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
+using static Com.ZiomtechStudios.ForgeExchange.DragAndDropSlot;
 
 namespace Com.ZiomtechStudios.ForgeExchange{
     public class BackpackController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -120,19 +119,22 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         //Store info of original item is contained in and move the item to the moving slot
         public void OnBeginDrag(PointerEventData eventData){
             SlotController selectedSlotCont = eventData.pointerPressRaycast.gameObject.transform.parent.gameObject.GetComponent<SlotController>();
-            if(selectedSlotCont != null && selectedSlotCont.SlotWithItem){
+            if (selectedSlotCont != null && selectedSlotCont.SlotWithItem)
+            {
                 ogSlotType = selectedSlotCont.gameObject.transform.parent.name;
-                ogSlotIndex = Int32.Parse(selectedSlotCont.gameObject.name.Remove(0,4));
+                ogSlotIndex = Int32.Parse(selectedSlotCont.gameObject.name.Remove(0, 4));
                 EmptySlot();
                 RectTransformUtility.ScreenPointToLocalPointInRectangle(backPackRectTransform, eventData.pointerCurrentRaycast.screenPosition, eventData.pressEventCamera, out Vector2 anchoredPosition);
                 movingSlotRectTransform.anchoredPosition = anchoredPosition;
             }
+            //DragAndDropSlot.SelectItem(eventData, backPackRectTransform, movingSlotRectTransform, backPackSlots, m_InventoryCont.NoItemSprite, out ogSlotIndex);
         }
         //Move moving slot to coressponding current touch position
         public void OnDrag(PointerEventData eventData)
         {
             RectTransformUtility.ScreenPointToLocalPointInRectangle(backPackRectTransform, eventData.pointerCurrentRaycast.screenPosition, eventData.pressEventCamera, out Vector2 anchoredPosition);
             movingSlotRectTransform.anchoredPosition = anchoredPosition;
+            //DragAndDropSlot.MoveItem(eventData, backPackRectTransform, movingSlotRectTransform);
         }
         /// <summary>
         /// Moving slot is at destination
