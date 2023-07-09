@@ -60,7 +60,6 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         public void OccupySlot(string slotType, int slotIndex){
             switch (slotType){
                 case "Backpack":
-                    Debug.Log(slotIndex);
                     //Sloting Item from moving slot to desured backpack slot
                     backPackSlots[slotIndex].ItemImage.sprite = movingSlotCont.ItemImage.sprite;
                     backPackSlots[slotIndex].SlotWithItem = true;
@@ -118,6 +117,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         }
         //Store info of original item is contained in and move the item to the moving slot
         public void OnBeginDrag(PointerEventData eventData){
+            /*
             SlotController selectedSlotCont = eventData.pointerPressRaycast.gameObject.transform.parent.gameObject.GetComponent<SlotController>();
             if (selectedSlotCont != null && selectedSlotCont.SlotWithItem)
             {
@@ -127,7 +127,18 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 RectTransformUtility.ScreenPointToLocalPointInRectangle(backPackRectTransform, eventData.pointerCurrentRaycast.screenPosition, eventData.pressEventCamera, out Vector2 anchoredPosition);
                 movingSlotRectTransform.anchoredPosition = anchoredPosition;
             }
-            //DragAndDropSlot.SelectItem(eventData, backPackRectTransform, movingSlotRectTransform, backPackSlots, m_InventoryCont.NoItemSprite, out ogSlotIndex);
+            */
+            switch(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.name){
+                case("Backpack"):
+                    DragAndDropSlot.SelectItem(eventData, backPackRectTransform, movingSlotRectTransform, backPackSlots, m_InventoryCont.NoItemSprite, out ogSlotIndex);
+                    break;
+                case("QuickSlots"):
+                    DragAndDropSlot.SelectItem(eventData, backPackRectTransform, movingSlotRectTransform, quickSlots, m_InventoryCont.NoItemSprite, out ogSlotIndex);
+                    break; 
+                default:
+                    break;
+            }
+            
         }
         //Move moving slot to coressponding current touch position
         public void OnDrag(PointerEventData eventData)

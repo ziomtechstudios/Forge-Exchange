@@ -19,6 +19,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         [SerializeField] private InventoryController m_InventoryCont;
         [SerializeField] private PolygonCollider2D m_Collider;
         [SerializeField] private WorkstationController workstationCont;
+        [SerializeField] private string backPackObjPath;
         #endregion
         #region Private Fields
         private StockpileController stockpileCont;
@@ -26,6 +27,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         private int lookXHash, lookYHash, isMovingHash, moveXHash, moveYHash;
         private int layerMask, stockpileLayer, workstationLayer, boundsLayer;
         private RaycastHit2D hit;
+        private GameObject backPackObj;
         private void MovePlayer(bool moving){
             if(moving){
                 m_Animator.SetBool(isMovingHash, true);
@@ -136,7 +138,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                         break;
                     //Coal pile, wood pile, etc...
                     case 10:
-                        holdingItem = (!holdingItem)?((m_InventoryCont.SlotsAreFull)?(false):PickUpObj()):(DropObj());
+                        holdingItem = (!holdingItem)?((m_InventoryCont.SlotsAreFull)?(false):(backPackObj.activeInHierarchy)?(false):(PickUpObj())):(DropObj());
                         break;
                     default:
                         break;
@@ -175,6 +177,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             layerMask = (stockpileLayer|workstationLayer|boundsLayer);
             stockpileCont = null;
             m_Collider = GetComponent<PolygonCollider2D>();
+            backPackObj = transform.Find(backPackObjPath).gameObject;
         }
         // Update is called once per frame
         void Update(){

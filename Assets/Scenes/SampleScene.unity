@@ -14395,6 +14395,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -9.3
       objectReference: {fileID: 0}
+    - target: {fileID: 2417434155176800258, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
+      propertyPath: backPackObjPath
+      value: Main Camera/Canvas/Inventory/ImageInventory/Backpack
+      objectReference: {fileID: 0}
     - target: {fileID: 2417434155176800262, guid: ebcd30f56c9f99f81924416e8794ec83, type: 3}
       propertyPath: m_Name
       value: player

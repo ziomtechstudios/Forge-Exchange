@@ -32,6 +32,7 @@ namespace Com.ZiomtechStudios.ForgeExchange
             if (selectedSlotCont != null && selectedSlotCont.SlotWithItem)
             {
                 ogSlotIndex = Int32.Parse(selectedSlotCont.gameObject.name.Remove(0, 4));
+                Debug.Log($"Original Slot selected is slot number{ogSlotIndex}");
                 EmptySlot(ogSlotIndex, slots, selectedSlotCont, noItemSprite);
                 RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRectTransform, eventData.pointerCurrentRaycast.screenPosition, eventData.pressEventCamera, out Vector2 anchoredPosition);
                 movingSlotRectTransform.anchoredPosition = anchoredPosition;
