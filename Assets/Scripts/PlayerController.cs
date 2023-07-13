@@ -123,7 +123,7 @@ namespace Com.ZiomtechStudios.ForgeExchange{
             ///The last dir the player moves in is the players looking direction
             ///</summary>
             moveDir = context.ReadValue<Vector2>();
-            isMoving = moveDir != Vector2.zero;
+            isMoving = (moveDir != Vector2.zero);
             lookDir = (isMoving)?(moveDir.normalized):(lookDir);
         }
         public void OnInteraction(InputAction.CallbackContext context){
@@ -134,10 +134,14 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                 switch(hit.transform.gameObject.layer){
                      //Forge, Quelcher, Sandstone, etc...
                     case 8:
+                        //If theb player is holding an object let them interact with the workstation
+                        //If tehplayer does not have an item them they are going to want to uise the workstation
                         holdingItem = (holdingItem)?(InteractWorkstation()):(UseWorkstation());
                         break;
                     //Coal pile, wood pile, etc...
                     case 10:
+                        //If the player is not holding an item check that the quickslots are not full and that the player does not have the backpack open in order to allow them to pick up the desired object
+                        //If the player is holding an object allow them to drop the object
                         holdingItem = (!holdingItem)?((m_InventoryCont.SlotsAreFull)?(false):(backPackObj.activeInHierarchy)?(false):(PickUpObj())):(DropObj());
                         break;
                     default:
