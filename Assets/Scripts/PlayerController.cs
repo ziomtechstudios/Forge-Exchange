@@ -140,7 +140,8 @@ namespace Com.ZiomtechStudios.ForgeExchange{
                         break;
                     //Coal pile, wood pile, etc...
                     case 10:
-                        //If the player is not holding an item check that the quickslots are not full and that the player does not have the backpack open in order to allow them to pick up the desired object
+                        //If the player is not holding an item check that the quickslots are not full
+                        //and that the player does not have the backpack open in order to allow them to pick up the desired object
                         //If the player is holding an object allow them to drop the object
                         holdingItem = (!holdingItem)?((m_InventoryCont.SlotsAreFull)?(false):(backPackObj.activeInHierarchy)?(false):(PickUpObj())):(DropObj());
                         break;

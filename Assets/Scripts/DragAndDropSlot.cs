@@ -1,4 +1,3 @@
-using Mono.CompilerServices.SymbolWriter;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,9 +13,9 @@ namespace Com.ZiomtechStudios.ForgeExchange
             ogSlotType = "";
             if (selectedSlotCont != null && selectedSlotCont.SlotWithItem)
             {
+                //Store reference to original slot in case invalid item drop is later made
                 ogSlotIndex = Int32.Parse(selectedSlotCont.gameObject.name.Remove(0, 4));
                 ogSlotType = eventData.pointerPressRaycast.gameObject.transform.parent.parent.name;
-                movingSlotCont.gameObject.SetActive(true);
                 //EmptySlot(ogSlotIndex,  slots, selectedSlotCont, noItemSprite);
                 //Moving item from Selected Slot to Moving Slot
                 movingSlotCont.ItemImage.sprite = slots[ogSlotIndex].ItemImage.sprite;
@@ -28,6 +27,8 @@ namespace Com.ZiomtechStudios.ForgeExchange
                 slots[ogSlotIndex].SlotWithItem = false;
                 slots[ogSlotIndex].ItemCont = null;
                 slots[ogSlotIndex].SlotPrefab = null;
+                //Making moving slot visible
+                movingSlotCont.gameObject.SetActive(true);
             }
         }
         public static void MoveItem(PointerEventData eventData, RectTransform canvasRectTransform, RectTransform movingSlotRectTransform)

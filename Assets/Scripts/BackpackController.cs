@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using static Com.ZiomtechStudios.ForgeExchange.DragAndDropSlot;
 namespace Com.ZiomtechStudios.ForgeExchange{
     public class BackpackController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
@@ -20,6 +19,20 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         private int ogSlotIndex;
         private RectTransform movingSlotRectTransform;
         private RectTransform backPackRectTransform;
+        private void ReturnItem()
+        {
+            switch (ogSlotType)
+            {
+                case ("Backpack"):
+                    DragAndDropSlot.DropItem(movingSlotCont, backPackSlots, m_InventoryCont.NoItemSprite, ogSlotIndex);
+                    break;
+                case ("QuickSlots"):
+                    DragAndDropSlot.DropItem(movingSlotCont, quickSlots, m_InventoryCont.NoItemSprite, ogSlotIndex);
+                    break;
+                default:
+                    break;
+            }
+        }
         #endregion
         #region Getters/Setters
         public string OGSlotType{get{return ogSlotType;}}
@@ -69,8 +82,6 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         //Move moving slot to coressponding current touch position
         public void OnDrag(PointerEventData eventData)
         {
-            //RectTransformUtility.ScreenPointToLocalPointInRectangle(backPackRectTransform, eventData.pointerCurrentRaycast.screenPosition, eventData.pressEventCamera, out Vector2 anchoredPosition);
-            //movingSlotRectTransform.anchoredPosition = anchoredPosition;
             DragAndDropSlot.MoveItem(eventData, backPackRectTransform, movingSlotRectTransform);
         }
         /// <summary>
@@ -81,33 +92,25 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         /// </summary>
         public void OnEndDrag(PointerEventData eventData)
         {
-            //Debug.Log(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.name);
-            switch (eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.name)
+            if (eventData.pointerCurrentRaycast.gameObject != null)
             {
-                case ("Backpack"):
-                    DragAndDropSlot.DropItem( movingSlotCont, backPackSlots,  m_InventoryCont.NoItemSprite, Int32.Parse(eventData.pointerCurrentRaycast.gameObject.transform.parent.name.Remove(0, 4)));
-                    break;
-                case ("QuickSlots"):
-                    DragAndDropSlot.DropItem(movingSlotCont, quickSlots, m_InventoryCont.NoItemSprite, Int32.Parse(eventData.pointerCurrentRaycast.gameObject.transform.parent.name.Remove(0, 4)));
-                    break;
-                case ("Canvas"):
-                    //Debug.Log($"The original slot type was {ogSlotType} with the index of {ogSlotIndex}.");
-                    switch (ogSlotType)
-                    {
-                        case ("Backpack"):
-                            DragAndDropSlot.DropItem(movingSlotCont, backPackSlots, m_InventoryCont.NoItemSprite, ogSlotIndex);
-                            break;
-                        case ("QuickSlots"):
-                            DragAndDropSlot.DropItem(movingSlotCont, quickSlots, m_InventoryCont.NoItemSprite, ogSlotIndex);
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                default:
-                    break;
+                switch (eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.name)
+                {
+                    case ("Backpack"):
+                        DragAndDropSlot.DropItem(movingSlotCont, backPackSlots, m_InventoryCont.NoItemSprite, Int32.Parse(eventData.pointerCurrentRaycast.gameObject.transform.parent.name.Remove(0, 4)));
+                        break;
+                    case ("QuickSlots"):
+                        DragAndDropSlot.DropItem(movingSlotCont, quickSlots, m_InventoryCont.NoItemSprite, Int32.Parse(eventData.pointerCurrentRaycast.gameObject.transform.parent.name.Remove(0, 4)));
+                        break;
+                    case ("Canvas"):
+                        ReturnItem();
+                        break;
+                    default:
+                        break;
+                }
             }
-
+            else
+                ReturnItem();
         }
         #endregion
         // Start is called before the first frame update
@@ -127,10 +130,12 @@ namespace Com.ZiomtechStudios.ForgeExchange{
         }
         public void OnEnable()
         {
+            //Disable in-game quickslots, I didnt like having both references to quickslots enabled
             m_PlayerUIController.InGameQuickSlotObjs.SetActive(false);
         }
         public void OnDisable()
         {
+            //Re-enable in-game quickslots since backpack is closed
             m_PlayerUIController.InGameQuickSlotObjs.SetActive(true);
         }
     }

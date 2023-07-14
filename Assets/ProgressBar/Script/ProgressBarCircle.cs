@@ -74,7 +74,6 @@ public class ProgressBarCircle : MonoBehaviour {
 
     void UpdateValue(float val)
     {
-       
         bar.fillAmount = -(val / 100) + 1f;
         string percentage = (showPercentage)?val + "%":"";
         txtTitle.text = Title + " " + percentage;
@@ -87,7 +86,6 @@ public class ProgressBarCircle : MonoBehaviour {
         {
             barBackground.color = BarBackGroundColor;
         }
-
     }
 
 
